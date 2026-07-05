@@ -110,7 +110,9 @@
     min-height:100dvh;
     display:flex;align-items:flex-end;justify-content:center;
     padding:0 5vw 8vw;
-    background: #3a352e;
+    background:
+      linear-gradient(180deg, rgba(11,10,8,.1) 0%, rgba(11,10,8,.5) 60%, rgba(11,10,8,1) 100%),
+      url('hero.jpeg') center 22%/cover no-repeat;
   }
   .hero-inner{max-width:640px;text-align:center;display:flex;flex-direction:column;align-items:center;}
   .hero-campaign{text-align:center;display:flex;flex-direction:column;align-items:center;}
@@ -255,6 +257,7 @@
   }
   @media (max-width:600px){
     .hero{align-items:flex-start;justify-content:center;padding-top:56vh;padding-bottom:0;}
+    nav{-webkit-backdrop-filter:none;backdrop-filter:none;background:rgba(11,10,8,.95);}
   }
   .bio-grid img{width:100%;object-fit:cover;border:1px solid var(--line);}
   .bio-grid p{line-height:1.8;color:var(--ink-dim);margin-bottom:20px;font-size:1.02rem;}
