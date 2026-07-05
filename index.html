@@ -62,7 +62,7 @@
     -webkit-backdrop-filter:blur(10px);
     backdrop-filter:blur(10px);
     border-bottom:1px solid var(--line);
-    box-shadow:0 1px 0 rgba(11,10,8,.75);
+    box-shadow:0 4px 0 -1px var(--bg);
   }
   .nav-name{
     font-family:'Clash Display',sans-serif;
@@ -259,6 +259,7 @@
   }
   @media (max-width:600px){
     .hero{align-items:flex-start;justify-content:center;padding-top:60vh;padding-bottom:0;background-position-y:12% !important;}
+    nav{border-bottom:none;}
   }
   .bio-grid img{width:100%;object-fit:cover;border:1px solid var(--line);}
   .bio-grid p{line-height:1.8;color:var(--ink-dim);margin-bottom:20px;font-size:1.02rem;}
