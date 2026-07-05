@@ -128,6 +128,34 @@
     line-height:1;
     word-spacing:.2em;
   }
+  .hero-cta-row{
+    display:flex;align-items:center;gap:clamp(18px,3vw,36px);
+  }
+  .hero-cta-divider{
+    width:1px;height:38px;
+    background:linear-gradient(180deg, var(--gold-bright), var(--coral));
+  }
+  .hero-cta-btn{
+    display:flex;flex-direction:column;align-items:center;gap:4px;
+    text-align:center;
+  }
+  .hero-cta-btn .cta-title{
+    font-family:'Space Mono',monospace;
+    font-size:.85rem;
+    letter-spacing:.08em;
+    color:var(--gold-bright);
+    border-bottom:1px solid var(--gold);
+    padding-bottom:6px;
+    transition:color .25s ease;
+  }
+  .hero-cta-btn .cta-sub{
+    font-family:'Space Mono',monospace;
+    font-size:.62rem;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    color:var(--ink-dim);
+  }
+  .hero-cta-btn:hover .cta-title{color:var(--gold);}
   .hero p{
     font-size:clamp(1rem,1.6vw,1.2rem);
     color:var(--ink-dim);
@@ -275,7 +303,7 @@
     filter:grayscale(15%) contrast(1.05);
   }
   .feature-card .eyebrow{margin-top:22px;display:block;}
-  .feature-card h3{font-size:1.6rem;margin-top:8px;letter-spacing:0.02em;word-spacing:0.15em;}
+  .feature-card h3{font-size:1.6rem;margin-top:26px;letter-spacing:0.02em;word-spacing:0.15em;}
   .feature-card p{color:var(--ink-dim);margin-top:10px;line-height:1.6;font-size:.95rem;}
   .feature-card .btn{margin-top:18px;display:inline-block;}
   .btn-row{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px;}
@@ -515,10 +543,12 @@
 
 <!-- STREETWEAR + PERFUME -->
 <section data-reveal>
+  <div class="section-head">
+    <span class="eyebrow">06 / Streetwear &amp; Perfume by Nejma Nefertiti</span>
+  </div>
   <div class="feature-grid">
     <div class="feature-card" id="streetwear">
       <img src="streetwear.jpeg" alt="Maroon Couture streetwear" loading="lazy">
-      <span class="eyebrow">06 / Streetwear</span>
       <h3>Maroon Couture</h3>
       <p>Streetwear and custom sneakers.</p>
       <div class="btn-row">
@@ -528,7 +558,6 @@
     </div>
     <div class="feature-card" id="perfume">
       <img src="perfume.jpeg" alt="House of Hatshepsut perfume" loading="lazy">
-      <span class="eyebrow">07 / Perfumery</span>
       <h3>House of Hatshepsut</h3>
       <p>Natural luxury perfume, hand-blended in small batches.</p>
       <a class="btn" href="https://www.etsy.com/shop/TEMPLEofNEJ" target="_blank" rel="noopener">Shop the collection</a>
@@ -547,7 +576,7 @@
 <!-- CONTACT -->
 <section id="contact" data-reveal>
   <div class="section-head">
-    <span class="eyebrow">08 / Contact</span>
+    <span class="eyebrow">07 / Contact</span>
     <h2>Bookings &amp; Inquiries</h2>
   </div>
   <div style="text-align:center;">
