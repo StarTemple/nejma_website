@@ -247,7 +247,7 @@
 
   /* Bio */
   .bio-grid{
-    display:grid;grid-template-columns:1.15fr .85fr;gap:60px;align-items:center;
+    display:grid;grid-template-columns:1.15fr .85fr;gap:60px;align-items:stretch;
   }
   @media (max-width:860px){.bio-grid{grid-template-columns:1fr;}}
   @media (min-width:900px){
@@ -260,6 +260,26 @@
   .bio-grid img{width:100%;object-fit:cover;border:1px solid var(--line);}
   .bio-grid p{line-height:1.8;color:var(--ink-dim);margin-bottom:20px;font-size:1.02rem;}
   .bio-grid strong{color:var(--ink);font-weight:500;}
+  .bio-photo{
+    aspect-ratio:4/5;height:100%;
+    filter:grayscale(15%) contrast(1.05);
+    align-self:start;
+  }
+  @media (max-width:860px){.bio-photo{aspect-ratio:4/5;height:auto;}}
+  .bio-more{
+    max-height:0;overflow:hidden;
+    transition:max-height .5s ease;
+  }
+  .bio-more.open{max-height:1200px;}
+  .bio-toggle{
+    font-family:'Space Mono',monospace;
+    font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;
+    color:var(--gold-bright);
+    background:none;border:none;border-bottom:1px solid var(--gold);
+    padding:0 0 4px;cursor:pointer;
+    transition:color .25s ease;
+  }
+  .bio-toggle:hover{color:var(--gold);}
 
   /* Events */
   .events-grid{
@@ -464,10 +484,13 @@
       <span class="eyebrow">02 / Bio</span>
       <h2 style="margin:12px 0 26px;font-size:clamp(2rem,4vw,2.8rem);">Bio</h2>
       <p>Nejma Nefertiti has carved her place as one of Brooklyn's most formidable voices in Hip Hop, a lyricist known for fierce delivery, multisyllabic rhyme, and vivid, cinematic imagery. She was one of 12 winners of The Saga Continues Contest, created by Sway and RZA of Wu-Tang Clan, and her flow has been described as "grimy and captivating," with critics praising her razor-sharp bars and next-level command of the mic.</p>
-      <p>She's traded verses with French Hip Hop legend Akhenaton on a Nicholas Craven production, appeared as a feature for Beat Junkies' DJ Rhettmatic, recorded a full album with Harlem producer Big French, and continues to add to an extensive catalog of collaborative releases with Napoleon Da Legend. In 2024, she took home Best International Hip Hop Music Video at the Golden Sneakers International Hip Hop Film Festival in London for "Soul Ties."</p>
-      <p>She has built a discography of albums, EPs, and singles, including Letters From The Akashic, The Valley of the Queens, and the Jayne Wayne trilogy, showcasing her range as a writer, vocalist, and executive producer. She continues to expand her discography with tracks like "Goddess," off her LP Method To My Madness, featuring De La Soul's Pos, rap veteran Shortie No Mass, and DJ Evil Dee.</p>
+      <div class="bio-more" id="bioMore">
+        <p>She's traded verses with French Hip Hop legend Akhenaton on a Nicholas Craven production, appeared as a feature for Beat Junkies' DJ Rhettmatic, recorded a full album with Harlem producer Big French, and continues to add to an extensive catalog of collaborative releases with Napoleon Da Legend. In 2024, she took home Best International Hip Hop Music Video at the Golden Sneakers International Hip Hop Film Festival in London for "Soul Ties."</p>
+        <p>She has built a discography of albums, EPs, and singles, including Letters From The Akashic, The Valley of the Queens, and the Jayne Wayne trilogy, showcasing her range as a writer, vocalist, and executive producer. She continues to expand her discography with tracks like "Goddess," off her LP Method To My Madness, featuring De La Soul's Pos, rap veteran Shortie No Mass, and DJ Evil Dee.</p>
+      </div>
+      <button class="bio-toggle" id="bioToggle" aria-expanded="false" aria-controls="bioMore">Read More</button>
     </div>
-    <img src="gallery-12.jpeg" alt="Nejma Nefertiti portrait wearing a Palestinian flag zip-up hoodie, holding a red microphone" loading="lazy">
+    <img class="bio-photo" src="gallery-12.jpeg" alt="Nejma Nefertiti portrait wearing a Palestinian flag zip-up hoodie, holding a red microphone" loading="lazy">
   </div>
 </section>
 
@@ -512,22 +535,22 @@
     <h2>Gallery</h2>
   </div>
   <div class="gallery-grid">
-    <a href="gallery-01.jpeg" target="_blank" rel="noopener"><img loading="lazy" src="gallery-01.jpeg" alt="Nejma Nefertiti performing live with microphone in hand"></a>
-    <a href="gallery-02.jpeg" target="_blank" rel="noopener"><img loading="lazy" src="gallery-02.jpeg" alt="Nejma Nefertiti holding a Palestinian flag while performing on stage"></a>
-    <a href="gallery-04.jpeg" target="_blank" rel="noopener"><img loading="lazy" src="gallery-04.jpeg" alt="Nejma Nefertiti performing in a tan bucket hat with arm raised"></a>
-    <a href="gallery-14.jpeg" target="_blank" rel="noopener"><img loading="lazy" src="gallery-14.jpeg" alt="Nejma Nefertiti performing under orange stage lighting with arm raised"></a>
-    <a href="gallery-15.jpeg" target="_blank" rel="noopener"><img loading="lazy" src="gallery-15.jpeg" alt="Nejma Nefertiti seated on stage performing in smoky purple lighting"></a>
-    <a href="gallery-16.jpeg" target="_blank" rel="noopener"><img loading="lazy" src="gallery-16.jpeg" alt="Close-up of Nejma Nefertiti removing her glasses"></a>
-    <a href="gallery-17.jpeg" target="_blank" rel="noopener"><img loading="lazy" src="gallery-17.jpeg" alt="Nejma Nefertiti performing in a gold and black patterned outfit under string lights"></a>
-    <a href="gallery-26.jpeg" target="_blank" rel="noopener"><img loading="lazy" src="gallery-26.jpeg" alt="Close-up of Nejma Nefertiti wearing gold bangles and rings"></a>
-    <a href="gallery-27.jpeg" target="_blank" rel="noopener"><img loading="lazy" src="gallery-27.jpeg" alt="Nejma Nefertiti performing in front of an SOB's venue backdrop"></a>
-    <a href="gallery-19.jpeg" target="_blank" rel="noopener"><img loading="lazy" src="gallery-19.jpeg" alt="Nejma Nefertiti singing intensely in a denim jacket"></a>
-    <a href="gallery-20.jpeg" target="_blank" rel="noopener"><img loading="lazy" src="gallery-20.jpeg" alt="Nejma Nefertiti performing with fist raised, wearing a teal outfit and embroidered headband"></a>
-    <a href="gallery-21.jpeg" target="_blank" rel="noopener"><img loading="lazy" src="gallery-21.jpeg" alt="Nejma Nefertiti performing on stage in front of a graffiti wall"></a>
-    <a href="gallery-22.jpeg" target="_blank" rel="noopener"><img loading="lazy" src="gallery-22.jpeg" alt="Nejma Nefertiti with face covered by a checkered scarf, graffiti wall backdrop"></a>
-    <a href="gallery-23.jpeg" target="_blank" rel="noopener"><img loading="lazy" src="gallery-23.jpeg" alt="Black-and-white studio portrait of Nejma Nefertiti seated in a leather armchair"></a>
-    <a href="gallery-24.jpeg" target="_blank" rel="noopener"><img loading="lazy" src="gallery-24.jpeg" alt="Close-up portrait of Nejma Nefertiti with wind-blown hair"></a>
-    <a href="gallery-25.jpeg" target="_blank" rel="noopener"><img loading="lazy" src="gallery-25.jpeg" alt="Silhouette of Nejma Nefertiti in a recording studio booth"></a>
+    <a href="gallery-01.jpeg" target="_blank" rel="noopener"><img loading="eager" src="gallery-01.jpeg" alt="Nejma Nefertiti performing live with microphone in hand"></a>
+    <a href="gallery-02.jpeg" target="_blank" rel="noopener"><img loading="eager" src="gallery-02.jpeg" alt="Nejma Nefertiti holding a Palestinian flag while performing on stage"></a>
+    <a href="gallery-04.jpeg" target="_blank" rel="noopener"><img loading="eager" src="gallery-04.jpeg" alt="Nejma Nefertiti performing in a tan bucket hat with arm raised"></a>
+    <a href="gallery-14.jpeg" target="_blank" rel="noopener"><img loading="eager" src="gallery-14.jpeg" alt="Nejma Nefertiti performing under orange stage lighting with arm raised"></a>
+    <a href="gallery-15.jpeg" target="_blank" rel="noopener"><img loading="eager" src="gallery-15.jpeg" alt="Nejma Nefertiti seated on stage performing in smoky purple lighting"></a>
+    <a href="gallery-16.jpeg" target="_blank" rel="noopener"><img loading="eager" src="gallery-16.jpeg" alt="Close-up of Nejma Nefertiti removing her glasses"></a>
+    <a href="gallery-17.jpeg" target="_blank" rel="noopener"><img loading="eager" src="gallery-17.jpeg" alt="Nejma Nefertiti performing in a gold and black patterned outfit under string lights"></a>
+    <a href="gallery-26.jpeg" target="_blank" rel="noopener"><img loading="eager" src="gallery-26.jpeg" alt="Close-up of Nejma Nefertiti wearing gold bangles and rings"></a>
+    <a href="gallery-27.jpeg" target="_blank" rel="noopener"><img loading="eager" src="gallery-27.jpeg" alt="Nejma Nefertiti performing in front of an SOB's venue backdrop"></a>
+    <a href="gallery-19.jpeg" target="_blank" rel="noopener"><img loading="eager" src="gallery-19.jpeg" alt="Nejma Nefertiti singing intensely in a denim jacket"></a>
+    <a href="gallery-20.jpeg" target="_blank" rel="noopener"><img loading="eager" src="gallery-20.jpeg" alt="Nejma Nefertiti performing with fist raised, wearing a teal outfit and embroidered headband"></a>
+    <a href="gallery-21.jpeg" target="_blank" rel="noopener"><img loading="eager" src="gallery-21.jpeg" alt="Nejma Nefertiti performing on stage in front of a graffiti wall"></a>
+    <a href="gallery-22.jpeg" target="_blank" rel="noopener"><img loading="eager" src="gallery-22.jpeg" alt="Nejma Nefertiti with face covered by a checkered scarf, graffiti wall backdrop"></a>
+    <a href="gallery-23.jpeg" target="_blank" rel="noopener"><img loading="eager" src="gallery-23.jpeg" alt="Black-and-white studio portrait of Nejma Nefertiti seated in a leather armchair"></a>
+    <a href="gallery-24.jpeg" target="_blank" rel="noopener"><img loading="eager" src="gallery-24.jpeg" alt="Close-up portrait of Nejma Nefertiti with wind-blown hair"></a>
+    <a href="gallery-25.jpeg" target="_blank" rel="noopener"><img loading="eager" src="gallery-25.jpeg" alt="Silhouette of Nejma Nefertiti in a recording studio booth"></a>
   </div>
 </section>
 
@@ -688,6 +711,25 @@
 
   // close mobile menu on link click
   links.forEach(l=>l.addEventListener('click', ()=>document.querySelector('.nav-links').classList.remove('open')));
+
+  // instantly reveal the target section when jumping via nav (no fade-in wait)
+  links.forEach(l=>{
+    l.addEventListener('click', ()=>{
+      const target = document.querySelector(l.getAttribute('href'));
+      if(target){ target.classList.add('in'); io.unobserve(target); }
+    });
+  });
+
+  // bio read more toggle
+  const bioToggle = document.getElementById('bioToggle');
+  const bioMore = document.getElementById('bioMore');
+  if(bioToggle && bioMore){
+    bioToggle.addEventListener('click', ()=>{
+      const isOpen = bioMore.classList.toggle('open');
+      bioToggle.textContent = isOpen ? 'Read Less' : 'Read More';
+      bioToggle.setAttribute('aria-expanded', isOpen);
+    });
+  }
 </script>
 
 </body>
