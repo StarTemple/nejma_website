@@ -324,6 +324,26 @@
   .press-row a{transition:color .25s ease, border-color .25s ease;display:inline-block;}
   .press-row a:hover{color:var(--gold-bright);border-color:var(--gold);}
 
+  .quote-grid{
+    display:grid;grid-template-columns:1fr 1fr;
+    gap:36px 48px;
+    margin-top:48px;
+  }
+  @media (max-width:700px){.quote-grid{grid-template-columns:1fr;gap:32px;}}
+  .press-quote p{
+    font-family:'Clash Display',sans-serif;
+    font-weight:600;
+    font-size:1.15rem;
+    line-height:1.4;
+    color:var(--ink);
+    letter-spacing:-0.01em;
+  }
+  .press-quote .eyebrow{
+    display:block;
+    margin-top:12px;
+    font-size:.62rem;
+  }
+
   /* Two-column feature (streetwear / perfume) */
   .feature-grid{
     display:grid;grid-template-columns:1fr 1fr;gap:60px;
@@ -598,6 +618,25 @@
     <a href="https://www.instagram.com/reel/C-5auHTRFj4/" target="_blank" rel="noopener">The Punchline Academy</a>
   </div>
 
+  <div class="quote-grid">
+    <div class="press-quote">
+      <p>"Nejma Nefertiti delivers scorching bars."</p>
+      <span class="eyebrow">Karas Lamb, Okayplayer</span>
+    </div>
+    <div class="press-quote">
+      <p>"Hip Hop's regal rhyme ripper."</p>
+      <span class="eyebrow">Insomniac Magazine</span>
+    </div>
+    <div class="press-quote">
+      <p>"Nejma Nefertiti's music transcends boundaries, reflecting her rich multicultural background."</p>
+      <span class="eyebrow">The Rap Pulse</span>
+    </div>
+    <div class="press-quote">
+      <p>"Regardless what people think, there's still some real spitters out there."</p>
+      <span class="eyebrow">Rock The Bells</span>
+    </div>
+  </div>
+
   <div style="margin-top:48px;">
     <span class="eyebrow">Flowers &amp; Respect</span>
     <div class="press-row" style="margin-top:16px;">
@@ -609,7 +648,7 @@
   </div>
 
   <div style="margin-top:64px;">
-    <a class="btn" href="https://www.reverbnation.com/nejmanefertiti/press" target="_blank" rel="noopener">Press coverage</a>
+    <a class="btn" href="https://www.reverbnation.com/nejmanefertiti/press" target="_blank" rel="noopener">Press archive</a>
   </div>
 </section>
 
