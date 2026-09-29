@@ -452,6 +452,7 @@
   <button class="nav-toggle" aria-label="Toggle menu" onclick="document.querySelector('.nav-links').classList.toggle('open')">&#9776;</button>
   <div class="nav-links">
     <a href="#music">Music</a>
+    <a href="fyc/">FYC</a>
     <a href="#bio">Bio</a>
     <a href="#events">Events</a>
     <a href="#gallery">Gallery</a>
@@ -466,7 +467,7 @@
 <header class="hero" id="top">
   <div class="hero-campaign">
     <h2 class="hero-campaign-title">Nejma Nefertiti</h2>
-    <a class="btn solid" href="https://www.instagram.com/reel/CunzYoZr_we/" target="_blank" rel="noopener">Watch Now</a>
+    <a class="btn solid" href="https://www.youtube.com/watch?v=lno9CuAGpDM" target="_blank" rel="noopener">Watch Now</a>
   </div>
 </header>
 
@@ -511,7 +512,7 @@
     <div>
       <span class="eyebrow">02 / Bio</span>
       <h2 style="margin:12px 0 26px;font-size:clamp(2rem,4vw,2.8rem);">Bio</h2>
-      <p>Nejma Nefertiti has carved her place as one of Brooklyn's most formidable voices in Hip Hop, a lyricist known for fierce delivery, multisyllabic rhyme, and vivid, cinematic imagery. She was one of 12 winners of The Saga Continues Contest, created by Sway and RZA of Wu-Tang Clan, and her flow has been described as "grimy and captivating," with critics praising her razor-sharp bars and next-level command of the mic.</p>
+      <p>Nejma Nefertiti has carved her place as one of Brooklyn's most formidable voices in Hip Hop, a lyricist known for fierce delivery, intricate wordplay, layered storytelling, and vivid, cinematic imagery. She was one of 12 winners of The Saga Continues Contest, created by Sway and RZA of Wu-Tang Clan, and her flow has been described as "grimy and captivating," with critics praising her razor-sharp bars and next-level command of the mic.</p>
       <div class="bio-more" id="bioMore">
         <p>She's traded verses with French Hip Hop legend Akhenaton on a Nicholas Craven production, appeared as a feature for Beat Junkies' DJ Rhettmatic, recorded a full album with Harlem producer Big French, and continues to add to an extensive catalog of collaborative releases with Napoleon Da Legend. In 2024, she took home Best International Hip Hop Music Video at the Golden Sneakers International Hip Hop Film Festival in London for "Soul Ties."</p>
         <p>She has built a discography of albums, EPs, and singles, including Letters From The Akashic, The Valley of the Queens, and the Jayne Wayne trilogy, showcasing her range as a writer, vocalist, and executive producer. She continues to expand her discography with tracks like "Goddess," off her LP Method To My Madness, featuring De La Soul's Pos, rap veteran Shortie No Mass, and DJ Evil Dee.</p>
@@ -756,7 +757,7 @@
 
   // active nav link on scroll
   const links = document.querySelectorAll('.nav-links a');
-  const sections = Array.from(links).map(l=>document.querySelector(l.getAttribute('href'))).filter(Boolean);
+  const sections = Array.from(links).filter(l=>l.getAttribute('href').startsWith('#')).map(l=>document.querySelector(l.getAttribute('href'))).filter(Boolean);
   const navIo = new IntersectionObserver((entries)=>{
     entries.forEach(entry=>{
       const id = '#' + entry.target.id;
@@ -776,7 +777,9 @@
   // instantly reveal the target section when jumping via nav (no fade-in wait)
   links.forEach(l=>{
     l.addEventListener('click', ()=>{
-      const target = document.querySelector(l.getAttribute('href'));
+      const href = l.getAttribute('href');
+      if(!href.startsWith('#')) return;
+      const target = document.querySelector(href);
       if(target){ target.classList.add('in'); io.unobserve(target); }
     });
   });
