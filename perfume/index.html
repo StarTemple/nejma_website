@@ -108,7 +108,22 @@
     min-height:86vh;
     display:flex;align-items:flex-end;
     padding:0 5vw 70px;
-    background:linear-gradient(0deg, rgba(11,10,8,.95) 0%, rgba(11,10,8,.35) 55%, rgba(11,10,8,.55) 100%), url('perfume-hero.jpeg') center 28% / cover no-repeat;
+    background:linear-gradient(90deg, rgba(11,10,8,.88) 0%, rgba(11,10,8,.5) 42%, rgba(11,10,8,0) 70%), linear-gradient(0deg, rgba(11,10,8,.9) 0%, rgba(11,10,8,0) 24%), url('perfume-hero.jpeg') 70% center / cover no-repeat;
+    background-color:var(--bg);
+  }
+  @media (max-width:800px){
+    .hero{
+      min-height:0;
+      padding-top:330px;
+      background:var(--bg);
+    }
+    .hero::before{
+      content:'';position:absolute;left:0;right:0;top:0;height:360px;
+      background:url('perfume-hero.jpeg') 71% center / cover no-repeat;
+      -webkit-mask-image:linear-gradient(180deg,#000 62%,transparent 100%);
+      mask-image:linear-gradient(180deg,#000 62%,transparent 100%);
+    }
+    .hero-inner{position:relative;z-index:1;}
   }
   .hero-inner{max-width:720px;}
   .hero-inner .eyebrow{display:block;margin-bottom:18px;}
@@ -340,7 +355,7 @@
 <body>
 
 <nav>
-  <a class="nav-back" href="../#perfume">&larr; Nejma Nefertiti</a>
+  <a class="nav-back" href="../">&larr; Nejma Nefertiti</a>
   <span class="nav-brand">House of Hatshepsut</span>
   <a class="nav-order" href="#order">Order</a>
 </nav>
@@ -405,6 +420,7 @@
         <div class="price-row"><span class="fmt">9ml Alcohol Spray<small>Frosted cylinder, matte gold</small></span><span class="amt">$120</span></div>
         <div class="price-row"><span class="fmt">5ml Oil Attar<small>Marble crystal, glass wand</small></span><span class="amt">$90</span></div>
         <div class="price-row"><span class="fmt">2ml Sample<small>Alcohol, amber vial</small></span><span class="amt">$12</span></div>
+        <div class="price-row"><span class="fmt">Oil Sample<small>Jojoba attar, amber dropper</small></span><span class="amt">$15</span></div>
       </div>
       <div class="order-row">
         <button class="btn solid full order-trigger" data-scent="Frankinberri">Order This Scent</button>
@@ -421,6 +437,7 @@
         <div class="price-row"><span class="fmt">9ml Alcohol Spray<small>Frosted cylinder, matte gold</small></span><span class="amt">$130</span></div>
         <div class="price-row"><span class="fmt">5ml Oil Attar<small>Marble crystal, glass wand</small></span><span class="amt">$95</span></div>
         <div class="price-row"><span class="fmt">2ml Sample<small>Alcohol, amber vial</small></span><span class="amt">$12</span></div>
+        <div class="price-row"><span class="fmt">Oil Sample<small>Jojoba attar, amber dropper</small></span><span class="amt">$15</span></div>
       </div>
       <div class="order-row">
         <button class="btn solid full order-trigger" data-scent="Makeda">Order This Scent</button>
@@ -437,6 +454,7 @@
         <div class="price-row"><span class="fmt">9ml Alcohol Spray<small>Frosted cylinder, matte gold</small></span><span class="amt">$155</span></div>
         <div class="price-row"><span class="fmt">5ml Oil Attar<small>Marble crystal, glass wand</small></span><span class="amt">$110</span></div>
         <div class="price-row"><span class="fmt">2ml Sample<small>Alcohol, amber vial</small></span><span class="amt">$15</span></div>
+        <div class="price-row"><span class="fmt">Oil Sample<small>Jojoba attar, amber dropper</small></span><span class="amt">$18</span></div>
       </div>
       <div class="order-row">
         <button class="btn solid full order-trigger" data-scent="Hatshepsut">Order This Scent</button>
@@ -453,6 +471,7 @@
         <div class="price-row"><span class="fmt">9ml Alcohol Spray<small>Frosted cylinder, matte gold</small></span><span class="amt">$120</span></div>
         <div class="price-row"><span class="fmt">5ml Oil Attar<small>Marble crystal, glass wand</small></span><span class="amt">$90</span></div>
         <div class="price-row"><span class="fmt">2ml Sample<small>Alcohol, amber vial</small></span><span class="amt">$12</span></div>
+        <div class="price-row"><span class="fmt">Oil Sample<small>Jojoba attar, amber dropper</small></span><span class="amt">$15</span></div>
       </div>
       <div class="order-row">
         <button class="btn solid full order-trigger" data-scent="Karnak">Order This Scent</button>
@@ -469,6 +488,7 @@
         <div class="price-row"><span class="fmt">9ml Alcohol Spray<small>Frosted cylinder, matte gold</small></span><span class="amt">$160</span></div>
         <div class="price-row"><span class="fmt">5ml Oil Attar<small>Marble crystal, glass wand</small></span><span class="amt">$115</span></div>
         <div class="price-row"><span class="fmt">2ml Sample<small>Alcohol, amber vial</small></span><span class="amt">$15</span></div>
+        <div class="price-row"><span class="fmt">Oil Sample<small>Jojoba attar, amber dropper</small></span><span class="amt">$18</span></div>
       </div>
       <div class="order-row">
         <button class="btn solid full order-trigger" data-scent="Black Oud">Order This Scent</button>
@@ -485,6 +505,7 @@
         <div class="price-row"><span class="fmt">9ml Alcohol Spray<small>Frosted cylinder, matte gold</small></span><span class="amt">$130</span></div>
         <div class="price-row"><span class="fmt">5ml Oil Attar<small>Marble crystal, glass wand</small></span><span class="amt">$95</span></div>
         <div class="price-row"><span class="fmt">2ml Sample<small>Alcohol, amber vial</small></span><span class="amt">$12</span></div>
+        <div class="price-row"><span class="fmt">Oil Sample<small>Jojoba attar, amber dropper</small></span><span class="amt">$15</span></div>
       </div>
       <div class="order-row">
         <button class="btn solid full order-trigger" data-scent="Kemet">Order This Scent</button>
@@ -531,7 +552,7 @@
     <div class="vessel-card">
       <img src="perfume-oilsample-bottle.jpeg" alt="House of Hatshepsut small amber glass dropper bottle, oil attar sample format" loading="lazy">
       <h3>Oil Sample</h3>
-      <p>Small amber glass dropper bottle. Jojoba oil attar, in sample size. Pricing coming soon.</p>
+      <p>Small amber glass dropper bottle. Jojoba oil attar in sample size, so you can wear it before choosing a full bottle.</p>
     </div>
   </div>
 </section>
@@ -585,6 +606,7 @@
             <option value="alc9">9ml Alcohol Spray (frosted cylinder)</option>
             <option value="oil5">5ml Oil Attar (marble crystal, wand)</option>
             <option value="sample2">2ml Sample (alcohol, amber vial)</option>
+            <option value="oils2">Oil Sample (jojoba attar, amber dropper)</option>
           </select>
         </div>
         <div class="field">
@@ -670,7 +692,7 @@
 </section>
 
 <footer>
-  <p>&copy; 2026 Star Temple Studios LLC. House of Hatshepsut &middot; Temple of NeJ. <a href="../#perfume">Back to nejmanefertiti.com</a></p>
+  <p>&copy; 2026 Star Temple Studios LLC. House of Hatshepsut &middot; Temple of NeJ. <a href="../">Back to nejmanefertiti.com</a></p>
 </footer>
 
 <button class="to-top" id="toTop" aria-label="Back to top"><svg viewBox="0 0 24 24"><path d="M12 3.5L21 20H3L12 3.5Z"/></svg></button>
@@ -694,12 +716,12 @@
 
   // price table
   const PRICES = {
-    "Frankinberri": {alc5:85, alc9:120, oil5:90, sample2:12},
-    "Makeda":       {alc5:90, alc9:130, oil5:95, sample2:12},
-    "Hatshepsut":   {alc5:105, alc9:155, oil5:110, sample2:15},
-    "Karnak":       {alc5:85, alc9:120, oil5:90, sample2:12},
-    "Black Oud":    {alc5:110, alc9:160, oil5:115, sample2:15},
-    "Kemet":        {alc5:90, alc9:130, oil5:95, sample2:12}
+    "Frankinberri": {alc5:85, alc9:120, oil5:90, sample2:12, oils2:15},
+    "Makeda":       {alc5:90, alc9:130, oil5:95, sample2:12, oils2:15},
+    "Hatshepsut":   {alc5:105, alc9:155, oil5:110, sample2:15, oils2:18},
+    "Karnak":       {alc5:85, alc9:120, oil5:90, sample2:12, oils2:15},
+    "Black Oud":    {alc5:110, alc9:160, oil5:115, sample2:15, oils2:18},
+    "Kemet":        {alc5:90, alc9:130, oil5:95, sample2:12, oils2:15}
   };
 
   const scentSelect = document.getElementById('scentSelect');
