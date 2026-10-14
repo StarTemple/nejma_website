@@ -3,15 +3,17 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>For Your GRAMMY&reg; Consideration | Nejma Nefertiti</title>
-<meta name="description" content="For Your GRAMMY&reg; Consideration: Nejma Nefertiti. Best Rap Album, Best Rap Song, Best Rap Performance and Record Of The Year.">
-<link rel="canonical" href="https://nejmanefertiti.com/fyc/">
-<meta property="og:title" content="For Your GRAMMY&reg; Consideration | Nejma Nefertiti">
-<meta property="og:description" content="Listen to Nejma Nefertiti's entries: Method To My Madness (M.T.M.M.), Bread &amp; Water, It's Us, Goddess and Pomegranate.">
-<meta property="og:image" content="https://nejmanefertiti.com/fyc/img/hero.jpg">
-<meta property="og:url" content="https://nejmanefertiti.com/fyc/">
+<title>Nejma Nefertiti | Hip Hop &middot; Perfume &middot; Streetwear</title>
+<meta name="description" content="Nejma Nefertiti: Brooklyn Hip Hop artist, perfumer, and creative director. Music, House of Hatshepsut perfumery, Maroon Couture streetwear, gallery, events, and press.">
+<meta property="og:title" content="Nejma Nefertiti | Hip Hop &middot; Perfume &middot; Streetwear">
+<meta property="og:description" content="Brooklyn-based Hip Hop artist, recording engineer, and executive producer. Music, House of Hatshepsut perfumery, Maroon Couture streetwear, gallery, events, and press.">
+<meta property="og:image" content="hero.jpeg">
+<meta property="og:url" content="https://nejmanefertiti.com/">
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Nejma Nefertiti | Hip Hop &middot; Perfume &middot; Streetwear">
+<meta name="twitter:description" content="Brooklyn-based Hip Hop artist, recording engineer, and executive producer.">
+<meta name="twitter:image" content="hero.jpeg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
@@ -24,100 +26,388 @@
     --ink-dim:#9c9384;
     --gold:#c9a15a;
     --gold-bright:#e0bc7a;
+    --coral:#c1614f;
+    --oxblood:#6b1f24;
     --line:#2a2620;
   }
   *{box-sizing:border-box;margin:0;padding:0;}
   html{scroll-behavior:smooth;}
-  body{background:var(--bg);color:var(--ink);font-family:'General Sans',sans-serif;font-weight:300;overflow-x:hidden;line-height:1.6;}
+  body{
+    background:var(--bg);
+    color:var(--ink);
+    font-family:'General Sans',sans-serif;
+    font-weight:300;
+    overflow-x:hidden;
+  }
   ::selection{background:var(--gold);color:#0b0a08;}
+
+  h1,h2,h3{font-family:'Clash Display',sans-serif;font-weight:600;letter-spacing:-0.01em;text-transform:uppercase;}
+
+  .eyebrow{
+    font-family:'Space Mono',monospace;
+    font-size:.72rem;
+    letter-spacing:.28em;
+    text-transform:uppercase;
+    color:var(--gold);
+  }
+
   a{color:inherit;text-decoration:none;}
-  img{max-width:100%;display:block;}
-  h1,h2,h3{font-family:'Clash Display',sans-serif;font-weight:600;letter-spacing:-0.01em;text-transform:uppercase;line-height:1.05;}
-  .eyebrow{font-family:'Space Mono',monospace;font-size:.72rem;letter-spacing:.28em;text-transform:uppercase;color:var(--gold);}
-  .reg{font-size:.7em;vertical-align:.35em;letter-spacing:0;}
 
-  /* NAV */
-  nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;gap:20px;padding:16px 5vw;background:rgba(11,10,8,.8);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border-bottom:1px solid transparent;}
-  .nav-home{font-family:'Clash Display',sans-serif;font-weight:600;font-size:1rem;letter-spacing:.03em;text-transform:uppercase;white-space:nowrap;}
-  .nav-home:hover{color:var(--gold-bright);}
-  .nav-links{display:flex;gap:clamp(16px,3vw,36px);font-family:'Space Mono',monospace;font-size:.74rem;letter-spacing:.13em;text-transform:uppercase;}
-  .nav-links a{color:var(--ink-dim);padding-bottom:3px;border-bottom:1px solid transparent;transition:color .25s,border-color .25s;}
-  .nav-links a:hover{color:var(--gold-bright);border-color:var(--gold);}
-  @media (max-width:640px){.nav-links{display:none;}nav{justify-content:center;}}
+  /* ---------- NAV ---------- */
+  nav{
+    position:fixed;top:0;left:0;right:0;z-index:100;
+    display:flex;align-items:center;justify-content:center;
+    padding:18px 5vw;
+    background:rgba(11,10,8,.75);
+    -webkit-backdrop-filter:blur(10px);
+    backdrop-filter:blur(10px);
+  }
+  .nav-name{
+    font-family:'Clash Display',sans-serif;
+    font-weight:600;
+    font-size:1.05rem;
+    letter-spacing:.03em;
+    text-transform:uppercase;
+  }
+  .nav-links{
+    display:flex;gap:clamp(14px,2.4vw,40px);justify-content:center;width:100%;max-width:1300px;
+    font-family:'Space Mono',monospace;
+    font-size:.8rem;
+    letter-spacing:.13em;
+    text-transform:uppercase;
+    flex-wrap:nowrap;white-space:nowrap;
+  }
+  .nav-links a{
+    color:var(--ink-dim);
+    padding-bottom:4px;
+    border-bottom:1px solid transparent;
+    transition:color .25s ease, border-color .25s ease;
+  }
+  .nav-links a:hover, .nav-links a.active{
+    color:var(--gold-bright);
+    border-color:var(--gold);
+  }
+  .nav-toggle{display:none;background:none;border:none;color:var(--ink);font-size:1.4rem;cursor:pointer;position:absolute;right:5vw;}
 
-  /* HERO */
-  .hero{position:relative;min-height:92vh;display:flex;align-items:flex-end;justify-content:center;padding:120px 5vw 9vh;text-align:center;
-    background:linear-gradient(180deg,rgba(11,10,8,.35) 0%,rgba(11,10,8,.55) 55%,rgba(11,10,8,1) 100%),url('img/hero.jpg') center 35%/cover no-repeat;}
-  .hero-inner{max-width:760px;display:flex;flex-direction:column;align-items:center;}
-  .hero .eyebrow{color:var(--gold-bright);margin-bottom:18px;text-shadow:0 2px 16px rgba(0,0,0,.7);}
-  .hero h1{font-size:clamp(2.8rem,9vw,6rem);text-shadow:0 4px 30px rgba(0,0,0,.5);}
-  .hero-sub{margin-top:18px;color:var(--ink);opacity:.85;font-size:clamp(1rem,1.6vw,1.15rem);max-width:520px;}
-  .btn-row{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin-top:34px;}
-  .btn{font-family:'Space Mono',monospace;font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;padding:14px 26px;border:1px solid var(--gold);color:var(--gold-bright);transition:background .25s,color .25s;display:inline-block;}
+  @media (min-width:901px) and (max-width:1150px){
+    .nav-links{font-size:.7rem;letter-spacing:.07em;}
+  }
+  @media (max-width:900px){
+    .nav-links{
+      position:fixed;top:60px;left:0;right:0;
+      flex-direction:column;gap:0;
+      background:var(--bg);
+      max-height:0;overflow:hidden;
+      transition:max-height .35s ease;
+    }
+    .nav-links.open{max-height:80vh;overflow-y:auto;border-bottom:1px solid var(--line);}
+    .nav-links a{padding:14px 5vw;border-bottom:1px solid var(--line);width:100%;}
+    .nav-toggle{display:block;}
+  }
+
+  /* ---------- HERO ---------- */
+  .hero{
+    position:relative;
+    min-height:100vh;
+    display:flex;align-items:flex-end;justify-content:center;
+    padding:0 5vw 8vw;
+    background:
+      linear-gradient(180deg, rgba(11,10,8,.1) 0%, rgba(11,10,8,.5) 60%, rgba(11,10,8,1) 100%),
+      url('hero.jpeg') center 22%/cover no-repeat;
+  }
+  .hero-inner{max-width:640px;text-align:center;display:flex;flex-direction:column;align-items:center;}
+  .hero-campaign{text-align:center;display:flex;flex-direction:column;align-items:center;}
+  .hero-campaign .eyebrow{
+    color:var(--gold-bright);
+    text-shadow:0 2px 16px rgba(0,0,0,.7);
+    margin-bottom:10px;
+  }
+  .hero-campaign-title{
+    font-size:clamp(2.4rem,7vw,4.8rem);
+    color:var(--ink);
+    text-shadow:0 2px 24px rgba(0,0,0,.7);
+    margin-bottom:26px;
+    line-height:1;
+    word-spacing:.2em;
+  }
+  .hero-cta-row{
+    display:flex;align-items:center;gap:clamp(18px,3vw,36px);
+  }
+  .hero-cta-divider{
+    width:1px;height:38px;
+    background:linear-gradient(180deg, var(--gold-bright), var(--coral));
+  }
+  .hero-cta-btn{
+    display:flex;flex-direction:column;align-items:center;gap:4px;
+    text-align:center;
+  }
+  .hero-cta-btn .cta-title{
+    font-family:'Space Mono',monospace;
+    font-size:.85rem;
+    letter-spacing:.08em;
+    color:var(--gold-bright);
+    border-bottom:1px solid var(--gold);
+    padding-bottom:6px;
+    transition:color .25s ease;
+  }
+  .hero-cta-btn .cta-sub{
+    font-family:'Space Mono',monospace;
+    font-size:.62rem;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    color:var(--ink-dim);
+  }
+  .hero-cta-btn:hover .cta-title{color:var(--gold);}
+  .hero p{
+    font-size:clamp(1rem,1.6vw,1.2rem);
+    color:var(--ink-dim);
+    max-width:560px;
+    font-weight:300;
+    line-height:1.6;
+  }
+  .hero-cta{
+    margin-top:30px;
+    display:flex;gap:14px;flex-wrap:wrap;justify-content:center;
+  }
+  .btn{
+    font-family:'Space Mono',monospace;
+    font-size:.72rem;
+    letter-spacing:.16em;
+    text-transform:uppercase;
+    padding:14px 26px;
+    border:1px solid var(--gold);
+    color:var(--gold-bright);
+    transition:background .25s ease, color .25s ease;
+  }
   .btn:hover{background:var(--gold);color:#0b0a08;}
   .btn.solid{background:var(--gold);color:#0b0a08;}
   .btn.solid:hover{background:var(--gold-bright);}
 
-  /* JUMP MENU */
-  .jump{max-width:1100px;margin:0 auto;padding:0 5vw;display:flex;flex-wrap:wrap;gap:10px;justify-content:center;}
-  .jump a{font-family:'Space Mono',monospace;font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-dim);border:1px solid var(--line);padding:10px 16px;transition:.25s;}
-  .jump a:hover{color:var(--gold-bright);border-color:var(--gold);}
-
-  /* DIVIDER */
-  .divider{display:flex;align-items:center;justify-content:center;gap:16px;padding:64px 5vw 0;}
+  /* ---------- DIVIDER (signature motif) ---------- */
+  .divider{
+    display:flex;align-items:center;justify-content:center;
+    gap:16px;
+    padding:56px 5vw 0;
+  }
   .divider .rule{height:1px;flex:1;max-width:220px;background:var(--line);}
-  .divider svg{width:20px;height:20px;}
-
-  /* SECTIONS */
-  section{padding:64px 5vw 40px;max-width:1100px;margin:0 auto;scroll-margin-top:70px;}
-  .section-head{margin-bottom:40px;text-align:center;}
-  .section-head .eyebrow{display:block;margin-bottom:12px;}
-  .section-head h2{font-size:clamp(2rem,4.5vw,3rem);}
-  .section-head p{color:var(--ink-dim);margin:14px auto 0;max-width:560px;}
-
-  /* LISTEN */
-  .player{position:relative;width:100%;max-width:880px;margin:0 auto;aspect-ratio:16/9;border:1px solid var(--line);background:#000;}
-  .player iframe{position:absolute;inset:0;width:100%;height:100%;border:0;}
-  .center{text-align:center;}
-
-  /* ENTRIES */
-  .entries{display:flex;flex-direction:column;gap:28px;}
-  .entry{display:grid;grid-template-columns:minmax(0,340px) 1fr;gap:clamp(24px,4vw,48px);align-items:start;padding:clamp(22px,3vw,36px);background:var(--bg-raised);border:1px solid var(--line);scroll-margin-top:80px;}
-  .entry-art{position:relative;}
-  .entry-art img{width:100%;aspect-ratio:1/1;object-fit:cover;border:1px solid var(--line);}
-  .entry .eyebrow{display:block;margin-bottom:10px;}
-  .entry-group{display:flex;flex-direction:column;gap:clamp(22px,3vw,36px);padding:clamp(22px,3vw,36px);background:var(--bg-raised);border:1px solid var(--line);scroll-margin-top:80px;}
-  .entry-group .entry{padding:0;border:0;background:none;}
-  .entry-group .entry + .entry{padding-top:clamp(22px,3vw,36px);border-top:1px solid var(--line);}
-  .entry h3{font-size:clamp(1.7rem,3.4vw,2.5rem);}
-  .entry .ft{margin-top:10px;color:var(--ink);opacity:.85;font-size:1rem;}
-  .credits{margin-top:22px;border-top:1px solid var(--line);}
-  .credits div{display:grid;grid-template-columns:170px 1fr;gap:16px;padding:10px 0;border-bottom:1px solid var(--line);}
-  .credits dt{font-family:'Space Mono',monospace;font-size:.66rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-dim);padding-top:3px;}
-  .credits dd{font-size:.98rem;color:var(--ink);}
-  .listen-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px;}
-  .listen-row a{font-family:'Space Mono',monospace;font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--gold-bright);border:1px solid var(--gold);padding:11px 18px;transition:.25s;}
-  .listen-row a:hover{background:var(--gold);color:#0b0a08;}
-  @media (max-width:760px){
-    .entry{grid-template-columns:1fr;}
-    .entry-art{max-width:420px;}
-    .credits div{grid-template-columns:1fr;gap:2px;}
+  .divider .mark{
+    width:22px;height:22px;
+    color:var(--gold);
   }
 
-  /* BIO */
-  .bio{max-width:720px;margin:0 auto;text-align:center;}
-  .bio p{color:var(--ink-dim);font-size:1.05rem;line-height:1.85;}
+  /* ---------- SECTIONS ---------- */
+  section{
+    padding:70px 5vw 90px;
+    max-width:1280px;
+    margin:0 auto;
+    scroll-margin-top:80px;
+  }
+  .section-head{margin-bottom:44px;max-width:640px;}
+  .section-head .eyebrow{margin-bottom:12px;display:block;}
+  .section-head h2{font-size:clamp(2rem,4vw,3rem);}
+  .section-head p{color:var(--ink-dim);margin-top:14px;line-height:1.6;font-weight:300;}
 
-  /* CONTACT */
-  .contact-box{max-width:720px;margin:0 auto;border:1px solid var(--line);background:var(--bg-raised);padding:44px 5vw;text-align:center;}
-  .contact-box p{color:var(--ink-dim);margin-bottom:24px;}
+  /* Music */
+  .music-layout{
+    display:flex;gap:24px;align-items:stretch;
+  }
+  .music-art{
+    width:220px;height:220px;flex-shrink:0;
+    object-fit:cover;
+    border:1px solid var(--line);
+  }
+  .music-embed{
+    border:1px solid var(--line);
+    background:var(--bg-raised);
+    padding:4px;
+    flex:1;
+    display:flex;align-items:center;
+  }
+  .music-embed iframe{width:100%;display:block;border:0;}
+  @media (max-width:700px){
+    .music-layout{flex-direction:column;}
+    .music-art{width:100%;height:auto;aspect-ratio:1/1;}
+  }
+  .platform-row{
+    display:flex;flex-wrap:wrap;gap:12px;margin-top:24px;
+  }
+  .platform-row a{
+    font-family:'Space Mono',monospace;
+    font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;
+    color:var(--ink-dim);
+    border:1px solid var(--line);
+    padding:10px 18px;
+    transition:.25s;
+  }
+  .platform-row span{
+    font-family:'Space Mono',monospace;
+    font-size:.72rem;letter-spacing:.05em;text-transform:none;
+    color:var(--ink-dim);
+    border:1px solid var(--line);
+    padding:10px 18px;
+  }
+  .platform-row a:hover{color:var(--gold-bright);border-color:var(--gold);}
 
-  /* FOOTER */
-  footer{margin-top:64px;padding:48px 5vw 40px;border-top:1px solid var(--line);text-align:center;}
-  footer p{color:var(--ink-dim);font-size:.85rem;max-width:620px;margin:0 auto 14px;}
-  footer a{color:var(--gold-bright);border-bottom:1px solid var(--line);}
-  footer a:hover{border-color:var(--gold);}
-  footer .copy{font-family:'Space Mono',monospace;font-size:.7rem;letter-spacing:.05em;color:#5a5347;margin-top:22px;}
+  /* Bio */
+  .bio-grid{
+    display:grid;grid-template-columns:1.15fr .85fr;gap:60px;align-items:stretch;
+  }
+  @media (max-width:860px){.bio-grid{grid-template-columns:1fr;}}
+  @media (min-width:900px){
+    .hero{min-height:100vh;}
+  }
+  @media (max-width:600px){
+    .hero{align-items:flex-start;justify-content:center;padding-top:70vh;padding-bottom:0;}
+    nav{background:rgba(11,10,8,.75);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);}
+  }
+  .bio-grid img{width:100%;object-fit:cover;border:1px solid var(--line);}
+  .bio-grid p{line-height:1.8;color:var(--ink-dim);margin-bottom:20px;font-size:1.02rem;}
+  .bio-grid strong{color:var(--ink);font-weight:500;}
+  .bio-photo{
+    aspect-ratio:4/5;height:auto;
+    filter:grayscale(15%) contrast(1.05);
+    align-self:start;
+  }
+  .bio-more{
+    max-height:0;overflow:hidden;
+    transition:max-height .5s ease;
+  }
+  .bio-more.open{max-height:1200px;}
+  .bio-toggle{
+    font-family:'Space Mono',monospace;
+    font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;
+    color:var(--gold-bright);
+    background:none;border:none;border-bottom:1px solid var(--gold);
+    padding:0 0 4px;cursor:pointer;
+    transition:color .25s ease;
+  }
+  .bio-toggle:hover{color:var(--gold);}
+
+  /* Events */
+  .events-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fill,minmax(200px,1fr));
+    gap:18px;
+  }
+  .event-card img{
+    width:100%;aspect-ratio:4/5;object-fit:cover;
+    border:1px solid var(--line);
+  }
+  .event-card .eyebrow{margin-top:10px;display:block;font-size:.62rem;}
+  .event-info{
+    font-family:'Space Mono',monospace;
+    font-size:.68rem;
+    letter-spacing:.04em;
+    color:var(--ink-dim);
+    margin-top:10px;
+    display:block;
+    line-height:1.5;
+  }
+
+  /* Gallery */
+  .gallery-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fill,minmax(220px,1fr));
+    gap:6px;
+  }
+  .gallery-grid a{display:block;overflow:hidden;aspect-ratio:1/1;}
+  .gallery-grid img{
+    width:100%;height:100%;object-fit:cover;
+    filter:grayscale(35%);
+    transition:transform .5s ease, filter .5s ease;
+  }
+  .gallery-grid a:hover img{transform:scale(1.06);filter:grayscale(0%);}
+
+  /* Press */
+  .press-row{display:flex;flex-wrap:wrap;gap:14px;}
+  .press-row span, .press-row a{
+    font-family:'Space Mono',monospace;font-size:.78rem;
+    border:1px solid var(--line);padding:12px 18px;color:var(--ink-dim);
+  }
+  .press-row a{transition:color .25s ease, border-color .25s ease;display:inline-block;}
+  .press-row a:hover{color:var(--gold-bright);border-color:var(--gold);}
+
+  .quote-grid{
+    display:grid;grid-template-columns:1fr 1fr;
+    gap:36px 48px;
+    margin-top:48px;
+  }
+  @media (max-width:700px){.quote-grid{grid-template-columns:1fr;gap:32px;}}
+  .press-quote p{
+    font-family:'Clash Display',sans-serif;
+    font-weight:600;
+    font-size:1.15rem;
+    line-height:1.4;
+    color:var(--ink);
+    letter-spacing:-0.01em;
+  }
+  .press-quote .eyebrow{
+    display:block;
+    margin-top:12px;
+    font-size:.62rem;
+  }
+
+  /* Two-column feature (streetwear / perfume) */
+  .feature-grid{
+    display:grid;grid-template-columns:1fr 1fr;gap:60px;
+  }
+  @media (max-width:860px){.feature-grid{grid-template-columns:1fr;gap:40px;}}
+  .feature-card img{
+    width:100%;aspect-ratio:4/5;object-fit:cover;
+    filter:grayscale(15%) contrast(1.05);
+  }
+  .feature-card .eyebrow{margin-top:22px;display:block;}
+  .feature-card h3{font-size:1.6rem;margin-top:26px;letter-spacing:0.02em;word-spacing:0.15em;}
+  .feature-card p{color:var(--ink-dim);margin-top:10px;line-height:1.6;font-size:.95rem;}
+  .feature-card .btn{margin-top:18px;display:inline-block;}
+  .btn-row{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px;}
+  .btn-row .btn{margin-top:0;}
+
+  /* Contact */
+  .contact-box{
+    border:1px solid var(--line);
+    background:var(--bg-raised);
+    padding:48px 5vw;
+    text-align:center;
+  }
+  .email-link{
+    font-family:'Clash Display',sans-serif;
+    font-size:clamp(1.4rem,3.5vw,2.2rem);
+    text-transform:none;
+    color:var(--gold-bright);
+    display:inline-block;
+    margin-top:14px;
+    border-bottom:1px solid var(--gold);
+    padding-bottom:4px;
+    transition:color .25s ease;
+  }
+  .email-link:hover{color:var(--gold);}
+
+  /* Footer */
+  footer{
+    padding:60px 5vw 40px;
+    border-top:1px solid var(--line);
+    text-align:center;
+  }
+  .social-row{
+    display:flex;justify-content:center;gap:26px;flex-wrap:wrap;
+    font-family:'Space Mono',monospace;
+    font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;
+    margin-bottom:34px;
+  }
+  .social-row a{color:var(--ink-dim);border-bottom:1px solid transparent;padding-bottom:3px;}
+  .social-row a:hover{color:var(--gold-bright);border-color:var(--gold);}
+  footer .copy{color:#5a5347;font-size:.72rem;font-family:'Space Mono',monospace;letter-spacing:.05em;}
+
+  [data-reveal]{opacity:0;transform:translateY(24px);transition:opacity .7s ease, transform .7s ease;}
+  [data-reveal].in{opacity:1;transform:translateY(0);}
+
+  @media (prefers-reduced-motion: reduce){
+    [data-reveal]{opacity:1;transform:none;transition:none;}
+    html{scroll-behavior:auto;}
+  }
+
+  :focus-visible{outline:2px solid var(--gold-bright);outline-offset:3px;}
 
   /* Back to top */
   .to-top{
@@ -137,213 +427,366 @@
   .to-top svg path{fill:var(--gold);transition:fill .25s ease;}
   .to-top:hover svg path{fill:var(--bg);}
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MusicGroup",
+  "name": "Nejma Nefertiti",
+  "description": "Nejma Nefertiti is a Brooklyn-based Hip Hop artist, Emcee, recording engineer, and executive producer known for fierce delivery, multisyllabic rhyme, and vivid, cinematic imagery.",
+  "url": "https://nejmanefertiti.com/",
+  "image": "https://nejmanefertiti.com/hero.jpeg",
+  "genre": ["Hip Hop", "Boom Bap", "Lyrical Rap"],
+  "foundingLocation": {
+    "@type": "Place",
+    "name": "Brooklyn, New York, USA"
+  },
+  "member": {
+    "@type": "Person",
+    "name": "Nejma Nefertiti",
+    "jobTitle": "Hip Hop Emcee and Rapper"
+  },
+  "sameAs": [
+    "https://www.instagram.com/nejmanefertiti/",
+    "https://www.tiktok.com/@nejmanefertiti",
+    "https://www.facebook.com/nejmanefertiti",
+    "https://twitter.com/nejmanefertiti",
+    "https://nejmanefertiti.bandcamp.com/",
+    "https://soundcloud.com/nejmanefertiti",
+    "https://open.spotify.com/artist/1xPqTnYL7I4ZrXMnW8cGSv",
+    "https://music.apple.com/us/artist/nejma-nefertiti/1353037061",
+    "https://www.youtube.com/c/NejmaNefertiti"
+  ]
+}
+</script>
 </head>
 <body>
+<svg width="0" height="0" style="position:absolute">
+  <defs>
+    <linearGradient id="starGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#e0bc7a"/>
+      <stop offset="100%" stop-color="#c1614f"/>
+    </linearGradient>
+  </defs>
+</svg>
 
 <nav>
-  <a class="nav-home" href="https://nejmanefertiti.com/">Nejma Nefertiti</a>
+  <button class="nav-toggle" aria-label="Toggle menu" onclick="document.querySelector('.nav-links').classList.toggle('open')">&#9776;</button>
   <div class="nav-links">
-    <a href="#listen">Listen</a>
-    <a href="#entries">Entries</a>
+    <a href="#music">Music</a>
+    <a href="fyc/">FYC</a>
     <a href="#bio">Bio</a>
-    <a href="#contact">Contact</a>
+    <a href="#events">Events</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#press">Press</a>
+    <a href="https://app.amazecommerce.com/shop/maroon-couture" target="_blank" rel="noopener">Streetwear</a>
+    <a href="https://www.aliveshoes.com/liberte--3" target="_blank" rel="noopener">Sneakers</a>
+    <a href="perfume/">Perfume</a>
+    <a href="#contact">Book Now</a>
   </div>
 </nav>
 
 <!-- HERO -->
-<header class="hero">
-  <div class="hero-inner">
-    <span class="eyebrow">For Your GRAMMY<span class="reg">&reg;</span> Consideration</span>
-    <h1>Nejma Nefertiti</h1>
-    <p class="hero-sub">Brooklyn Hip Hop artist, recording engineer and executive producer.</p>
-    <div class="btn-row">
-      <a class="btn solid" href="#listen">Listen to all five</a>
-      <a class="btn" href="#entries">View entries</a>
-    </div>
+<header class="hero" id="top">
+  <div class="hero-campaign">
+    <h2 class="hero-campaign-title">Nejma Nefertiti</h2>
+    <a class="btn solid" href="https://www.youtube.com/watch?v=lno9CuAGpDM" target="_blank" rel="noopener">Watch Now</a>
   </div>
 </header>
 
-<div class="jump" role="navigation" aria-label="Jump to category" style="padding-top:36px;">
-  <a href="#best-rap-album">Best Rap Album</a>
-  <a href="#best-rap-song">Best Rap Song</a>
-  <a href="#best-rap-performance">Best Rap Performance</a>
-  <a href="#record-of-the-year">Record Of The Year</a>
+<div class="divider">
+  <div class="rule"></div>
+  <svg class="mark" viewBox="0 0 24 24" fill="none" stroke="none">
+    <path d="M12 3.5L21 20H3L12 3.5Z" fill="var(--gold)"/>
+  </svg>
+  <div class="rule"></div>
 </div>
 
-<div class="divider"><div class="rule"></div><svg viewBox="0 0 24 24"><path d="M12 3.5L21 20H3L12 3.5Z" fill="#c9a15a"/></svg><div class="rule"></div></div>
-
-<!-- LISTEN -->
-<section id="listen">
+<!-- MUSIC -->
+<section id="music" data-reveal>
   <div class="section-head">
     <span class="eyebrow">01 / Listen</span>
-    <h2>Listen</h2>
-    <p>All five entries in one playlist, including the full album.</p>
+    <h2>Music</h2>
   </div>
-  <div class="player">
-    <iframe src="https://www.youtube-nocookie.com/embed/videoseries?list=PLAUXEU-fSMzo" title="For Your GRAMMY Consideration playlist - Nejma Nefertiti" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  <div class="music-embed" style="max-width:600px;margin:0 auto;">
+      <iframe style="border-radius:0" src="https://open.spotify.com/embed/artist/1xPqTnYL7I4ZrXMnW8cGSv?utm_source=generator&theme=0" width="100%" height="352" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
   </div>
-  <div class="btn-row">
-    <a class="btn" href="https://www.youtube.com/playlist?list=PLAUXEU-fSMzo" target="_blank" rel="noopener">Open on YouTube</a>
-  </div>
-</section>
-
-<div class="divider"><div class="rule"></div><svg viewBox="0 0 24 24"><path d="M12 3.5L21 20H3L12 3.5Z" fill="#c9a15a"/></svg><div class="rule"></div></div>
-
-<!-- ENTRIES -->
-<section id="entries">
-  <div class="section-head">
-    <span class="eyebrow">02 / Entries</span>
-    <h2>Entries</h2>
-  </div>
-
-  <div class="entries">
-
-    <article class="entry" id="best-rap-album">
-      <div class="entry-art"><img src="img/method-to-my-madness.jpg" alt="Method To My Madness (M.T.M.M.) album cover" loading="lazy"></div>
-      <div>
-        <span class="eyebrow">Best Rap Album</span>
-        <h3>Method To My Madness (M.T.M.M.)</h3>
-        <p class="ft">ft. Destruct, Napoleon Da Legend, Magdalena Gomez, Kanya D&rsquo;Almeida, Shortie No Mass &amp; Pos (De La Soul)</p>
-        <dl class="credits">
-          <div><dt>Lyrics</dt><dd>Nejma Nefertiti and featured artists</dd></div>
-          <div><dt>Produced by</dt><dd>LuckCharmBeats</dd></div>
-          <div><dt>Executive producers</dt><dd>LuckCharmBeats &amp; Nejma Nefertiti</dd></div>
-          <div><dt>Lead vocals recorded</dt><dd>Nejma Nefertiti at Star Temple Studios</dd></div>
-          <div><dt>Mixed &amp; mastered</dt><dd>Jake Palumbo</dd></div>
-          <div><dt>Cuts</dt><dd>DJ Evil Dee</dd></div>
-        </dl>
-        <div class="listen-row">
-          <a href="https://open.spotify.com/album/4r2XWEcryFMt9o6f2czswv" target="_blank" rel="noopener">Spotify</a>
-          <a href="https://music.apple.com/us/album/method-to-my-madness-m-t-m-m/1879454190" target="_blank" rel="noopener">Apple Music</a>
-        </div>
-      </div>
-    </article>
-
-    <article class="entry" id="best-rap-song">
-      <div class="entry-art"><img src="img/bread-and-water.jpg" alt="Nejma Nefertiti holding a microphone toward the camera" loading="lazy"></div>
-      <div>
-        <span class="eyebrow">Best Rap Song</span>
-        <h3>Bread &amp; Water</h3>
-        <dl class="credits">
-          <div><dt>Lyrics</dt><dd>Nejma Nefertiti</dd></div>
-          <div><dt>Produced by</dt><dd>LuckCharmBeats</dd></div>
-          <div><dt>Executive producers</dt><dd>LuckCharmBeats &amp; Nejma Nefertiti</dd></div>
-          <div><dt>Recorded</dt><dd>Nejma Nefertiti at Star Temple Studios</dd></div>
-          <div><dt>Mixed &amp; mastered</dt><dd>Jake Palumbo</dd></div>
-          <div><dt>Cuts</dt><dd>DJ Evil Dee</dd></div>
-        </dl>
-        <div class="listen-row">
-          <a href="https://open.spotify.com/track/0TKc6WYf3OMzPiTfAzjVUD" target="_blank" rel="noopener">Spotify</a>
-          <a href="https://music.apple.com/us/song/bread-water/1879454191" target="_blank" rel="noopener">Apple Music</a>
-        </div>
-      </div>
-    </article>
-
-    <div class="entry-group" id="best-rap-performance">
-      <article class="entry" id="best-rap-performance-its-us">
-        <div class="entry-art"><img src="img/its-us.jpg" alt="Nejma Nefertiti and Napoleon Da Legend back to back under string lights" loading="lazy"></div>
-        <div>
-          <span class="eyebrow">Best Rap Performance (2 entries)</span>
-          <h3>It&rsquo;s Us</h3>
-          <p class="ft">ft. Napoleon Da Legend</p>
-          <dl class="credits">
-            <div><dt>Lyrics</dt><dd>Nejma Nefertiti &amp; Napoleon Da Legend</dd></div>
-            <div><dt>Produced by</dt><dd>LuckCharmBeats</dd></div>
-            <div><dt>Executive producers</dt><dd>LuckCharmBeats &amp; Nejma Nefertiti</dd></div>
-            <div><dt>Lead vocals recorded</dt><dd>Nejma Nefertiti at Star Temple Studios</dd></div>
-            <div><dt>Mixed &amp; mastered</dt><dd>Jake Palumbo</dd></div>
-          </dl>
-          <div class="listen-row">
-            <a href="https://open.spotify.com/track/5mVpgVg3qa3ypRTUMVrzfH" target="_blank" rel="noopener">Spotify</a>
-            <a href="https://music.apple.com/us/song/its-us-feat-napoleon-da-legend/1879454196" target="_blank" rel="noopener">Apple Music</a>
-          </div>
-        </div>
-      </article>
-
-      <article class="entry" id="best-rap-performance-pomegranate">
-        <div class="entry-art"><img src="img/pomegranate.jpg" alt="Pomegranate single cover" loading="lazy"></div>
-        <div>
-          <span class="eyebrow">Best Rap Performance</span>
-          <h3>Pomegranate</h3>
-          <dl class="credits">
-            <div><dt>Lyrics</dt><dd>Nejma Nefertiti</dd></div>
-            <div><dt>Beat produced by</dt><dd>DanoeBeatz</dd></div>
-            <div><dt>Executive producer</dt><dd>Nejma Nefertiti</dd></div>
-            <div><dt>Recorded</dt><dd>Nejma Nefertiti at Star Temple Studios</dd></div>
-            <div><dt>Mixed &amp; mastered</dt><dd>MR. Boda</dd></div>
-          </dl>
-          <div class="listen-row">
-            <a href="https://open.spotify.com/track/2iwATKxGKnm8Q0AIwIX1sw" target="_blank" rel="noopener">Spotify</a>
-            <a href="https://music.apple.com/us/album/pomegranate-single/1862756334" target="_blank" rel="noopener">Apple Music</a>
-          </div>
-        </div>
-      </article>
-    </div>
-
-    <article class="entry" id="record-of-the-year">
-      <div class="entry-art"><img src="img/goddess.jpg" alt="Nejma Nefertiti in purple sunglasses and an embroidered hat" loading="lazy"></div>
-      <div>
-        <span class="eyebrow">Record Of The Year</span>
-        <h3>Goddess</h3>
-        <p class="ft">ft. Shortie No Mass &amp; Pos (De La Soul)</p>
-        <dl class="credits">
-          <div><dt>Lyrics</dt><dd>Nejma Nefertiti, Shortie No Mass &amp; Pos</dd></div>
-          <div><dt>Produced by</dt><dd>LuckCharmBeats</dd></div>
-          <div><dt>Executive producers</dt><dd>LuckCharmBeats &amp; Nejma Nefertiti</dd></div>
-          <div><dt>Lead vocals recorded</dt><dd>Nejma Nefertiti at Star Temple Studios</dd></div>
-          <div><dt>Mixed &amp; mastered</dt><dd>Jake Palumbo</dd></div>
-          <div><dt>Cuts</dt><dd>DJ Evil Dee</dd></div>
-        </dl>
-        <div class="listen-row">
-          <a href="https://open.spotify.com/track/2o1Rp4wtuQwbvKKw9vE8rH" target="_blank" rel="noopener">Spotify</a>
-          <a href="https://music.apple.com/us/song/goddess-feat-pos-shortie-no-mass/1879454205" target="_blank" rel="noopener">Apple Music</a>
-          <a href="https://www.youtube.com/watch?v=lno9CuAGpDM" target="_blank" rel="noopener">Animated Video</a>
-        </div>
-      </div>
-    </article>
-
+  <div class="platform-row" style="justify-content:center;">
+    <a href="https://open.spotify.com/artist/1xPqTnYL7I4ZrXMnW8cGSv" target="_blank" rel="noopener">Spotify</a>
+    <a href="https://nejmanefertiti.bandcamp.com/" target="_blank" rel="noopener">Bandcamp</a>
+    <a href="https://soundcloud.com/nejmanefertiti" target="_blank" rel="noopener">SoundCloud</a>
+    <a href="https://music.apple.com/us/artist/nejma-nefertiti/1353037061" target="_blank" rel="noopener">Apple Music</a>
+    <a href="https://tidal.com/browse/artist/9589639" target="_blank" rel="noopener">Tidal</a>
+    <a href="https://www.youtube.com/c/NejmaNefertiti" target="_blank" rel="noopener">YouTube</a>
   </div>
 </section>
 
-<div class="divider"><div class="rule"></div><svg viewBox="0 0 24 24"><path d="M12 3.5L21 20H3L12 3.5Z" fill="#c9a15a"/></svg><div class="rule"></div></div>
+<div class="divider">
+  <div class="rule"></div>
+  <svg class="mark" viewBox="0 0 24 24" fill="none" stroke="none">
+    <path d="M12 3.5L21 20H3L12 3.5Z" fill="var(--gold)"/>
+  </svg>
+  <div class="rule"></div>
+</div>
 
 <!-- BIO -->
-<section id="bio">
-  <div class="section-head">
-    <span class="eyebrow">03 / Bio</span>
-    <h2>Bio</h2>
-  </div>
-  <div class="bio">
-    <p>Hailing from Brooklyn, New York, Nejma Nefertiti is a Hip Hop artist, recording engineer and executive producer whose work blends her Iranian, North African and Indigenous American roots. Known for her fierce delivery, vivid imagery, intricate wordplay and layered storytelling, she was one of 12 winners of The Saga Continues Contest, created by Sway and RZA of Wu-Tang Clan. Her video for &ldquo;Soul Ties&rdquo; won Best International Hip Hop Music Video at the Golden Sneakers International Hip Hop Film Festival in London. She independently writes, records and executive produces her own music.</p>
+<section id="bio" data-reveal>
+  <div class="bio-grid">
+    <div>
+      <span class="eyebrow">02 / Bio</span>
+      <h2 style="margin:12px 0 26px;font-size:clamp(2rem,4vw,2.8rem);">Bio</h2>
+      <p>Nejma Nefertiti has carved her place as one of Brooklyn's most formidable voices in Hip Hop, a lyricist known for fierce delivery, intricate wordplay, layered storytelling, and vivid, cinematic imagery. She was one of 12 winners of The Saga Continues Contest, created by Sway and RZA of Wu-Tang Clan, and her flow has been described as "grimy and captivating," with critics praising her razor-sharp bars and next-level command of the mic.</p>
+      <div class="bio-more" id="bioMore">
+        <p>She's traded verses with French Hip Hop legend Akhenaton on a Nicholas Craven production, appeared as a feature for Beat Junkies' DJ Rhettmatic, recorded a full album with Harlem producer Big French, and continues to add to an extensive catalog of collaborative releases with Napoleon Da Legend. In 2024, she took home Best International Hip Hop Music Video at the Golden Sneakers International Hip Hop Film Festival in London for "Soul Ties."</p>
+        <p>She has built a discography of albums, EPs, and singles, including Letters From The Akashic, The Valley of the Queens, and the Jayne Wayne trilogy, showcasing her range as a writer, vocalist, and executive producer. She continues to expand her discography with tracks like "Goddess," off her LP Method To My Madness, featuring De La Soul's Pos, rap veteran Shortie No Mass, and DJ Evil Dee.</p>
+      </div>
+      <button class="bio-toggle" id="bioToggle" aria-expanded="false" aria-controls="bioMore">Read More</button>
+    </div>
+    <img class="bio-photo" src="gallery-12.jpeg" alt="Nejma Nefertiti portrait wearing a Palestinian flag zip-up hoodie, holding a red microphone" loading="lazy">
   </div>
 </section>
+
+<div class="divider">
+  <div class="rule"></div>
+  <svg class="mark" viewBox="0 0 24 24" fill="none" stroke="none">
+    <path d="M12 3.5L21 20H3L12 3.5Z" fill="var(--gold)"/>
+  </svg>
+  <div class="rule"></div>
+</div>
+
+<!-- EVENTS -->
+<section id="events" data-reveal>
+  <div class="section-head">
+    <span class="eyebrow">03 / Live</span>
+    <h2>Events</h2>
+  </div>
+  <div class="events-grid">
+    <div class="event-card">
+      <img loading="lazy" src="event-01.jpeg" alt="Nejma Nefertiti event flyer, Savoir Faire exclusive listening event">
+      <span class="event-info">Tue, Apr 21, 2026 · Le Red Room, Montreal · Free</span>
+    </div>
+    <div class="event-card">
+      <img loading="lazy" src="event-02.jpeg" alt="Nejma Nefertiti event flyer, Classic Storm Radio 18 Year Anniversary show">
+      <span class="event-info">Sat, Dec 20, 2025 · Berlin, New York, NY · $20 advance, 21+</span>
+    </div>
+    <div class="event-card">
+      <img loading="lazy" src="event-03.jpeg" alt="Nejma Nefertiti event flyer, BIG BAR vinyl listening party">
+      <span class="event-info">Nov 22, 2025 · BIG Bar, New York, NY</span>
+    </div>
+    <div class="event-card">
+      <img loading="lazy" src="event-04.jpeg" alt="Nejma Nefertiti event flyer, Bierwax vinyl listening party">
+      <span class="event-info">Nov 15, 2025 · Bierwax, Brooklyn, NY</span>
+    </div>
+    <div class="event-card">
+      <img loading="lazy" src="event-05.jpeg" alt="Nejma Nefertiti event flyer, Final Friday Slam">
+      <span class="event-info">Fri, Oct 31, 2025 · Final Friday Slam, New York, NY · $35</span>
+    </div>
+  </div>
+</section>
+
+<div class="divider">
+  <div class="rule"></div>
+  <svg class="mark" viewBox="0 0 24 24" fill="none" stroke="none">
+    <path d="M12 3.5L21 20H3L12 3.5Z" fill="var(--gold)"/>
+  </svg>
+  <div class="rule"></div>
+</div>
+
+<!-- GALLERY -->
+<section id="gallery" data-reveal>
+  <div class="section-head">
+    <span class="eyebrow">04 / Gallery</span>
+    <h2>Gallery</h2>
+  </div>
+  <div class="gallery-grid">
+    <a href="gallery-01.jpeg" target="_blank" rel="noopener"><img loading="eager" src="gallery-01.jpeg" alt="Nejma Nefertiti performing live with microphone in hand"></a>
+    <a href="gallery-02.jpeg" target="_blank" rel="noopener"><img loading="eager" src="gallery-02.jpeg" alt="Nejma Nefertiti holding a Palestinian flag while performing on stage"></a>
+    <a href="gallery-04.jpeg" target="_blank" rel="noopener"><img loading="eager" src="gallery-04.jpeg" alt="Nejma Nefertiti performing in a tan bucket hat with arm raised"></a>
+    <a href="gallery-14.jpeg" target="_blank" rel="noopener"><img loading="eager" src="gallery-14.jpeg" alt="Nejma Nefertiti performing under orange stage lighting with arm raised"></a>
+    <a href="gallery-15.jpeg" target="_blank" rel="noopener"><img loading="eager" src="gallery-15.jpeg" alt="Nejma Nefertiti seated on stage performing in smoky purple lighting"></a>
+    <a href="gallery-16.jpeg" target="_blank" rel="noopener"><img loading="eager" src="gallery-16.jpeg" alt="Close-up of Nejma Nefertiti removing her glasses"></a>
+    <a href="gallery-17.jpeg" target="_blank" rel="noopener"><img loading="eager" src="gallery-17.jpeg" alt="Nejma Nefertiti performing in a gold and black patterned outfit under string lights"></a>
+    <a href="gallery-26.jpeg" target="_blank" rel="noopener"><img loading="eager" src="gallery-26.jpeg" alt="Close-up of Nejma Nefertiti wearing gold bangles and rings"></a>
+    <a href="gallery-27.jpeg" target="_blank" rel="noopener"><img loading="eager" src="gallery-27.jpeg" alt="Nejma Nefertiti performing in front of an SOB's venue backdrop"></a>
+    <a href="gallery-19.jpeg" target="_blank" rel="noopener"><img loading="eager" src="gallery-19.jpeg" alt="Nejma Nefertiti singing intensely in a denim jacket"></a>
+    <a href="gallery-20.jpeg" target="_blank" rel="noopener"><img loading="eager" src="gallery-20.jpeg" alt="Nejma Nefertiti performing with fist raised, wearing a teal outfit and embroidered headband"></a>
+    <a href="gallery-21.jpeg" target="_blank" rel="noopener"><img loading="eager" src="gallery-21.jpeg" alt="Nejma Nefertiti performing on stage in front of a graffiti wall"></a>
+    <a href="gallery-22.jpeg" target="_blank" rel="noopener"><img loading="eager" src="gallery-22.jpeg" alt="Nejma Nefertiti with face covered by a checkered scarf, graffiti wall backdrop"></a>
+    <a href="gallery-23.jpeg" target="_blank" rel="noopener"><img loading="eager" src="gallery-23.jpeg" alt="Black-and-white studio portrait of Nejma Nefertiti seated in a leather armchair"></a>
+    <a href="gallery-24.jpeg" target="_blank" rel="noopener"><img loading="eager" src="gallery-24.jpeg" alt="Close-up portrait of Nejma Nefertiti with wind-blown hair"></a>
+    <a href="gallery-25.jpeg" target="_blank" rel="noopener"><img loading="eager" src="gallery-25.jpeg" alt="Silhouette of Nejma Nefertiti in a recording studio booth"></a>
+  </div>
+</section>
+
+<div class="divider">
+  <div class="rule"></div>
+  <svg class="mark" viewBox="0 0 24 24" fill="none" stroke="none">
+    <path d="M12 3.5L21 20H3L12 3.5Z" fill="var(--gold)"/>
+  </svg>
+  <div class="rule"></div>
+</div>
+
+<!-- PRESS -->
+<section id="press" data-reveal>
+  <div class="section-head">
+    <span class="eyebrow">05 / Press</span>
+    <h2>Featured On</h2>
+  </div>
+  <div class="press-row">
+    <a href="https://www.instagram.com/reel/C1dRGEZLrb6/" target="_blank" rel="noopener">Rap Is Outta Control</a>
+    <a href="https://www.instagram.com/reel/Cuf0LegRXiv/" target="_blank" rel="noopener">Sway's Universe</a>
+    <a href="https://www.instagram.com/reel/C-5auHTRFj4/" target="_blank" rel="noopener">The Punchline Academy</a>
+  </div>
+
+  <div class="quote-grid">
+    <div class="press-quote">
+      <p>"Regardless what people think, there's still some real spitters out there."</p>
+      <span class="eyebrow">Rock The Bells</span>
+    </div>
+    <div class="press-quote">
+      <p>"Nejma Nefertiti delivers scorching bars..."</p>
+      <span class="eyebrow">Karas Lamb, Okayplayer</span>
+    </div>
+    <div class="press-quote">
+      <p>"Hip Hop's regal rhyme ripper."</p>
+      <span class="eyebrow">Insomniac Magazine</span>
+    </div>
+    <div class="press-quote">
+      <p>"Nejma Nefertiti's music transcends boundaries, reflecting her rich multicultural background."</p>
+      <span class="eyebrow">The Rap Pulse</span>
+    </div>
+  </div>
+
+  <div style="margin-top:48px;">
+    <span class="eyebrow">Flowers &amp; Respect</span>
+    <div class="press-row" style="margin-top:16px;">
+      <a href="https://www.instagram.com/reel/DJdQ0OdNSbx/" target="_blank" rel="noopener">Kurtis Blow</a>
+      <a href="https://www.facebook.com/queennejmanefertiti/videos/dj-premier-spinning-that-encrypted-wisdom-by-napoleon-da-legend-ft-nejma-neferti/424057415018592/" target="_blank" rel="noopener">DJ Premier</a>
+      <a href="https://www.instagram.com/reel/DVeOAYBDpRs/" target="_blank" rel="noopener">DJ Evil Dee</a>
+      <a href="https://www.instagram.com/reel/C7hyxebPclt/" target="_blank" rel="noopener">Sway &amp; RZA</a>
+    </div>
+  </div>
+</section>
+
+<div class="divider">
+  <div class="rule"></div>
+  <svg class="mark" viewBox="0 0 24 24" fill="none" stroke="none">
+    <path d="M12 3.5L21 20H3L12 3.5Z" fill="var(--gold)"/>
+  </svg>
+  <div class="rule"></div>
+</div>
 
 <!-- CONTACT -->
-<section id="contact">
-  <div class="contact-box">
-    <span class="eyebrow" style="display:block;margin-bottom:12px;">04 / Contact</span>
-    <h2 style="font-size:clamp(1.8rem,4vw,2.6rem);margin-bottom:16px;">Contact</h2>
-    <p>For press, bookings and campaign inquiries.</p>
-    <a class="btn solid" href="mailto:startemplebooking@gmail.com">startemplebooking@gmail.com</a>
+<section id="contact" data-reveal>
+  <div class="section-head">
+    <span class="eyebrow">06 / Contact</span>
+    <h2>Bookings &amp; Inquiries</h2>
+  </div>
+  <div style="text-align:center;">
+    <a class="email-link" href="mailto:startemplebooking@gmail.com">startemplebooking@gmail.com</a>
   </div>
 </section>
 
+<div class="divider">
+  <div class="rule"></div>
+  <svg class="mark" viewBox="0 0 24 24" fill="none" stroke="none">
+    <path d="M12 3.5L21 20H3L12 3.5Z" fill="var(--gold)"/>
+  </svg>
+  <div class="rule"></div>
+</div>
+
+<!-- TIP JAR -->
+<section data-reveal>
+  <div class="section-head" style="text-align:center;max-width:none;margin-left:auto;margin-right:auto;">
+    <span class="eyebrow">07 / Support the Art</span>
+    <h2>Tip Jar</h2>
+  </div>
+  <div style="text-align:center;">
+    <div class="platform-row" style="justify-content:center;">
+      <a href="https://cash.app/$StarTempleStudios" target="_blank" rel="noopener">Cash App</a>
+      <a href="https://paypal.me/NejmaNefertiti555" target="_blank" rel="noopener">PayPal</a>
+    </div>
+    <div style="margin-top:28px;">
+      <span class="eyebrow" style="display:block;margin-bottom:12px;">Bitcoin</span>
+      <img src="https://api.qrserver.com/v1/create-qr-code/?size=160x160&bgcolor=ece4d3&color=0b0a08&data=bitcoin:bc1qkq4l79m0j6ft55uv2c5fuwxmzpg2g3unt0xe9u" alt="Bitcoin address QR code" width="160" height="160" style="border:1px solid var(--line);" loading="lazy">
+      <div style="margin-top:10px;font-family:'Space Mono',monospace;font-size:.65rem;color:var(--ink-dim);word-break:break-all;max-width:280px;margin-left:auto;margin-right:auto;">bc1qkq4l79m0j6ft55uv2c5fuwxmzpg2g3unt0xe9u</div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
 <footer>
-  <p>View the Recording Academy&rsquo;s <a href="https://www.grammy.com/awards/voting-and-solicitation-guidelines" target="_blank" rel="noopener">Voting and Solicitation Guidelines</a>.</p>
-  <p>Prefer not to receive FYC messages? Email <a href="mailto:startemplebooking@gmail.com?subject=Opt%20out">startemplebooking@gmail.com</a> with the subject &ldquo;Opt out&rdquo; and you&rsquo;ll be removed from all FYC outreach.</p>
-  <p class="copy">&copy; Star Temple Studios LLC. All rights reserved.</p>
+  <div class="social-row">
+    <a href="https://www.instagram.com/nejmanefertiti/" target="_blank" rel="noopener">Instagram</a>
+    <a href="https://www.tiktok.com/@nejmanefertiti" target="_blank" rel="noopener">TikTok</a>
+    <a href="https://www.facebook.com/nejmanefertiti" target="_blank" rel="noopener">Facebook</a>
+    <a href="https://twitter.com/nejmanefertiti" target="_blank" rel="noopener">X</a>
+    <a href="https://nejmanefertiti.bandcamp.com/follow_me" target="_blank" rel="noopener">Bandcamp</a>
+    <a href="https://soundcloud.com/nejmanefertiti" target="_blank" rel="noopener">SoundCloud</a>
+    <a href="https://open.spotify.com/artist/1xPqTnYL7I4ZrXMnW8cGSv" target="_blank" rel="noopener">Spotify</a>
+    <a href="https://music.apple.com/us/artist/nejma-nefertiti/1353037061" target="_blank" rel="noopener">Apple Music</a>
+    <a href="https://www.youtube.com/c/NejmaNefertiti" target="_blank" rel="noopener">YouTube</a>
+  </div>
+  <p class="copy">&copy; 2026 Star Temple Studios LLC. All rights reserved.</p>
 </footer>
 
 <button class="to-top" id="toTop" aria-label="Back to top"><svg viewBox="0 0 24 24"><path d="M12 3.5L21 20H3L12 3.5Z"/></svg></button>
+
 <script>
-  (function(){
-    var toTop=document.getElementById('toTop');
-    if(!toTop) return;
-    function toggleTop(){ toTop.classList.toggle('show', window.scrollY > 700); }
+  // scroll reveal
+  const revealEls = document.querySelectorAll('[data-reveal]');
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, {threshold:.12});
+  revealEls.forEach(el=>io.observe(el));
+
+  // back to top button
+  const toTop = document.getElementById('toTop');
+  if(toTop){
+    const toggleTop = ()=>{ toTop.classList.toggle('show', window.scrollY > 700); };
     window.addEventListener('scroll', toggleTop, {passive:true});
     toggleTop();
-    toTop.addEventListener('click', function(){ window.scrollTo({top:0, behavior:'smooth'}); });
-  })();
+    toTop.addEventListener('click', ()=>window.scrollTo({top:0, behavior:'smooth'}));
+  }
+
+  // active nav link on scroll
+  const links = document.querySelectorAll('.nav-links a');
+  const sections = Array.from(links).filter(l=>l.getAttribute('href').startsWith('#')).map(l=>document.querySelector(l.getAttribute('href'))).filter(Boolean);
+  const navIo = new IntersectionObserver((entries)=>{
+    entries.forEach(entry=>{
+      const id = '#' + entry.target.id;
+      const link = document.querySelector(`.nav-links a[href="${id}"]`);
+      if(!link) return;
+      if(entry.isIntersecting){
+        links.forEach(l=>l.classList.remove('active'));
+        link.classList.add('active');
+      }
+    });
+  }, {rootMargin:'-45% 0px -45% 0px'});
+  sections.forEach(s=>navIo.observe(s));
+
+  // close mobile menu on link click
+  links.forEach(l=>l.addEventListener('click', ()=>document.querySelector('.nav-links').classList.remove('open')));
+
+  // instantly reveal the target section when jumping via nav (no fade-in wait)
+  links.forEach(l=>{
+    l.addEventListener('click', ()=>{
+      const href = l.getAttribute('href');
+      if(!href.startsWith('#')) return;
+      const target = document.querySelector(href);
+      if(target){ target.classList.add('in'); io.unobserve(target); }
+    });
+  });
+
+  // bio read more toggle
+  const bioToggle = document.getElementById('bioToggle');
+  const bioMore = document.getElementById('bioMore');
+  if(bioToggle && bioMore){
+    bioToggle.addEventListener('click', ()=>{
+      const isOpen = bioMore.classList.toggle('open');
+      bioToggle.textContent = isOpen ? 'Read Less' : 'Read More';
+      bioToggle.setAttribute('aria-expanded', isOpen);
+    });
+  }
 </script>
 
 </body>
