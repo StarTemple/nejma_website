@@ -405,6 +405,24 @@
   }
 
   :focus-visible{outline:2px solid var(--gold-bright);outline-offset:3px;}
+
+  /* Back to top */
+  .to-top{
+    position:fixed;right:22px;bottom:22px;z-index:60;
+    width:46px;height:46px;
+    display:flex;align-items:center;justify-content:center;
+    background:rgba(11,10,8,.88);
+    border:1px solid var(--gold);
+    cursor:pointer;
+    opacity:0;pointer-events:none;
+    transform:translateY(8px);
+    transition:opacity .3s ease, transform .3s ease, background .25s ease;
+  }
+  .to-top.show{opacity:1;pointer-events:auto;transform:translateY(0);}
+  .to-top:hover{background:var(--gold);}
+  .to-top svg{width:16px;height:16px;}
+  .to-top svg path{fill:var(--gold);transition:fill .25s ease;}
+  .to-top:hover svg path{fill:var(--bg);}
 </style>
 <script type="application/ld+json">
 {
@@ -559,6 +577,9 @@
       <span class="event-info">Fri, Oct 31, 2025 · Final Friday Slam, New York, NY · $35</span>
     </div>
   </div>
+  <div style="margin-top:26px;">
+    <a class="btn" href="https://www.reverbnation.com/page_object/page_object_photos/artist_248784" target="_blank" rel="noopener">Events archive</a>
+  </div>
 </section>
 
 <div class="divider">
@@ -612,7 +633,7 @@
   <div class="press-row">
     <a href="https://www.instagram.com/reel/C1dRGEZLrb6/" target="_blank" rel="noopener">Rap Is Outta Control</a>
     <a href="https://www.instagram.com/reel/Cuf0LegRXiv/" target="_blank" rel="noopener">Sway's Universe</a>
-    <a href="https://www.instagram.com/reel/DEP2ix4Rg3G/" target="_blank" rel="noopener">The Punchline Academy</a>
+    <a href="https://www.instagram.com/reel/C-5auHTRFj4/" target="_blank" rel="noopener">The Punchline Academy</a>
   </div>
 
   <div class="quote-grid">
@@ -642,6 +663,10 @@
       <a href="https://www.instagram.com/reel/DVeOAYBDpRs/" target="_blank" rel="noopener">DJ Evil Dee</a>
       <a href="https://www.instagram.com/reel/C7hyxebPclt/" target="_blank" rel="noopener">Sway &amp; RZA</a>
     </div>
+  </div>
+
+  <div style="margin-top:64px;">
+    <a class="btn" href="https://www.reverbnation.com/nejmanefertiti/press" target="_blank" rel="noopener">Press archive</a>
   </div>
 </section>
 
@@ -673,7 +698,7 @@
       <img src="perfume.jpeg" alt="House of Hatshepsut perfume" loading="lazy">
       <h3>House of Hatshepsut</h3>
       <p>Natural luxury perfume, hand-blended in small batches.</p>
-      <a class="btn" href="https://www.etsy.com/shop/TEMPLEofNEJ" target="_blank" rel="noopener">Shop the collection</a>
+      <a class="btn" href="perfume/">Shop the collection</a>
     </div>
   </div>
 </section>
@@ -740,6 +765,8 @@
   <p class="copy">&copy; 2026 Star Temple Studios LLC. All rights reserved.</p>
 </footer>
 
+<button class="to-top" id="toTop" aria-label="Back to top"><svg viewBox="0 0 24 24"><path d="M12 3.5L21 20H3L12 3.5Z"/></svg></button>
+
 <script>
   // scroll reveal
   const revealEls = document.querySelectorAll('[data-reveal]');
@@ -747,6 +774,15 @@
     entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
   }, {threshold:.12});
   revealEls.forEach(el=>io.observe(el));
+
+  // back to top button
+  const toTop = document.getElementById('toTop');
+  if(toTop){
+    const toggleTop = ()=>{ toTop.classList.toggle('show', window.scrollY > 700); };
+    window.addEventListener('scroll', toggleTop, {passive:true});
+    toggleTop();
+    toTop.addEventListener('click', ()=>window.scrollTo({top:0, behavior:'smooth'}));
+  }
 
   // active nav link on scroll
   const links = document.querySelectorAll('.nav-links a');
