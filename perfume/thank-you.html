@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Order Received | House of Hatshepsut</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=clash-display@400,500,600,700&f[]=general-sans@400,500,600&display=swap">
+<style>
+  :root{
+    --bg:#0b0a08; --bg-raised:#131110; --ink:#ece4d3; --ink-dim:#9c9384;
+    --gold:#c9a15a; --gold-bright:#e0bc7a; --line:#2a2620;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{
+    background:var(--bg);color:var(--ink);font-family:'General Sans',sans-serif;
+    min-height:100vh;display:flex;align-items:center;justify-content:center;
+    padding:60px 5vw;
+  }
+  h1,h2,h3{font-family:'Clash Display',sans-serif;font-weight:600;}
+  a{color:inherit;}
+  .card{max-width:560px;width:100%;text-align:center;}
+  .eyebrow{
+    font-family:'Space Mono',monospace;font-size:.7rem;letter-spacing:.18em;
+    text-transform:uppercase;color:var(--gold);display:block;margin-bottom:16px;
+  }
+  h1{font-size:clamp(2rem,5vw,2.8rem);}
+  .sub{color:var(--ink-dim);margin-top:16px;line-height:1.7;}
+  .order-summary{
+    margin-top:34px;border:1px solid var(--line);background:var(--bg-raised);
+    padding:30px;text-align:left;
+  }
+  .order-summary .row{display:flex;justify-content:space-between;padding:8px 0;font-size:.92rem;}
+  .order-summary .row + .row{border-top:1px solid var(--line);}
+  .order-summary .row span:first-child{color:var(--ink-dim);}
+  .order-summary .total-row{margin-top:10px;padding-top:14px;border-top:1px solid var(--gold);}
+  .order-summary .total-row span{font-family:'Clash Display',sans-serif;font-size:1.3rem;color:var(--gold-bright);}
+  .pay-cta{margin-top:30px;}
+  .btn{
+    display:inline-block;font-family:'Space Mono',monospace;font-size:.72rem;letter-spacing:.1em;
+    text-transform:uppercase;color:var(--bg);background:var(--gold);border:1px solid var(--gold);
+    padding:14px 28px;margin-top:8px;
+  }
+  .btn:hover{background:var(--gold-bright);border-color:var(--gold-bright);}
+  .fallback-note{color:var(--ink-dim);font-size:.85rem;margin-top:30px;line-height:1.7;}
+  .back-link{
+    display:inline-block;margin-top:34px;font-family:'Space Mono',monospace;font-size:.7rem;
+    letter-spacing:.1em;text-transform:uppercase;color:var(--ink-dim);border-bottom:1px solid var(--line);
+  }
+  .back-link:hover{color:var(--gold-bright);border-color:var(--gold);}
+</style>
+</head>
+<body>
+
+<div class="card">
+  <span class="eyebrow">House of Hatshepsut</span>
+  <h1>Order Received</h1>
+  <p class="sub">Your order details were sent straight to Nejma. Once payment is received, your bottle is hand-blended, labeled, and shipped with care.</p>
+
+  <div id="summaryBox" class="order-summary" hidden>
+    <div class="row"><span>Scent</span><span id="sumScent">&mdash;</span></div>
+    <div class="row"><span>Format</span><span id="sumFormat">&mdash;</span></div>
+    <div class="row"><span>Quantity</span><span id="sumQty">&mdash;</span></div>
+    <div class="row total-row"><span>Total</span><span id="sumTotal">&mdash;</span></div>
+  </div>
+
+  <div id="payCta" class="pay-cta" hidden>
+    <p class="sub">Complete payment via <strong id="sumMethod" style="color:var(--gold-bright);"></strong>:</p>
+    <a class="btn" id="payLink" href="#" target="_blank" rel="noopener">Pay Now</a>
+  </div>
+
+  <p id="fallbackNote" class="fallback-note" hidden>If you haven't paid yet, use the payment method you selected at checkout &mdash; PayPal (paypal.me/NejmaNefertiti555), Cash App ($StarTempleStudios), Zelle (nejmanefertiti@gmail.com), or Bitcoin. Questions? Email <a href="mailto:nejmanefertiti@gmail.com" style="border-bottom:1px solid var(--gold);">nejmanefertiti@gmail.com</a>.</p>
+
+  <a class="back-link" href="index.html">&larr; Back to House of Hatshepsut</a>
+</div>
+
+<script>
+  try{
+    const raw = sessionStorage.getItem('hoh_order');
+    if(raw){
+      const o = JSON.parse(raw);
+      document.getElementById('sumScent').textContent = o.scent || '-';
+      document.getElementById('sumFormat').textContent = o.format || '-';
+      document.getElementById('sumQty').textContent = o.qty || '-';
+      document.getElementById('sumTotal').textContent = '$' + (o.total || '-');
+      document.getElementById('summaryBox').hidden = false;
+
+      const method = o.method || 'PayPal';
+      const total = o.total || 0;
+      let url = null, label = method;
+      if(method === 'PayPal'){ url = 'https://paypal.me/NejmaNefertiti555/' + total + 'USD'; }
+      else if(method === 'Cash App'){ url = 'https://cash.app/$StarTempleStudios/' + total; }
+
+      if(url){
+        document.getElementById('sumMethod').textContent = method;
+        document.getElementById('payLink').href = url;
+        document.getElementById('payCta').hidden = false;
+      } else {
+        document.getElementById('fallbackNote').hidden = false;
+      }
+      sessionStorage.removeItem('hoh_order');
+    } else {
+      document.getElementById('fallbackNote').hidden = false;
+    }
+  }catch(e){
+    document.getElementById('fallbackNote').hidden = false;
+  }
+</script>
+
+</body>
+</html>
