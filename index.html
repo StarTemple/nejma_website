@@ -70,12 +70,12 @@
     text-transform:uppercase;
   }
   .nav-links{
-    display:flex;gap:clamp(20px,4vw,48px);justify-content:center;width:100%;max-width:900px;
+    display:flex;gap:clamp(14px,2.4vw,40px);justify-content:center;width:100%;max-width:1300px;
     font-family:'Space Mono',monospace;
     font-size:.8rem;
     letter-spacing:.13em;
     text-transform:uppercase;
-    flex-wrap:wrap;
+    flex-wrap:nowrap;white-space:nowrap;
   }
   .nav-links a{
     color:var(--ink-dim);
@@ -89,6 +89,9 @@
   }
   .nav-toggle{display:none;background:none;border:none;color:var(--ink);font-size:1.4rem;cursor:pointer;position:absolute;right:5vw;}
 
+  @media (min-width:901px) and (max-width:1150px){
+    .nav-links{font-size:.7rem;letter-spacing:.07em;}
+  }
   @media (max-width:900px){
     .nav-links{
       position:fixed;top:60px;left:0;right:0;
