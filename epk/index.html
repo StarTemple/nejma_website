@@ -137,6 +137,19 @@
   .booking .email { font-family: 'Cormorant Garamond', serif; font-size: clamp(26px, 4vw, 40px); display: inline-block; margin: 6px 0 22px; }
   .booking p { color: var(--muted); margin-bottom: 30px; }
   .booking .btn-row { justify-content: center; }
+  .to-top {
+    position: fixed; right: 20px; bottom: 20px; z-index: 10;
+    width: 46px; height: 46px; display: flex; align-items: center; justify-content: center;
+    background: rgba(11,10,8,.85); border: 1px solid var(--line); border-radius: 50%;
+    opacity: 0; pointer-events: none; transition: opacity .3s, border-color .25s;
+  }
+  .to-top.show { opacity: 1; pointer-events: auto; }
+  .to-top:hover { border-color: var(--gold); }
+  .to-top span {
+    width: 0; height: 0; margin-bottom: 3px;
+    border-left: 9px solid transparent; border-right: 9px solid transparent;
+    border-bottom: 15px solid var(--gold);
+  }
   footer { text-align: center; padding: 30px 24px; font-size: 12px; color: var(--muted); letter-spacing: 0.1em; border-top: 1px solid var(--line); }
 
   @media (max-width: 860px) {
@@ -326,6 +339,20 @@
 </section>
 
 <footer>&copy; 2026 Star Temple Studios LLC</footer>
+
+<a href="#top" class="to-top" id="toTop" aria-label="Back to top"><span></span></a>
+<script>
+  (function () {
+    var btn = document.getElementById('toTop');
+    window.addEventListener('scroll', function () {
+      btn.classList.toggle('show', window.scrollY > 600);
+    }, { passive: true });
+    btn.addEventListener('click', function (e) {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  })();
+</script>
 
 </body>
 </html>
