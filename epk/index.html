@@ -1,0 +1,325 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Nejma Nefertiti | EPK</title>
+<meta name="description" content="Electronic press kit for Nejma Nefertiti, Brooklyn Hip Hop lyricist.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #0b0a08;
+    --ink-2: #16130f;
+    --cream: #ece4d3;
+    --muted: #b3a891;
+    --gold: #d4af6a;
+    --maroon: #6e1f2a;
+    --coral: #e2725b;
+    --line: rgba(212, 175, 106, 0.25);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--ink);
+    color: var(--cream);
+    font-family: 'Jost', sans-serif;
+    font-weight: 300;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: var(--gold); text-decoration: none; }
+  a:hover { color: var(--coral); }
+  img { display: block; max-width: 100%; }
+
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
+  section { padding: 88px 0; border-top: 1px solid var(--line); }
+
+  .label {
+    font-size: 12px; letter-spacing: 0.28em; text-transform: uppercase;
+    color: var(--gold); margin-bottom: 14px; display: flex; align-items: center; gap: 10px;
+  }
+  .label::before {
+    content: ""; width: 0; height: 0;
+    border-left: 6px solid transparent; border-right: 6px solid transparent;
+    border-bottom: 10px solid var(--gold);
+  }
+  h1, h2, h3 { font-family: 'Cormorant Garamond', serif; font-weight: 600; line-height: 1.1; }
+  h2 { font-size: clamp(34px, 5vw, 52px); margin-bottom: 32px; }
+
+  /* Hero */
+  .hero {
+    display: grid; grid-template-columns: 1.05fr 1fr; min-height: 100vh;
+  }
+  .hero-img { position: relative; overflow: hidden; background: var(--ink-2); }
+  .hero-img img { width: 100%; height: 100%; object-fit: cover; object-position: center 30%; }
+  .hero-text {
+    display: flex; flex-direction: column; justify-content: center;
+    padding: 64px 56px; background: linear-gradient(160deg, var(--ink) 55%, #1d0d10);
+  }
+  .hero h1 { font-size: clamp(52px, 7vw, 92px); letter-spacing: -0.01em; }
+  .hero h1 em { color: var(--gold); font-style: italic; font-weight: 500; }
+  .tagline { font-size: 15px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--muted); margin: 18px 0 36px; }
+  .btn {
+    display: inline-block; border: 1px solid var(--gold); color: var(--gold);
+    padding: 14px 30px; font-size: 13px; letter-spacing: 0.22em; text-transform: uppercase;
+    transition: all .25s;
+  }
+  .btn:hover { background: var(--gold); color: var(--ink); }
+  .btn-row { display: flex; gap: 14px; flex-wrap: wrap; }
+  .btn.ghost { border-color: var(--line); color: var(--cream); }
+  .btn.ghost:hover { background: var(--cream); color: var(--ink); }
+
+  /* Bio */
+  .bio-grid { display: grid; grid-template-columns: 1.4fr 1fr; gap: 56px; align-items: start; }
+  .bio p { font-size: 18px; margin-bottom: 20px; }
+  .bio p:first-child::first-letter {
+    font-family: 'Cormorant Garamond', serif; font-size: 64px; float: left;
+    line-height: 0.85; margin: 6px 10px 0 0; color: var(--gold);
+  }
+  .bio-photo img { width: 100%; aspect-ratio: 4/5; object-fit: cover; }
+
+  /* Highlights */
+  .highlights { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); }
+  .hl { background: var(--ink); padding: 28px 26px; }
+  .hl h3 { font-size: 24px; color: var(--cream); margin-bottom: 8px; }
+  .hl p { font-size: 14px; color: var(--muted); }
+  .venues { margin-top: 36px; font-size: 15px; color: var(--muted); }
+  .venues strong { color: var(--cream); font-weight: 400; }
+
+  /* Watch / Listen */
+  .media-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; }
+  .frame { position: relative; width: 100%; aspect-ratio: 16/9; background: var(--ink-2); border: 1px solid var(--line); }
+  .frame iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+  .frame.wide { grid-column: 1 / -1; }
+  .reel { grid-column: 1 / -1; justify-self: center; width: 100%; max-width: 420px; }
+  .reel iframe { width: 100%; height: 640px; border: 1px solid var(--line); background: var(--ink-2); }
+  .clip-label { grid-column: 1 / -1; font-size: 12px; letter-spacing: 0.24em; text-transform: uppercase; color: var(--muted); margin-top: 12px; }
+  .spotify iframe { width: 100%; height: 352px; border: 0; border-radius: 12px; }
+  .platforms { display: flex; flex-wrap: wrap; gap: 10px 22px; margin-top: 20px; font-size: 14px; letter-spacing: 0.08em; }
+
+  /* Collaborations */
+  .collabs { display: flex; flex-wrap: wrap; gap: 12px; }
+  .collabs span {
+    border: 1px solid var(--line); padding: 10px 18px; font-size: 15px;
+    font-family: 'Cormorant Garamond', serif; font-size: 20px;
+  }
+  .collabs span small { font-family: 'Jost', sans-serif; font-size: 12px; color: var(--muted); letter-spacing: 0.06em; margin-left: 6px; }
+
+  /* Press */
+  .quotes { display: grid; grid-template-columns: repeat(2, 1fr); gap: 40px 56px; }
+  blockquote { border-left: 2px solid var(--maroon); padding-left: 22px; }
+  blockquote p { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 26px; line-height: 1.3; }
+  blockquote cite { display: block; margin-top: 10px; font-style: normal; font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold); }
+  .cosigns { margin-top: 56px; }
+  .cosigns h3 { font-size: 28px; margin-bottom: 16px; }
+
+  /* Photos */
+  .photos { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+  .photos a { position: relative; display: block; overflow: hidden; background: var(--ink-2); }
+  .photos img { width: 100%; aspect-ratio: 4/5; object-fit: cover; transition: transform .5s; }
+  .photos a:hover img { transform: scale(1.04); }
+  .photos a::after {
+    content: "Download"; position: absolute; bottom: 12px; left: 12px;
+    font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase;
+    background: rgba(11,10,8,.8); color: var(--gold); padding: 6px 10px;
+  }
+  .note { margin-top: 18px; font-size: 14px; color: var(--muted); }
+
+  /* Booking */
+  .booking { text-align: center; background: linear-gradient(180deg, var(--ink), #1d0d10); }
+  .booking h2 { margin-bottom: 18px; }
+  .booking .email { font-family: 'Cormorant Garamond', serif; font-size: clamp(26px, 4vw, 40px); display: inline-block; margin: 6px 0 22px; }
+  .booking p { color: var(--muted); margin-bottom: 30px; }
+  .booking .btn-row { justify-content: center; }
+  footer { text-align: center; padding: 30px 24px; font-size: 12px; color: var(--muted); letter-spacing: 0.1em; border-top: 1px solid var(--line); }
+
+  @media (max-width: 860px) {
+    .hero { grid-template-columns: 1fr; min-height: auto; }
+    .hero-img { height: 78vh; }
+    .hero-text { padding: 48px 16px 64px; }
+    .wrap { padding: 0 16px; }
+    section { padding: 64px 0; }
+    .bio-grid, .media-grid, .quotes { grid-template-columns: 1fr; gap: 36px; }
+    .highlights { grid-template-columns: 1fr; }
+    .photos { grid-template-columns: repeat(2, 1fr); }
+    .bio p { font-size: 17px; }
+    blockquote p { font-size: 23px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="hero-img">
+    <img src="/epk/hero.jpg" onerror="this.onerror=null;this.src='/gallery-01.jpeg'" alt="Nejma Nefertiti holding a microphone toward the camera">
+  </div>
+  <div class="hero-text">
+    <div class="label">Electronic Press Kit</div>
+    <h1>Nejma <em>Nefertiti</em></h1>
+    <p class="tagline">Brooklyn Hip Hop Lyricist</p>
+    <div class="btn-row">
+      <a class="btn" href="mailto:startemplebooking@gmail.com?subject=Booking%20Inquiry%20-%20Nejma%20Nefertiti">Book Now</a>
+      <a class="btn ghost" href="#watch">Watch Live</a>
+    </div>
+  </div>
+</header>
+
+<!-- BIO -->
+<section id="bio">
+  <div class="wrap bio-grid">
+    <div class="bio">
+      <div class="label">Bio</div>
+      <p>Nejma Nefertiti is a Brooklyn Hip Hop lyricist known for fierce delivery, intricate wordplay, and vivid, cinematic storytelling. She was one of 12 winners of The Saga Continues Contest, created by Sway and RZA of Wu-Tang Clan, and won Best International Hip Hop Music Video at the 2024 Golden Sneakers International Hip Hop Film Festival in London for "Soul Ties."</p>
+      <p>She has traded verses with French Hip Hop legend Akhenaton, featured for Beat Junkies' DJ Rhettmatic, and released "Goddess" ft. Pos of De La Soul, Shortie No Mass, and DJ Evil Dee. Her catalog includes Letters From The Akashic, The Valley of the Queens, and the Jayne Wayne trilogy.</p>
+      <p>On stage, she has performed everywhere from BAM and the Kennedy Center to festivals in Belgrade and Brussels.</p>
+    </div>
+    <div class="bio-photo">
+      <img src="/epk/photo-2.jpg" onerror="this.onerror=null;this.src='/gallery-23.jpeg'" alt="Nejma Nefertiti in a yellow bucket hat and painted jacket">
+    </div>
+  </div>
+</section>
+
+<!-- HIGHLIGHTS -->
+<section id="highlights">
+  <div class="wrap">
+    <div class="label">Highlights</div>
+    <h2>On the Record</h2>
+    <div class="highlights">
+      <div class="hl"><h3>The Saga Continues</h3><p>One of 12 winners from over 10,000 submissions. Sway's Universe with RZA.</p></div>
+      <div class="hl"><h3>Golden Sneakers 2024</h3><p>Best International Hip Hop Music Video for "Soul Ties." London.</p></div>
+      <div class="hl"><h3>Brooklyn Academy of Music</h3><p>Word. Sound. Power. 2021 and 2025.</p></div>
+      <div class="hl"><h3>Kennedy Center</h3><p>Millennium Stage, Washington D.C.</p></div>
+      <div class="hl"><h3>International Festivals</h3><p>Beton Hip-Hop Festival, Belgrade. La Belle Hip-Hop Festival, Brussels.</p></div>
+      <div class="hl"><h3>Touring</h3><p>France and Switzerland, Canada, and Serbia.</p></div>
+    </div>
+    <p class="venues"><strong>Stages include</strong> SOB's, Blue Note Jazz Club, Joe's Pub, Le Poisson Rouge, La MaMa, Nuyorican Poets Cafe, and Knitting Factory Brooklyn. <strong>Media:</strong> Shade 45, Sway's Universe, Rock The Bells.</p>
+  </div>
+</section>
+
+<!-- WATCH -->
+<section id="watch">
+  <div class="wrap">
+    <div class="label">Watch</div>
+    <h2>Live and on Screen</h2>
+    <div class="media-grid">
+      <div class="frame wide">
+        <iframe src="https://www.youtube-nocookie.com/embed/LmnZsaNGDaY" title="Nejma Nefertiti featured video" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <p class="clip-label">Live Performances</p>
+      <div class="frame">
+        <iframe src="https://www.youtube-nocookie.com/embed/RjTyWOt3y3E" title="Nejma Nefertiti live performance" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <div class="frame">
+        <iframe src="https://www.youtube-nocookie.com/embed/vFGaSZpL8wI" title="Nejma Nefertiti live performance" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <div class="reel">
+        <iframe src="https://www.instagram.com/reel/DWkW1OTDuBN/embed" title="Nejma Nefertiti live at a bar" loading="lazy" scrolling="no" allowtransparency="true"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LISTEN -->
+<section id="listen">
+  <div class="wrap">
+    <div class="label">Listen</div>
+    <h2>The Music</h2>
+    <div class="spotify">
+      <iframe src="https://open.spotify.com/embed/artist/1xPqTnYL7I4ZrXMnW8cGSv?theme=0" loading="lazy" allow="encrypted-media" title="Nejma Nefertiti on Spotify"></iframe>
+    </div>
+    <div class="platforms">
+      <a href="https://open.spotify.com/artist/1xPqTnYL7I4ZrXMnW8cGSv">Spotify</a>
+      <a href="https://music.apple.com/us/artist/nejma-nefertiti/1353037061">Apple Music</a>
+      <a href="https://nejmanefertiti.bandcamp.com/">Bandcamp</a>
+      <a href="https://www.youtube.com/c/NejmaNefertiti">YouTube</a>
+      <a href="https://soundcloud.com/nejmanefertiti">SoundCloud</a>
+      <a href="https://tidal.com/browse/artist/9589639">Tidal</a>
+    </div>
+  </div>
+</section>
+
+<!-- COLLABORATIONS -->
+<section id="collaborations">
+  <div class="wrap">
+    <div class="label">Collaborations</div>
+    <h2>In Good Company</h2>
+    <div class="collabs">
+      <span>Akhenaton<small>IAM</small></span>
+      <span>DJ Rhettmatic<small>Beat Junkies</small></span>
+      <span>Pos<small>De La Soul</small></span>
+      <span>DJ Evil Dee<small>Da Beatminerz</small></span>
+      <span>Sa-Roc</span>
+      <span>M1<small>dead prez</small></span>
+      <span>Che Noir</span>
+      <span>Nicholas Craven</span>
+      <span>Napoleon Da Legend</span>
+      <span>Big French</span>
+    </div>
+  </div>
+</section>
+
+<!-- PRESS -->
+<section id="press">
+  <div class="wrap">
+    <div class="label">Press</div>
+    <h2>What They're Saying</h2>
+    <div class="quotes">
+      <blockquote><p>"Nejma Nefertiti delivers scorching bars."</p><cite>Karas Lamb, Okayplayer</cite></blockquote>
+      <blockquote><p>"Hip Hop's regal rhyme ripper."</p><cite>Insomniac Magazine</cite></blockquote>
+      <blockquote><p>"Her delivery is grimy and captivating."</p><cite>Grant Jones, Rap Reviews</cite></blockquote>
+      <blockquote><p>"On the mic, she is everything."</p><cite>PoppaOmega, Balcony Life</cite></blockquote>
+      <blockquote><p>"Regardless what people think, there's still some real spitters out there."</p><cite>Rock The Bells</cite></blockquote>
+      <blockquote><p>"Nejma Nefertiti's music transcends boundaries."</p><cite>The Rap Pulse</cite></blockquote>
+    </div>
+    <div class="cosigns">
+      <h3>Flowers and Respect</h3>
+      <div class="platforms">
+        <a href="https://www.instagram.com/reel/DJdQ0OdNSbx/">Kurtis Blow</a>
+        <a href="https://www.facebook.com/queennejmanefertiti/videos/dj-premier-spinning-that-encrypted-wisdom-by-napoleon-da-legend-ft-nejma-neferti/424057415018592/">DJ Premier</a>
+        <a href="https://www.instagram.com/reel/DVeOAYBDpRs/">DJ Evil Dee</a>
+        <a href="https://www.instagram.com/reel/C7hyxebPclt/">Sway and RZA</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PHOTOS -->
+<section id="photos">
+  <div class="wrap">
+    <div class="label">Press Photos</div>
+    <h2>Photos</h2>
+    <div class="photos">
+      <a href="/epk/hero.jpg" download><img src="/epk/hero.jpg" onerror="this.onerror=null;this.src='/gallery-01.jpeg'" alt="Nejma Nefertiti with microphone" loading="lazy"></a>
+      <a href="/epk/photo-2.jpg" download><img src="/epk/photo-2.jpg" onerror="this.onerror=null;this.src='/gallery-24.jpeg'" alt="Nejma Nefertiti in a yellow bucket hat" loading="lazy"></a>
+      <a href="/gallery-23.jpeg" download><img src="/gallery-23.jpeg" alt="Black-and-white portrait of Nejma Nefertiti" loading="lazy"></a>
+      <a href="/gallery-14.jpeg" download><img src="/gallery-14.jpeg" alt="Nejma Nefertiti performing under orange stage lights" loading="lazy"></a>
+      <a href="/gallery-27.jpeg" download><img src="/gallery-27.jpeg" alt="Nejma Nefertiti performing at SOB's" loading="lazy"></a>
+      <a href="/gallery-20.jpeg" download><img src="/gallery-20.jpeg" alt="Nejma Nefertiti performing with fist raised" loading="lazy"></a>
+    </div>
+    <p class="note">Photos may be used to promote Nejma Nefertiti performances. Please credit the photographer where known.</p>
+  </div>
+</section>
+
+<!-- BOOKING -->
+<section id="booking" class="booking">
+  <div class="wrap">
+    <div class="label" style="justify-content:center">Booking</div>
+    <h2>Bring Nejma to Your City</h2>
+    <a class="email" href="mailto:startemplebooking@gmail.com?subject=Booking%20Inquiry%20-%20Nejma%20Nefertiti">startemplebooking@gmail.com</a>
+    <p>Technical and hospitality rider available on request.</p>
+    <div class="btn-row">
+      <a class="btn" href="mailto:startemplebooking@gmail.com?subject=Rider%20Request%20-%20Nejma%20Nefertiti">Request Rider</a>
+      <a class="btn ghost" href="https://www.instagram.com/nejmanefertiti/">Instagram</a>
+      <a class="btn ghost" href="https://nejmanefertiti.com">Website</a>
+    </div>
+  </div>
+</section>
+
+<footer>&copy; 2026 Star Temple Studios LLC</footer>
+
+</body>
+</html>
