@@ -18,7 +18,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800;900&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800;900&family=Jost:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@1,500&display=swap" rel="stylesheet">
 <style>
   :root{
     --bg:#0b0a08;
@@ -480,7 +480,7 @@
   .nav-links a{font-weight:500;letter-spacing:.08em;}
   .hero-campaign-title{font-size:clamp(2.4rem,9vw,6.5rem);line-height:.95;margin-bottom:30px;word-spacing:0;text-wrap:balance;}
   .epk-line{margin-top:18px;font-size:.98rem;letter-spacing:.1em;}
-  .epk-line a{color:var(--ink-dim);border-bottom:1px solid var(--gold);padding-bottom:2px;transition:color .2s;}
+  .epk-line a{color:#fff;font-weight:500;border-bottom:1px solid var(--gold);padding-bottom:2px;transition:color .2s;}
   .epk-line a:hover{color:var(--gold-bright);}
   .vinyl-link{text-align:center;margin-top:16px;font-size:.78rem;letter-spacing:.14em;}
   .vinyl-link a{color:var(--ink-dim);border-bottom:1px solid var(--line);padding-bottom:2px;transition:color .2s,border-color .2s;}
@@ -491,6 +491,25 @@
   .credit-list a::after{align-self:flex-start;background:var(--gold);}
   .credit-list a:hover,.credit-list a:focus-visible,.credit-list a:active{background:var(--ink);background:#ece4d3;color:#0b0a08;border-color:#ece4d3;padding-left:16px;}
   .credit-list a:hover::after,.credit-list a:focus-visible::after,.credit-list a:active::after{background:#0b0a08;transform:none;}
+
+  #press{padding-bottom:50px;}
+  .band{position:relative;padding:64px 0 72px;}
+  .band-inner{max-width:1280px;margin:0 auto;padding:0 5vw;}
+  .band::before{content:"";position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,rgba(201,161,90,0),rgba(201,161,90,.65),rgba(201,161,90,0));}
+  .band::after{content:"";position:absolute;top:-8px;left:50%;width:16px;height:14px;margin-left:-8px;background:var(--gold);clip-path:polygon(50% 0,100% 100%,0 100%);}
+  .band .credit-label{margin-top:0;}
+  .band-featured{background:#15120f;}
+  .band-flowers{background:linear-gradient(180deg,#2c1018 0%,#1b0a10 100%);}
+  .band-flowers .credit-list a,.band-flowers .credit-list a:nth-child(-n+2),.band-flowers .credit-list a:nth-child(2){border-color:rgba(226,114,91,.55);}
+  .band-flowers .credit-list a::after{background:var(--gold);}
+  .band-flowers .credit-list a:hover,.band-flowers .credit-list a:focus-visible,.band-flowers .credit-list a:active{border-color:#ece4d3;}
+
+  .press-quote{border-left:2px solid #8c2a36;padding-left:22px;}
+  .press-quote p{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:500;font-size:1.65rem;line-height:1.3;letter-spacing:0;}
+  .press-quote .eyebrow{margin-top:10px;color:var(--gold);}
+  .press-quote .eyebrow::before{display:none;}
+  .email-link{overflow-wrap:anywhere;}
+  @media (max-width:700px){.press-quote p{font-size:1.45rem;}}
 </style>
 <script type="application/ld+json">
 {
@@ -542,7 +561,7 @@
     <a href="#events">Events</a>
     <a href="#gallery">Gallery</a>
     <a href="#press">Press</a>
-    <a href="https://www.aliveshoes.com/liberte--3" target="_blank" rel="noopener">Streetwear</a>
+    <a href="https://app.amazecommerce.com/shop/maroon-couture" target="_blank" rel="noopener">Streetwear</a>
     <a href="https://www.aliveshoes.com/liberte--3" target="_blank" rel="noopener">Sneakers</a>
     <a href="perfume/">Perfume</a>
     <a href="#contact">Book Now</a>
@@ -706,26 +725,24 @@
       <span class="eyebrow">The Rap Pulse</span>
     </div>
   </div>
+</section>
 
-  
-  <h3 class="credit-label">Featured On</h3>
+<div class="band band-featured" id="featured-on"><div class="band-inner"><h3 class="credit-label">Featured On</h3>
   <div class="credit-list">
     <a href="https://www.instagram.com/reel/C1dRGEZLrb6/" target="_blank" rel="noopener">Rap Is Outta Control</a>
     <a href="https://www.instagram.com/reel/Cuf0LegRXiv/" target="_blank" rel="noopener">Sway's Universe</a>
     <a href="https://www.instagram.com/reel/C-5auHTRFj4/" target="_blank" rel="noopener">The Punchline Academy - Basement Cypher</a>
     <a href="https://www.instagram.com/reel/Dej5Q1-pU0A/" target="_blank" rel="noopener">The Punchline Academy - Lyric League Series</a>
     <a href="https://www.instagram.com/reel/DJuHgPltFdE/" target="_blank" rel="noopener">End Of The Weak</a>
-  </div>
-
-  
-  <h3 class="credit-label">Flowers &amp; Respect</h3>
+  </div></div></div>
+<div class="band band-flowers" id="flowers-respect"><div class="band-inner"><h3 class="credit-label">Flowers &amp; Respect</h3>
   <div class="credit-list">
     <a href="https://www.instagram.com/reel/DJdQ0OdNSbx/" target="_blank" rel="noopener">Kurtis Blow</a>
     <a href="https://www.facebook.com/queennejmanefertiti/videos/dj-premier-spinning-that-encrypted-wisdom-by-napoleon-da-legend-ft-nejma-neferti/424057415018592/" target="_blank" rel="noopener">DJ Premier</a>
     <a href="https://www.instagram.com/reel/DVeOAYBDpRs/" target="_blank" rel="noopener">DJ Evil Dee</a>
     <a href="https://www.instagram.com/reel/C7hyxebPclt/" target="_blank" rel="noopener">Sway &amp; RZA</a>
-  </div>
-</section>
+  </div></div></div>
+
 
 <div class="divider">
   <div class="rule"></div>
