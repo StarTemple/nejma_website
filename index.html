@@ -18,7 +18,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800;900&family=Jost:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@1,500&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800;900&family=Jost:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@0,500;1,500&display=swap" rel="stylesheet">
 <style>
   :root{
     --bg:#0b0a08;
@@ -506,7 +506,18 @@
   .band-flowers .credit-list a::after{background:var(--gold);}
   .band-flowers .credit-list a:hover,.band-flowers .credit-list a:focus-visible,.band-flowers .credit-list a:active{border-color:#ece4d3;}
 
-  .press-quote{border-left:2px solid #8c2a36;padding-left:22px;}
+
+  .band.band-flowers{background:none;padding:8px 0 80px;}
+  .band.band-flowers::before,.band.band-flowers::after{display:none;}
+  .band.band-flowers .credit-label{font-family:'Cormorant Garamond',serif;font-weight:500;font-style:normal;text-transform:none;letter-spacing:0;font-size:1.9rem;color:var(--ink);margin-bottom:16px;}
+  .band.band-flowers .credit-list{display:flex;flex-wrap:wrap;gap:10px 28px;}
+  .band.band-flowers .credit-list a,.band.band-flowers .credit-list a:nth-child(-n+2),.band.band-flowers .credit-list a:nth-child(2),.band.band-flowers .credit-list a:hover,.band.band-flowers .credit-list a:focus-visible,.band.band-flowers .credit-list a:active{background:none;border:0;border-bottom:1px solid transparent;padding:0 0 2px;min-height:0;display:inline-block;font-family:'Jost',sans-serif;font-weight:400;text-transform:none;letter-spacing:.03em;font-size:.95rem;color:var(--ink-dim);transform:none;}
+  .band.band-flowers .credit-list a:hover,.band.band-flowers .credit-list a:focus-visible,.band.band-flowers .credit-list a:active{color:var(--gold-bright);border-bottom-color:var(--gold);}
+  .band.band-flowers .credit-list a::after{display:none;}
+  .band.band-flowers .credit-list a:nth-child(n){--c:#c9a15a;color:var(--c);border-bottom-color:rgba(236,228,211,.18);}
+  .band.band-flowers .credit-list a:nth-child(n):hover,.band.band-flowers .credit-list a:nth-child(n):focus-visible,.band.band-flowers .credit-list a:nth-child(n):active{color:#fff;border-bottom-color:var(--c);}
+  .press-quote{border-left:0;padding:50px 0 0;position:relative;}
+  .press-quote::before{content:'\201C';position:absolute;top:-6px;left:-3px;font-family:'Cormorant Garamond',serif;font-weight:500;font-size:6rem;line-height:1;color:var(--gold);}
   .press-quote p{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:500;font-size:1.65rem;line-height:1.3;letter-spacing:0;}
   .press-quote .eyebrow{margin-top:10px;color:var(--gold);}
   .press-quote .eyebrow::before{display:none;}
@@ -711,19 +722,19 @@
   </div>
   <div class="quote-grid">
     <div class="press-quote">
-      <p>"Regardless what people think, there's still some real spitters out there."</p>
+      <p>Regardless what people think, there's still some real spitters out there.</p>
       <span class="eyebrow">Rock The Bells</span>
     </div>
     <div class="press-quote">
-      <p>"Nejma Nefertiti delivers scorching bars..."</p>
+      <p>Nejma Nefertiti delivers scorching bars...</p>
       <span class="eyebrow">Karas Lamb, Okayplayer</span>
     </div>
     <div class="press-quote">
-      <p>"Hip Hop's regal rhyme ripper."</p>
+      <p>Hip Hop's regal rhyme ripper.</p>
       <span class="eyebrow">Insomniac Magazine</span>
     </div>
     <div class="press-quote">
-      <p>"Nejma Nefertiti's music transcends boundaries, reflecting her rich multicultural background."</p>
+      <p>Nejma Nefertiti's music transcends boundaries, reflecting her rich multicultural background.</p>
       <span class="eyebrow">The Rap Pulse</span>
     </div>
   </div>
