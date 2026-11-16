@@ -476,13 +476,21 @@
 
   h1,h2,h3{text-transform:uppercase;font-weight:800;letter-spacing:.02em;}
   section h2{text-transform:uppercase;font-size:clamp(3rem,6.4vw,5rem);line-height:.95;letter-spacing:.02em;}
-  .credit-label{font-size:clamp(1.8rem,3.4vw,2.4rem);}
+  .credit-label{font-size:clamp(1.8rem,3.4vw,2.4rem);color:var(--gold);}
   .nav-links a{font-weight:500;letter-spacing:.08em;}
   .hero-campaign-title{font-size:clamp(2.4rem,9vw,6.5rem);line-height:.95;margin-bottom:30px;word-spacing:0;text-wrap:balance;}
   .epk-line{margin-top:18px;font-size:.98rem;letter-spacing:.1em;}
   .epk-line a{color:var(--ink-dim);border-bottom:1px solid var(--gold);padding-bottom:2px;transition:color .2s;}
   .epk-line a:hover{color:var(--gold-bright);}
-  .vinyl-feature{padding-top:6px;}
+  .vinyl-link{text-align:center;margin-top:16px;font-size:.78rem;letter-spacing:.14em;}
+  .vinyl-link a{color:var(--ink-dim);border-bottom:1px solid var(--line);padding-bottom:2px;transition:color .2s,border-color .2s;}
+  .vinyl-link a:hover{color:var(--gold-bright);border-bottom-color:var(--gold);}
+  .credit-list{grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;column-gap:14px;}
+  @media (max-width:700px){.credit-list{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;column-gap:10px;}}
+  .credit-list a,.credit-list a:nth-child(-n+2),.credit-list a:nth-child(2){border:1px solid rgba(201,161,90,.45);padding:20px 16px;min-height:84px;align-items:flex-end;font-family:'Big Shoulders Display',sans-serif;font-weight:800;text-transform:uppercase;letter-spacing:.04em;font-size:clamp(1.05rem,2.2vw,1.3rem);line-height:1.1;overflow-wrap:anywhere;transition:background .2s,color .2s,border-color .2s;}
+  .credit-list a::after{align-self:flex-start;background:var(--gold);}
+  .credit-list a:hover,.credit-list a:focus-visible,.credit-list a:active{background:var(--ink);background:#ece4d3;color:#0b0a08;border-color:#ece4d3;padding-left:16px;}
+  .credit-list a:hover::after,.credit-list a:focus-visible::after,.credit-list a:active::after{background:#0b0a08;transform:none;}
 </style>
 <script type="application/ld+json">
 {
@@ -571,7 +579,7 @@
     <a href="https://tidal.com/browse/artist/9589639" target="_blank" rel="noopener">Tidal</a>
     <a href="https://www.youtube.com/c/NejmaNefertiti" target="_blank" rel="noopener">YouTube</a>
   </div>
-  <div class="vinyl-feature"><a class="btn" href="https://www.subwayhiphop.com" target="_blank" rel="noopener">subwayhiphop.com</a></div>
+  <p class="vinyl-link"><a href="https://www.subwayhiphop.com" target="_blank" rel="noopener">subwayhiphop.com</a></p>
 </section>
 
 <div class="divider">
