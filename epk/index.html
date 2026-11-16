@@ -9,7 +9,7 @@
 <meta name="description" content="Electronic press kit for Nejma Nefertiti, Brooklyn Hip Hop lyricist.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@800&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Jost:wght@300;400;500&family=Big+Shoulders+Display:wght@800&display=swap" rel="stylesheet">
 <style>
   :root {
     --ink: #0b0a08;
@@ -48,7 +48,7 @@
     border-bottom: 10px solid var(--gold);
   }
   h1, h2, h3 { font-family: 'Cormorant Garamond', serif; font-weight: 600; line-height: 1.1; }
-  h2 { font-family: 'Big Shoulders Display', sans-serif; font-weight: 800; text-transform: uppercase; letter-spacing: 0.02em; color: #fff; line-height: 1; font-size: clamp(36px, 6.4vw, 72px); overflow-wrap: anywhere; margin-bottom: 32px; }
+  h2 { font-size: clamp(34px, 5vw, 52px); margin-bottom: 32px; }
 
   /* Hero */
   .hero {
@@ -76,7 +76,7 @@
   /* Bio */
   .bio-grid { display: grid; grid-template-columns: 1.4fr 1fr; gap: 56px; align-items: start; }
   .bio p { font-size: 18px; margin-bottom: 20px; }
-  .bio h2 + p::first-letter {
+  .bio p:first-child::first-letter {
     font-family: 'Cormorant Garamond', serif; font-size: 64px; float: left;
     line-height: 0.85; margin: 6px 10px 0 0; color: var(--gold);
   }
@@ -94,6 +94,11 @@
   .media-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; }
   .frame { position: relative; width: 100%; aspect-ratio: 16/9; background: var(--ink-2); border: 1px solid var(--line); }
   .frame iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+  .frame.wide { grid-column: 1 / -1; }
+  .reels { grid-column: 1 / -1; display: flex; flex-wrap: wrap; justify-content: center; gap: 28px; }
+  .reel { width: 100%; max-width: 400px; }
+  .reel iframe { width: 100%; height: 640px; border: 1px solid var(--line); background: var(--ink-2); }
+  .clip-label { grid-column: 1 / -1; font-size: 12px; letter-spacing: 0.24em; text-transform: uppercase; color: var(--muted); margin-top: 12px; }
   .spotify iframe { width: 100%; height: 352px; border: 0; border-radius: 12px; }
   .platforms { display: flex; flex-wrap: wrap; gap: 10px 22px; margin-top: 20px; font-size: 14px; letter-spacing: 0.08em; }
 
@@ -127,10 +132,26 @@
 
   /* Booking */
   .booking { text-align: center; background: linear-gradient(180deg, var(--ink), #1d0d10); }
+  .booking { padding-top: 0; }
+  .crowd { max-width: 1080px; margin: 0 auto 64px; padding: 0 24px; }
+  .crowd img { width: 100%; aspect-ratio: 3/2; object-fit: cover; border: 1px solid var(--line); }
   .booking h2 { margin-bottom: 18px; }
   .booking .email { font-family: 'Cormorant Garamond', serif; font-size: clamp(26px, 4vw, 40px); display: inline-block; margin: 6px 0 22px; }
   .booking p { color: var(--muted); margin-bottom: 30px; }
   .booking .btn-row { justify-content: center; }
+  .to-top {
+    position: fixed; right: 20px; bottom: 20px; z-index: 10;
+    width: 46px; height: 46px; display: flex; align-items: center; justify-content: center;
+    background: rgba(11,10,8,.85); border: 1px solid var(--line); border-radius: 50%;
+    opacity: 0; pointer-events: none; transition: opacity .3s, border-color .25s;
+  }
+  .to-top.show { opacity: 1; pointer-events: auto; }
+  .to-top:hover { border-color: var(--gold); }
+  .to-top span {
+    width: 0; height: 0; margin-bottom: 3px;
+    border-left: 9px solid transparent; border-right: 9px solid transparent;
+    border-bottom: 15px solid var(--gold);
+  }
   footer { text-align: center; padding: 30px 24px; font-size: 12px; color: var(--muted); letter-spacing: 0.1em; border-top: 1px solid var(--line); }
 
   @media (max-width: 860px) {
@@ -138,6 +159,7 @@
     .hero-img { height: 78vh; }
     .hero-text { padding: 48px 16px 64px; }
     .wrap { padding: 0 16px; }
+    .crowd { padding: 0 16px; margin-bottom: 48px; }
     section { padding: 64px 0; }
     .bio-grid, .media-grid, .quotes { grid-template-columns: 1fr; gap: 36px; }
     .highlights { grid-template-columns: 1fr; }
@@ -145,6 +167,21 @@
     .bio p { font-size: 17px; }
     blockquote p { font-size: 23px; }
   }
+
+  /* section titles */
+  h2 { font-family: 'Big Shoulders Display', sans-serif; font-weight: 800; text-transform: uppercase; letter-spacing: .02em; color: #fff; line-height: 1; font-size: clamp(36px, 6.4vw, 72px); overflow-wrap: anywhere; margin-bottom: 32px; }
+  .booking h2 { margin-bottom: 18px; }
+  .bio h2 + p::first-letter { font-family: 'Cormorant Garamond', serif; font-size: 64px; float: left; line-height: 0.85; margin: 6px 10px 0 0; color: var(--gold); }
+  /* highlights with more color */
+  .highlights { gap: 14px; background: none; border: 0; }
+  .hl { background: linear-gradient(160deg, #26111a 0%, var(--ink) 70%); border: 1px solid var(--line); border-top: 3px solid var(--maroon); padding: 30px 26px; transition: border-color .25s, transform .25s; }
+  .hl:hover { border-top-color: var(--coral); transform: translateY(-3px); }
+  .hl h3 { color: var(--gold); font-size: 28px; }
+  .hl p { color: var(--cream); font-size: 15px; font-weight: 300; }
+  .venues strong { color: var(--gold); }
+  .collabs span { border-color: rgba(226,114,91,.35); transition: background .25s, border-color .25s; }
+  .collabs span:hover { background: var(--maroon); border-color: var(--maroon); }
+  .booking .email { overflow-wrap: anywhere; }
 </style>
 </head>
 <body>
@@ -195,12 +232,27 @@
 
 <section id="watch">
   <div class="wrap">
-    <h2>Live Performances</h2>
+    <h2>Live and on Screen</h2>
     <div class="media-grid">
+      <div class="frame wide">
+        <iframe src="https://www.youtube-nocookie.com/embed/LmnZsaNGDaY" title="Nejma Nefertiti featured video" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <p class="clip-label">Live Performances</p>
       <div class="frame">
-        <iframe src="https://www.youtube-nocookie.com/embed/lno9CuAGpDM" title="Nejma Nefertiti video" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe src="https://www.youtube-nocookie.com/embed/RjTyWOt3y3E" title="Nejma Nefertiti live performance" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
+      <div class="frame">
+        <iframe src="https://www.youtube-nocookie.com/embed/vFGaSZpL8wI" title="Nejma Nefertiti live performance" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
+      <div class="reels">
+        <div class="reel">
+          <iframe src="https://www.instagram.com/reel/DJuHgPltFdE/embed" title="Nejma Nefertiti live performance" loading="lazy" scrolling="no" allowtransparency="true"></iframe>
+        </div>
+        <div class="reel">
+          <iframe src="https://www.instagram.com/reel/DWkW1OTDuBN/embed" title="Nejma Nefertiti live at a bar" loading="lazy" scrolling="no" allowtransparency="true"></iframe>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -269,15 +321,18 @@
       <a href="/epk/hero.jpg" download><img src="/epk/hero.jpg" onerror="this.onerror=null;this.src='/gallery-01.jpeg'" alt="Nejma Nefertiti with microphone" loading="lazy"></a>
       <a href="/epk/photo-2.jpg" download><img src="/epk/photo-2.jpg" onerror="this.onerror=null;this.src='/gallery-24.jpeg'" alt="Nejma Nefertiti in a yellow bucket hat" loading="lazy"></a>
       <a href="/gallery-23.jpeg" download><img src="/gallery-23.jpeg" alt="Black-and-white portrait of Nejma Nefertiti" loading="lazy"></a>
-      <a href="/gallery-14.jpeg" download><img src="/gallery-14.jpeg" alt="Nejma Nefertiti performing under orange stage lights" loading="lazy"></a>
-      <a href="/gallery-27.jpeg" download><img src="/gallery-27.jpeg" alt="Nejma Nefertiti performing at SOB's" loading="lazy"></a>
-      <a href="/gallery-20.jpeg" download><img src="/gallery-20.jpeg" alt="Nejma Nefertiti performing with fist raised" loading="lazy"></a>
+      <a href="/epk/photo-3.jpg" download><img src="/epk/photo-3.jpg" alt="Nejma Nefertiti performing on stage in a red, black, and green hoodie" loading="lazy"></a>
+      <a href="/epk/photo-4.jpg" download><img src="/epk/photo-4.jpg" alt="Nejma Nefertiti performing in a black knit sweater" loading="lazy"></a>
+      <a href="/epk/photo-5.jpg" download><img src="/epk/photo-5.jpg" alt="Nejma Nefertiti performing under blue stage lights" loading="lazy"></a>
     </div>
     <p class="note">Photos may be used to promote Nejma Nefertiti performances.</p>
   </div>
 </section>
 
 <section id="booking" class="booking">
+  <div class="crowd">
+    <img src="/epk/crowd.jpg" alt="Nejma Nefertiti on stage in front of a packed crowd" loading="lazy">
+  </div>
   <div class="wrap">
     <h2>Bring Nejma to Your City</h2>
     <a class="email" href="mailto:startemplebooking@gmail.com?subject=Booking%20Inquiry%20-%20Nejma%20Nefertiti">startemplebooking@gmail.com</a>
@@ -291,6 +346,20 @@
 </section>
 
 <footer>&copy; 2026 Star Temple Studios LLC</footer>
+
+<a href="#top" class="to-top" id="toTop" aria-label="Back to top"><span></span></a>
+<script>
+  (function () {
+    var btn = document.getElementById('toTop');
+    window.addEventListener('scroll', function () {
+      btn.classList.toggle('show', window.scrollY > 600);
+    }, { passive: true });
+    btn.addEventListener('click', function (e) {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  })();
+</script>
 
 </body>
 </html>
