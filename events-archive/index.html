@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Events Archive | Nejma Nefertiti</title>
+<meta name="author" content="Nejma Nefertiti">
+<meta name="description" content="Every flyer from Nejma Nefertiti's shows, listening parties and appearances, kept in order. Brooklyn Hip Hop artist.">
+<link rel="canonical" href="https://nejmanefertiti.com/events-archive/">
+<meta property="og:title" content="Events Archive | Nejma Nefertiti">
+<meta property="og:description" content="Every flyer from Nejma Nefertiti's shows, listening parties and appearances, kept in order.">
+<meta property="og:image" content="https://nejmanefertiti.com/hero.jpeg">
+<meta property="og:url" content="https://nejmanefertiti.com/events-archive/">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800;900&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{--bg:#0b0a08;--bg-raised:#131110;--ink:#ece4d3;--ink-dim:#9c9384;--gold:#c9a15a;--gold-bright:#e0bc7a;--line:#2a2620;}
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{background:var(--bg);color:var(--ink);font-family:'Jost',sans-serif;font-weight:300;overflow-x:hidden;}
+  ::selection{background:var(--gold);color:#0b0a08;}
+  a{color:inherit;text-decoration:none;}
+  h1,h2,h3{font-family:'Big Shoulders Display',sans-serif;font-weight:600;letter-spacing:-0.02em;}
+  .eyebrow{font-family:'Jost',sans-serif;font-size:.82rem;font-weight:500;letter-spacing:.05em;color:var(--gold);}
+
+  nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:18px 5vw;background:rgba(11,10,8,.75);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);}
+  .nav-name{font-family:'Big Shoulders Display',sans-serif;font-weight:600;font-size:1.05rem;letter-spacing:.03em;text-transform:uppercase;color:var(--ink);}
+  .nav-back{display:inline-flex;align-items:center;gap:10px;font-weight:500;font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-dim);transition:color .25s ease;}
+  .nav-back::before{content:"";width:8px;height:8px;background:var(--gold);clip-path:polygon(100% 0,0 50%,100% 100%);}
+  .nav-back:hover{color:var(--gold-bright);}
+
+  .top{max-width:1280px;margin:0 auto;padding:170px 5vw 30px;}
+  .top h1{font-size:clamp(2.6rem,7vw,5.4rem);line-height:1;margin-top:0;}
+  .top p{color:var(--ink-dim);max-width:520px;line-height:1.7;font-size:1.05rem;margin-top:22px;}
+  .count{display:inline-block;margin-top:26px;font-family:'Space Mono',monospace;font-size:.72rem;letter-spacing:.08em;color:var(--gold);}
+  .top-rule{height:1px;margin-top:44px;background:linear-gradient(90deg,rgba(201,161,90,.6),rgba(201,161,90,0));}
+
+  main{max-width:1280px;margin:0 auto;padding:0 5vw 40px;}
+  .year{display:grid;grid-template-columns:200px 1fr;gap:40px;padding:64px 0 24px;}
+  .year-label{position:relative;}
+  .year-label h2{position:sticky;top:96px;font-size:clamp(2.4rem,4.6vw,3.6rem);line-height:1;}
+  .year-label h2::after{content:"";display:block;width:44px;height:1px;margin-top:18px;background:var(--gold);}
+  .sleeves{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:44px 28px;}
+  .sleeve a{display:block;padding:10px;background:var(--bg-raised);border:1px solid var(--line);transition:border-color .35s ease, transform .35s ease, box-shadow .35s ease;}
+  .sleeve img{display:block;width:100%;aspect-ratio:4/5;object-fit:contain;background:#0e0d0b;}
+  .sleeve a:hover{border-color:var(--gold);transform:translateY(-4px);box-shadow:0 18px 40px rgba(0,0,0,.55);}
+  figcaption{display:flex;flex-direction:column;gap:5px;margin-top:14px;}
+  .sl-date{font-family:'Space Mono',monospace;font-size:.7rem;letter-spacing:.04em;color:var(--gold);}
+  .sl-title{font-family:'Big Shoulders Display',sans-serif;font-weight:600;font-size:1.02rem;line-height:1.25;color:var(--ink);}
+  .sl-venue{font-size:.86rem;color:var(--ink-dim);line-height:1.5;}
+
+  .divider{display:flex;align-items:center;justify-content:center;gap:16px;padding:40px 5vw 0;}
+  .divider .rule{height:1px;flex:1;max-width:260px;background:linear-gradient(90deg,rgba(201,161,90,0),rgba(201,161,90,.55));}
+  .divider .rule:last-child{transform:scaleX(-1);}
+  .divider .mark{width:22px;height:22px;}
+  footer{padding:48px 5vw 40px;text-align:center;}
+  .btn{display:inline-block;font-weight:600;font-size:.76rem;letter-spacing:.16em;text-transform:uppercase;padding:14px 26px;border:1px solid var(--gold);color:var(--gold-bright);transition:background .25s ease,color .25s ease;}
+  .btn:hover{background:var(--gold);color:#0b0a08;}
+  footer .copy{color:#6b6354;font-size:.78rem;letter-spacing:.04em;margin-top:30px;}
+
+  [data-reveal]{opacity:0;transform:translateY(24px);transition:opacity .7s ease, transform .7s ease;}
+  [data-reveal].in{opacity:1;transform:translateY(0);}
+  @media (prefers-reduced-motion: reduce){[data-reveal]{opacity:1;transform:none;transition:none;}html{scroll-behavior:auto;}}
+  :focus-visible{outline:2px solid var(--gold-bright);outline-offset:3px;}
+
+  .lightbox{position:fixed;inset:0;z-index:200;display:none;align-items:center;justify-content:center;padding:4vh 4vw;background:rgba(8,7,5,.94);cursor:zoom-out;}
+  .lightbox.open{display:flex;}
+  .lightbox img{max-width:100%;max-height:92vh;object-fit:contain;border:1px solid var(--line);}
+  .lightbox button{position:absolute;top:18px;right:22px;background:none;border:1px solid var(--gold);color:var(--gold-bright);font:600 .74rem 'Jost',sans-serif;letter-spacing:.16em;text-transform:uppercase;padding:10px 16px;cursor:pointer;}
+
+  .to-top{position:fixed;right:22px;bottom:22px;z-index:60;width:46px;height:46px;display:flex;align-items:center;justify-content:center;background:rgba(11,10,8,.88);border:1px solid var(--gold);cursor:pointer;opacity:0;pointer-events:none;transform:translateY(8px);transition:opacity .3s ease, transform .3s ease, background .25s ease;}
+  .to-top.show{opacity:1;pointer-events:auto;transform:translateY(0);}
+  .to-top:hover{background:var(--gold);}
+  .to-top svg{width:16px;height:16px;}
+  .to-top svg path{fill:var(--gold);transition:fill .25s ease;}
+  .to-top:hover svg path{fill:var(--bg);}
+
+  @media (max-width:860px){
+    .year{grid-template-columns:1fr;gap:26px;padding-top:48px;}
+    .year-label h2{position:static;}
+    .sleeves{grid-template-columns:repeat(2,1fr);gap:34px 16px;}
+    .top{padding-top:130px;}
+  }
+  @media (max-width:420px){.sleeve a{padding:6px;}.sl-title{font-size:.95rem;}}
+  h1,h2,h3{text-transform:uppercase;font-weight:800;letter-spacing:.02em;}
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-name" href="../">Nejma Nefertiti</a>
+  <a class="nav-back" href="../#events">Back to site</a>
+</nav>
+
+<header class="top">
+  <h1>Events Archive</h1>
+  <p>Shows, listening parties and appearances.</p>
+  <div class="top-rule"></div>
+</header>
+
+<main>
+  <section class="year" id="y2026" data-dated data-reveal>
+    <div class="year-label"><h2>2026</h2></div>
+    <div class="sleeves">
+      <figure class="sleeve">
+        <a href="../event-01.jpeg" data-full="../event-01.jpeg"><img loading="lazy" src="../event-01.jpeg" alt="Flyer for Savoir Faire Exclusive Listening"></a>
+        <figcaption><span class="sl-date">Tue, Apr 21, 2026</span><span class="sl-title">Savoir Faire Exclusive Listening</span><span class="sl-venue">Le Red Room, Montr&eacute;al &middot; Free</span></figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="year" id="y2025" data-dated data-reveal>
+    <div class="year-label"><h2>2025</h2></div>
+    <div class="sleeves">
+      <figure class="sleeve">
+        <a href="../event-02.jpeg" data-full="../event-02.jpeg"><img loading="lazy" src="../event-02.jpeg" alt="Flyer for Classic Storm Radio 18 Year Anniversary"></a>
+        <figcaption><span class="sl-date">Sat, Dec 20, 2025</span><span class="sl-title">Classic Storm Radio 18 Year Anniversary</span><span class="sl-venue">Berlin, New York, NY &middot; $20 advance, 21+</span></figcaption>
+      </figure>
+      <figure class="sleeve">
+        <a href="../event-03.jpeg" data-full="../event-03.jpeg"><img loading="lazy" src="../event-03.jpeg" alt="Flyer for BIG Bar Vinyl Listening Party"></a>
+        <figcaption><span class="sl-date">Sat, Nov 22, 2025</span><span class="sl-title">BIG Bar Vinyl Listening Party</span><span class="sl-venue">BIG Bar, New York, NY</span></figcaption>
+      </figure>
+      <figure class="sleeve">
+        <a href="../event-04.jpeg" data-full="../event-04.jpeg"><img loading="lazy" src="../event-04.jpeg" alt="Flyer for Bierwax Vinyl Listening Party"></a>
+        <figcaption><span class="sl-date">Sat, Nov 15, 2025</span><span class="sl-title">Bierwax Vinyl Listening Party</span><span class="sl-venue">Bierwax, Brooklyn, NY</span></figcaption>
+      </figure>
+      <figure class="sleeve">
+        <a href="../event-05.jpeg" data-full="../event-05.jpeg"><img loading="lazy" src="../event-05.jpeg" alt="Flyer for Final Friday Slam"></a>
+        <figcaption><span class="sl-date">Fri, Oct 31, 2025</span><span class="sl-title">Final Friday Slam</span><span class="sl-venue">New York, NY &middot; $35</span></figcaption>
+      </figure>
+      <figure class="sleeve">
+        <a href="archive-trife-legacy-atlantucky-2025.jpeg" data-full="archive-trife-legacy-atlantucky-2025.jpeg"><img loading="lazy" src="archive-trife-legacy-atlantucky-2025.jpeg" alt="Flyer for Trife 90s Legacy Event"></a>
+        <figcaption><span class="sl-date">Sat, Jul 5, 2025</span><span class="sl-title">Trife 90s Legacy Event</span><span class="sl-venue">Atlantucky Brewing, Atlanta, GA</span></figcaption>
+      </figure>
+      <figure class="sleeve">
+        <a href="archive-atlantucky-vip-meet-greet.jpeg" data-full="archive-atlantucky-vip-meet-greet.jpeg"><img loading="lazy" src="archive-atlantucky-vip-meet-greet.jpeg" alt="Flyer for 1st Annual Meet &amp; Greet Mixer"></a>
+        <figcaption><span class="sl-date">Tue, Jul 1, 2025</span><span class="sl-title">1st Annual Meet &amp; Greet Mixer</span><span class="sl-venue">Atlantucky Brewing, Atlanta, GA &middot; 21+</span></figcaption>
+      </figure>
+      <figure class="sleeve">
+        <a href="archive-beton-nejma-2025.jpeg" data-full="archive-beton-nejma-2025.jpeg"><img loading="lazy" src="archive-beton-nejma-2025.jpeg" alt="Flyer for Beton"></a>
+        <figcaption><span class="sl-date">Fri, Jun 6, 2025</span><span class="sl-title">Beton</span><span class="sl-venue">New Tekstil, Beograd</span></figcaption>
+      </figure>
+      <figure class="sleeve">
+        <a href="archive-beton-2-beograd.jpeg" data-full="archive-beton-2-beograd.jpeg"><img loading="lazy" src="archive-beton-2-beograd.jpeg" alt="Flyer for Beton 2"></a>
+        <figcaption><span class="sl-date">Jun 6 and 7, 2025</span><span class="sl-title">Beton 2</span><span class="sl-venue">New Tekstil, Dunavska 86, Beograd</span></figcaption>
+      </figure>
+      <figure class="sleeve">
+        <a href="archive-return-of-the-open-mic-2025.jpeg" data-full="archive-return-of-the-open-mic-2025.jpeg"><img loading="lazy" src="archive-return-of-the-open-mic-2025.jpeg" alt="Flyer for End Of The Weak: Return of the Open Mic"></a>
+        <figcaption><span class="sl-date">Sun, May 4, 2025</span><span class="sl-title">End Of The Weak: Return of the Open Mic</span><span class="sl-venue">Sugar Mouse, New York, NY &middot; Verses Project fundraiser</span></figcaption>
+      </figure>
+      <figure class="sleeve">
+        <a href="archive-bam-word-sound-power-2025.jpeg" data-full="archive-bam-word-sound-power-2025.jpeg"><img loading="lazy" src="archive-bam-word-sound-power-2025.jpeg" alt="Flyer for BAM Word. Sound. Power."></a>
+        <figcaption><span class="sl-date">2025</span><span class="sl-title">BAM Word. Sound. Power.</span><span class="sl-venue">BAM</span></figcaption>
+      </figure>
+      <figure class="sleeve">
+        <a href="archive-bam-2025-artist-card.jpeg" data-full="archive-bam-2025-artist-card.jpeg"><img loading="lazy" src="archive-bam-2025-artist-card.jpeg" alt="Flyer for BAM Word. Sound. Power."></a>
+        <figcaption><span class="sl-date">2025</span><span class="sl-title">BAM Word. Sound. Power.</span><span class="sl-venue">BAM &middot; Artist card</span></figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="year" id="y2024" data-dated data-reveal>
+    <div class="year-label"><h2>2024</h2></div>
+    <div class="sleeves">
+      <figure class="sleeve">
+        <a href="archive-canadian-tour-2024.jpeg" data-full="archive-canadian-tour-2024.jpeg"><img loading="lazy" src="archive-canadian-tour-2024.jpeg" alt="Flyer for Canadian Tour"></a>
+        <figcaption><span class="sl-date">Sep to Dec 2024</span><span class="sl-title">Canadian Tour</span><span class="sl-venue">Montr&eacute;al and Toronto &middot; Star Temple Booking</span></figcaption>
+      </figure>
+      <figure class="sleeve">
+        <a href="archive-final-spin-mobb-deep-2024.jpeg" data-full="archive-final-spin-mobb-deep-2024.jpeg"><img loading="lazy" src="archive-final-spin-mobb-deep-2024.jpeg" alt="Flyer for The Final Spin: Mobb Deep, Smif N Wessun"></a>
+        <figcaption><span class="sl-date">Sun, Dec 15, 2024</span><span class="sl-title">The Final Spin: Mobb Deep, Smif N Wessun</span><span class="sl-venue">The Phoenix Concert Theatre, Toronto</span></figcaption>
+      </figure>
+      <figure class="sleeve">
+        <a href="archive-dj-merciless-bday-bash-2024.jpeg" data-full="archive-dj-merciless-bday-bash-2024.jpeg"><img loading="lazy" src="archive-dj-merciless-bday-bash-2024.jpeg" alt="Flyer for DJ Merciless Bday Bash"></a>
+        <figcaption><span class="sl-date">Fri, Nov 15, 2024</span><span class="sl-title">DJ Merciless Bday Bash</span><span class="sl-venue">The Phoenix Concert Theatre, Toronto &middot; Free</span></figcaption>
+      </figure>
+      <figure class="sleeve">
+        <a href="archive-group-home-cormega-phoenix.jpeg" data-full="archive-group-home-cormega-phoenix.jpeg"><img loading="lazy" src="archive-group-home-cormega-phoenix.jpeg" alt="Flyer for The Final Spin: Group Home and Cormega"></a>
+        <figcaption><span class="sl-date">Sun, Oct 13, 2024</span><span class="sl-title">The Final Spin: Group Home and Cormega</span><span class="sl-venue">The Phoenix Concert Theatre, Toronto &middot; 19+</span></figcaption>
+      </figure>
+      <figure class="sleeve">
+        <a href="archive-boogat-quai-des-brumes-2024.jpeg" data-full="archive-boogat-quai-des-brumes-2024.jpeg"><img loading="lazy" src="archive-boogat-quai-des-brumes-2024.jpeg" alt="Flyer for Boog&aacute;t en spectacle"></a>
+        <figcaption><span class="sl-date">Sat, Oct 5, 2024</span><span class="sl-title">Boog&aacute;t en spectacle</span><span class="sl-venue">Quai des Brumes, Montr&eacute;al &middot; 9 PM</span></figcaption>
+      </figure>
+      <figure class="sleeve">
+        <a href="archive-meryem-saci-kaza-maza-2024.jpeg" data-full="archive-meryem-saci-kaza-maza-2024.jpeg"><img loading="lazy" src="archive-meryem-saci-kaza-maza-2024.jpeg" alt="Flyer for Meryem Saci"></a>
+        <figcaption><span class="sl-date">Mon, Sep 16, 2024</span><span class="sl-title">Meryem Saci</span><span class="sl-venue">Kaza Maza, 4629 Park Ave, Montr&eacute;al &middot; $20</span></figcaption>
+      </figure>
+      <figure class="sleeve">
+        <a href="archive-knowledge-hot-cypher-redroom.jpeg" data-full="archive-knowledge-hot-cypher-redroom.jpeg"><img loading="lazy" src="archive-knowledge-hot-cypher-redroom.jpeg" alt="Flyer for Knowledge Hot Cypher"></a>
+        <figcaption><span class="sl-date">Tue, Sep 3, 2024</span><span class="sl-title">Knowledge Hot Cypher</span><span class="sl-venue">Le Red Room, Montr&eacute;al &middot; $5</span></figcaption>
+      </figure>
+      <figure class="sleeve">
+        <a href="archive-sis-expo-2024.jpeg" data-full="archive-sis-expo-2024.jpeg"><img loading="lazy" src="archive-sis-expo-2024.jpeg" alt="Flyer for SIS Expo New York"></a>
+        <figcaption><span class="sl-date">Sat, Jul 20, 2024</span><span class="sl-title">SIS Expo New York</span><span class="sl-venue">Brooklyn, NY &middot; 4 to 9 PM</span></figcaption>
+      </figure>
+      <figure class="sleeve">
+        <a href="archive-bronx-pride-festival-2024.jpeg" data-full="archive-bronx-pride-festival-2024.jpeg"><img loading="lazy" src="archive-bronx-pride-festival-2024.jpeg" alt="Flyer for Da Bronx Pride Festival"></a>
+        <figcaption><span class="sl-date">Sat, Jun 22, 2024</span><span class="sl-title">Da Bronx Pride Festival</span><span class="sl-venue">Westchester Ave, The Bronx &middot; Free, all ages</span></figcaption>
+      </figure>
+      <figure class="sleeve">
+        <a href="archive-nor-kin4life-belmont-2024.jpeg" data-full="archive-nor-kin4life-belmont-2024.jpeg"><img loading="lazy" src="archive-nor-kin4life-belmont-2024.jpeg" alt="Flyer for Nor Kin4Life Performing Live"></a>
+        <figcaption><span class="sl-date">Sat, Jun 22, 2024</span><span class="sl-title">Nor Kin4Life Performing Live</span><span class="sl-venue">619 Belmont Ave, Brooklyn, NY &middot; 1 PM &middot; Free</span></figcaption>
+      </figure>
+      <figure class="sleeve">
+        <a href="archive-la-belle-hip-hop-2024.jpeg" data-full="archive-la-belle-hip-hop-2024.jpeg"><img loading="lazy" src="archive-la-belle-hip-hop-2024.jpeg" alt="Flyer for La Belle Hip Hop: Bold Edition"></a>
+        <figcaption><span class="sl-date">May 21 to 24, 2024</span><span class="sl-title">La Belle Hip Hop: Bold Edition</span><span class="sl-venue">Workshop, concert and conference</span></figcaption>
+      </figure>
+      <figure class="sleeve">
+        <a href="archive-black-women-music-festival-2024.jpeg" data-full="archive-black-women-music-festival-2024.jpeg"><img loading="lazy" src="archive-black-women-music-festival-2024.jpeg" alt="Flyer for Black Women and Music Festival and Pop Up"></a>
+        <figcaption><span class="sl-date">Sat, May 11, 2024</span><span class="sl-title">Black Women and Music Festival and Pop Up</span><span class="sl-venue">The Garden, 46 Hillcrest Rd, Mount Vernon, NY</span></figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="year" id="y2023" data-dated data-reveal>
+    <div class="year-label"><h2>2023</h2></div>
+    <div class="sleeves">
+      <figure class="sleeve">
+        <a href="archive-we-the-artists-march-2023.jpeg" data-full="archive-we-the-artists-march-2023.jpeg"><img loading="lazy" src="archive-we-the-artists-march-2023.jpeg" alt="Flyer for We, The Artists March"></a>
+        <figcaption><span class="sl-date">Sat, Sep 16, 2023</span><span class="sl-title">We, The Artists March</span><span class="sl-venue">42nd St &amp; Broadway, New York, NY &middot; 3 PM</span></figcaption>
+      </figure>
+      <figure class="sleeve">
+        <a href="archive-wu-tang-sways-universe-2023.jpeg" data-full="archive-wu-tang-sways-universe-2023.jpeg"><img loading="lazy" src="archive-wu-tang-sways-universe-2023.jpeg" alt="Flyer for Wu-Tang x Sway's Universe: The Saga Continues"></a>
+        <figcaption><span class="sl-date">Fri, Jun 23, 2023</span><span class="sl-title">Wu-Tang x Sway's Universe: The Saga Continues</span><span class="sl-venue">New York, NY</span></figcaption>
+      </figure>
+      <figure class="sleeve">
+        <a href="archive-queersay-nuyorican-2023.jpeg" data-full="archive-queersay-nuyorican-2023.jpeg"><img loading="lazy" src="archive-queersay-nuyorican-2023.jpeg" alt="Flyer for Queersay: An LGBTQ+ Open Mic"></a>
+        <figcaption><span class="sl-date">Sat, Jun 17, 2023</span><span class="sl-title">Queersay: An LGBTQ+ Open Mic</span><span class="sl-venue">Nuyorican Poets Cafe, New York, NY &middot; Hosted by Nicco Diaz</span></figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="year" id="y2022" data-dated data-reveal>
+    <div class="year-label"><h2>2022</h2></div>
+    <div class="sleeves">
+      <figure class="sleeve">
+        <a href="archive-stage-garden-rumba-2022.jpeg" data-full="archive-stage-garden-rumba-2022.jpeg"><img loading="lazy" src="archive-stage-garden-rumba-2022.jpeg" alt="Flyer for Stage Garden Rumba"></a>
+        <figcaption><span class="sl-date">Sat, Oct 1, 2022</span><span class="sl-title">Stage Garden Rumba</span><span class="sl-venue">Woodycrest Garden, The Bronx &middot; Free</span></figcaption>
+      </figure>
+      <figure class="sleeve">
+        <a href="archive-le-detour-saint-louis-2022.jpeg" data-full="archive-le-detour-saint-louis-2022.jpeg"><img loading="lazy" src="archive-le-detour-saint-louis-2022.jpeg" alt="Flyer for Nejma Nefertiti et Napoleon da Legend en d&eacute;dicace"></a>
+        <figcaption><span class="sl-date">Sun, Sep 11, 2022</span><span class="sl-title">Nejma Nefertiti et Napoleon da Legend en d&eacute;dicace</span><span class="sl-venue">Le D&eacute;tour, Saint-Louis &middot; 16h</span></figcaption>
+      </figure>
+      <figure class="sleeve">
+        <a href="archive-botfess-samedi-10-septembre-2022.jpeg" data-full="archive-botfess-samedi-10-septembre-2022.jpeg"><img loading="lazy" src="archive-botfess-samedi-10-septembre-2022.jpeg" alt="Flyer for bot'fess presents Nejma Nefertiti et DJ Scribe"></a>
+        <figcaption><span class="sl-date">Sat, Sep 10, 2022</span><span class="sl-title">bot'fess presents Nejma Nefertiti et DJ Scribe</span><span class="sl-venue">ft. Napoleon da Legend</span></figcaption>
+      </figure>
+      <figure class="sleeve">
+        <a href="archive-llos-plattenboerse-basel-2022.jpeg" data-full="archive-llos-plattenboerse-basel-2022.jpeg"><img loading="lazy" src="archive-llos-plattenboerse-basel-2022.jpeg" alt="Flyer for LLOS Plattenb&ouml;rse Meet &amp; Greet"></a>
+        <figcaption><span class="sl-date">Sat, Sep 10, 2022</span><span class="sl-title">LLOS Plattenb&ouml;rse Meet &amp; Greet</span><span class="sl-venue">Saint-Louis-Strasse, Basel &middot; Free</span></figcaption>
+      </figure>
+      <figure class="sleeve">
+        <a href="archive-botfess-gambrinus-sept-9-2022.jpeg" data-full="archive-botfess-gambrinus-sept-9-2022.jpeg"><img loading="lazy" src="archive-botfess-gambrinus-sept-9-2022.jpeg" alt="Flyer for bot'fess: Showcase Exclusif"></a>
+        <figcaption><span class="sl-date">Fri, Sep 9, 2022</span><span class="sl-title">bot'fess: Showcase Exclusif</span><span class="sl-venue">Au Gambrinus &middot; Nejma Nefertiti et DJ Scribe</span></figcaption>
+      </figure>
+      <figure class="sleeve">
+        <a href="archive-bierwax-vinyl-signing-aug-10-2022.jpeg" data-full="archive-bierwax-vinyl-signing-aug-10-2022.jpeg"><img loading="lazy" src="archive-bierwax-vinyl-signing-aug-10-2022.jpeg" alt="Flyer for Bierwax Vinyl Listening and Signing"></a>
+        <figcaption><span class="sl-date">Wed, Aug 10, 2022</span><span class="sl-title">Bierwax Vinyl Listening and Signing</span><span class="sl-venue">Bierwax, Brooklyn, NY</span></figcaption>
+      </figure>
+      <figure class="sleeve">
+        <a href="archive-residency-knitting-factory-2022.jpeg" data-full="archive-residency-knitting-factory-2022.jpeg"><img loading="lazy" src="archive-residency-knitting-factory-2022.jpeg" alt="Flyer for The Residency @ Knitting Factory"></a>
+        <figcaption><span class="sl-date">Sun, Jun 5, 2022</span><span class="sl-title">The Residency @ Knitting Factory</span><span class="sl-venue">361 Metropolitan Ave, Brooklyn, NY &middot; End Of The Weak</span></figcaption>
+      </figure>
+      <figure class="sleeve">
+        <a href="archive-the-reset-atlanta-may-25.jpeg" data-full="archive-the-reset-atlanta-may-25.jpeg"><img loading="lazy" src="archive-the-reset-atlanta-may-25.jpeg" alt="Flyer for The Reset"></a>
+        <figcaption><span class="sl-date">Wed, May 25, 2022</span><span class="sl-title">The Reset</span><span class="sl-venue">529, East Atlanta Village, Atlanta, GA</span></figcaption>
+      </figure>
+      <figure class="sleeve">
+        <a href="archive-the-residency-eodub-may-01.jpeg" data-full="archive-the-residency-eodub-may-01.jpeg"><img loading="lazy" src="archive-the-residency-eodub-may-01.jpeg" alt="Flyer for The Residency @ EODUB, Season 1"></a>
+        <figcaption><span class="sl-date">Sun, May 1, 2022</span><span class="sl-title">The Residency @ EODUB, Season 1</span><span class="sl-venue">End Of The Weak</span></figcaption>
+      </figure>
+      <figure class="sleeve">
+        <a href="archive-residency-eodub-apr-03.jpeg" data-full="archive-residency-eodub-apr-03.jpeg"><img loading="lazy" src="archive-residency-eodub-apr-03.jpeg" alt="Flyer for The Residency @ EODUB, Season 1"></a>
+        <figcaption><span class="sl-date">Sun, Apr 3, 2022</span><span class="sl-title">The Residency @ EODUB, Season 1</span><span class="sl-venue">End Of The Weak</span></figcaption>
+      </figure>
+      <figure class="sleeve">
+        <a href="archive-the-residency-eodub-mar-06.jpeg" data-full="archive-the-residency-eodub-mar-06.jpeg"><img loading="lazy" src="archive-the-residency-eodub-mar-06.jpeg" alt="Flyer for The Residency @ EODUB, Season 1"></a>
+        <figcaption><span class="sl-date">Sun, Mar 6, 2022</span><span class="sl-title">The Residency @ EODUB, Season 1</span><span class="sl-venue">End Of The Weak</span></figcaption>
+      </figure>
+      <figure class="sleeve">
+        <a href="archive-iron-throne-radio-2022.jpeg" data-full="archive-iron-throne-radio-2022.jpeg"><img loading="lazy" src="archive-iron-throne-radio-2022.jpeg" alt="Flyer for Iron Throne Radio: Exclusive Interview"></a>
+        <figcaption><span class="sl-date">Fri, Feb 18, 2022</span><span class="sl-title">Iron Throne Radio: Exclusive Interview</span><span class="sl-venue">8:30 PM ET &middot; Online</span></figcaption>
+      </figure>
+      <figure class="sleeve">
+        <a href="archive-wvcc-radio-2022.jpeg" data-full="archive-wvcc-radio-2022.jpeg"><img loading="lazy" src="archive-wvcc-radio-2022.jpeg" alt="Flyer for WVCC Radio: Cyph Lyfe Radio"></a>
+        <figcaption><span class="sl-date">Thu, Feb 10, 2022</span><span class="sl-title">WVCC Radio: Cyph Lyfe Radio</span><span class="sl-venue">9 to 11 PM ET &middot; Twitch</span></figcaption>
+      </figure>
+      <figure class="sleeve">
+        <a href="archive-dvr-bbox-radio-2022.jpeg" data-full="archive-dvr-bbox-radio-2022.jpeg"><img loading="lazy" src="archive-dvr-bbox-radio-2022.jpeg" alt="Flyer for DVR Radio Show with Ze Motion"></a>
+        <figcaption><span class="sl-date">Wed, Feb 9, 2022</span><span class="sl-title">DVR Radio Show with Ze Motion</span><span class="sl-venue">BBOX Radio &middot; 7:30 to 9 PM</span></figcaption>
+      </figure>
+      <figure class="sleeve">
+        <a href="archive-hip-hop-homelands-baad-2022.jpeg" data-full="archive-hip-hop-homelands-baad-2022.jpeg"><img loading="lazy" src="archive-hip-hop-homelands-baad-2022.jpeg" alt="Flyer for Hip-Hop Homelands Showcase"></a>
+        <figcaption><span class="sl-date">Fri, Jan 21, 2022</span><span class="sl-title">Hip-Hop Homelands Showcase</span><span class="sl-venue">Pepatian and BAAD! Bronx &middot; Online &middot; Free</span></figcaption>
+      </figure>
+      <figure class="sleeve">
+        <a href="archive-wednesday-wreck-2022.jpeg" data-full="archive-wednesday-wreck-2022.jpeg"><img loading="lazy" src="archive-wednesday-wreck-2022.jpeg" alt="Flyer for DJ Kazzeo's Wednesday Wreck"></a>
+        <figcaption><span class="sl-date">Wed, Jan 12, 2022</span><span class="sl-title">DJ Kazzeo's Wednesday Wreck</span><span class="sl-venue">90.9 FM KHDC &middot; 6 PM PST</span></figcaption>
+      </figure>
+      <figure class="sleeve">
+        <a href="archive-beatnix-nuyorican-2022.jpeg" data-full="archive-beatnix-nuyorican-2022.jpeg"><img loading="lazy" src="archive-beatnix-nuyorican-2022.jpeg" alt="Flyer for Beatnix at Nuyorican Poets Cafe"></a>
+        <figcaption><span class="sl-date">Wed, Jan 5, 2022</span><span class="sl-title">Beatnix at Nuyorican Poets Cafe</span><span class="sl-venue">Online &middot; Hosted by La Bruja</span></figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="year" id="y2021" data-dated data-reveal>
+    <div class="year-label"><h2>2021</h2></div>
+    <div class="sleeves">
+      <figure class="sleeve">
+        <a href="archive-everything-indie-show-39-2021.jpeg" data-full="archive-everything-indie-show-39-2021.jpeg"><img loading="lazy" src="archive-everything-indie-show-39-2021.jpeg" alt="Flyer for The Everything Indie Show #39"></a>
+        <figcaption><span class="sl-date">Tue, Dec 7, 2021</span><span class="sl-title">The Everything Indie Show #39</span><span class="sl-venue">Have Knotz Indie Radio &middot; 7:30 PM</span></figcaption>
+      </figure>
+      <figure class="sleeve">
+        <a href="archive-ladies-first-virtual-open-mic-2021.jpeg" data-full="archive-ladies-first-virtual-open-mic-2021.jpeg"><img loading="lazy" src="archive-ladies-first-virtual-open-mic-2021.jpeg" alt="Flyer for Ladies First Virtual Open Mic"></a>
+        <figcaption><span class="sl-date">Sun, Sep 12, 2021</span><span class="sl-title">Ladies First Virtual Open Mic</span><span class="sl-venue">End Of The Weak &middot; Online</span></figcaption>
+      </figure>
+      <figure class="sleeve">
+        <a href="archive-maroon-futures-afro-yaqui.jpeg" data-full="archive-maroon-futures-afro-yaqui.jpeg"><img loading="lazy" src="archive-maroon-futures-afro-yaqui.jpeg" alt="Flyer for Maroon Futures Album Release Party and Retrospective"></a>
+        <figcaption><span class="sl-date">Thu, Jun 24, 2021</span><span class="sl-title">Maroon Futures Album Release Party and Retrospective</span><span class="sl-venue">Afro Yaqui Music Collective &middot; Online</span></figcaption>
+      </figure>
+      <figure class="sleeve">
+        <a href="archive-performing-body-mind-spirit-2021.jpeg" data-full="archive-performing-body-mind-spirit-2021.jpeg"><img loading="lazy" src="archive-performing-body-mind-spirit-2021.jpeg" alt="Flyer for Performing Body Mind Spirit"></a>
+        <figcaption><span class="sl-date">Thu, May 6, 2021</span><span class="sl-title">Performing Body Mind Spirit</span><span class="sl-venue">Livestream Zoom webinar &middot; UW-Madison</span></figcaption>
+      </figure>
+      <figure class="sleeve">
+        <a href="archive-bam-word-sound-power-2021.jpeg" data-full="archive-bam-word-sound-power-2021.jpeg"><img loading="lazy" src="archive-bam-word-sound-power-2021.jpeg" alt="Flyer for BAM Word. Sound. Power. 2021"></a>
+        <figcaption><span class="sl-date">Fri, Apr 23, 2021</span><span class="sl-title">BAM Word. Sound. Power. 2021</span><span class="sl-venue">BAM &middot; 8 PM</span></figcaption>
+      </figure>
+      <figure class="sleeve">
+        <a href="archive-valley-of-the-queens-2021.jpeg" data-full="archive-valley-of-the-queens-2021.jpeg"><img loading="lazy" src="archive-valley-of-the-queens-2021.jpeg" alt="Flyer for Valley of the Queens"></a>
+        <figcaption><span class="sl-date">Tue, Mar 30, 2021</span><span class="sl-title">Valley of the Queens</span><span class="sl-venue">Curated by Nejma Nefertiti &middot; City of Asylum &middot; Free</span></figcaption>
+      </figure>
+      <figure class="sleeve">
+        <a href="archive-the-park-jam-altspace-2021.jpeg" data-full="archive-the-park-jam-altspace-2021.jpeg"><img loading="lazy" src="archive-the-park-jam-altspace-2021.jpeg" alt="Flyer for The Park Jam"></a>
+        <figcaption><span class="sl-date">Sat, Mar 20, 2021</span><span class="sl-title">The Park Jam</span><span class="sl-venue">AltSpaceVR &middot; HipHopInVR.com</span></figcaption>
+      </figure>
+      <figure class="sleeve">
+        <a href="archive-we-are-maroon-2021.jpeg" data-full="archive-we-are-maroon-2021.jpeg"><img loading="lazy" src="archive-we-are-maroon-2021.jpeg" alt="Flyer for We Are Maroon! A Teach-In"></a>
+        <figcaption><span class="sl-date">Fri, Jan 29, 2021</span><span class="sl-title">We Are Maroon! A Teach-In</span><span class="sl-venue">Online &middot; 7 to 9 PM</span></figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="year" id="y2020" data-dated data-reveal>
+    <div class="year-label"><h2>2020</h2></div>
+    <div class="sleeves">
+      <figure class="sleeve">
+        <a href="archive-rhymez-rhythmz-2020.jpeg" data-full="archive-rhymez-rhythmz-2020.jpeg"><img loading="lazy" src="archive-rhymez-rhythmz-2020.jpeg" alt="Flyer for Rhymez &amp; Rhythmz Virtual Open Mic"></a>
+        <figcaption><span class="sl-date">Fri, Sep 11, 2020</span><span class="sl-title">Rhymez &amp; Rhythmz Virtual Open Mic</span><span class="sl-venue">Rhythm Visions Production Company &middot; 8 PM</span></figcaption>
+      </figure>
+      <figure class="sleeve">
+        <a href="archive-arts-x-sdgs-festival-2020.jpeg" data-full="archive-arts-x-sdgs-festival-2020.jpeg"><img loading="lazy" src="archive-arts-x-sdgs-festival-2020.jpeg" alt="Flyer for arts x sdgs Festival: Artist Spotlight"></a>
+        <figcaption><span class="sl-date">Tue, Aug 18, 2020</span><span class="sl-title">arts x sdgs Festival: Artist Spotlight</span><span class="sl-venue">Webinar &middot; 9:05 to 9:30 AM EST</span></figcaption>
+      </figure>
+      <figure class="sleeve">
+        <a href="archive-covid-19-arts-festival-2020.jpeg" data-full="archive-covid-19-arts-festival-2020.jpeg"><img loading="lazy" src="archive-covid-19-arts-festival-2020.jpeg" alt="Flyer for COVID-19 Arts Festival: Hip Hop &amp; COVID-19"></a>
+        <figcaption><span class="sl-date">Wed, Jul 29, 2020</span><span class="sl-title">COVID-19 Arts Festival: Hip Hop &amp; COVID-19</span><span class="sl-venue">Webinar #4 &middot; 12 PM Eastern</span></figcaption>
+      </figure>
+      <figure class="sleeve">
+        <a href="archive-the-sage-2020.jpeg" data-full="archive-the-sage-2020.jpeg"><img loading="lazy" src="archive-the-sage-2020.jpeg" alt="Flyer for The Sage"></a>
+        <figcaption><span class="sl-date">Wed, Jul 22, 2020</span><span class="sl-title">The Sage</span><span class="sl-venue">Real Radio &middot; 7 to 8 PM EST</span></figcaption>
+      </figure>
+      <figure class="sleeve">
+        <a href="archive-gritty-in-pink-new-york-2020.jpeg" data-full="archive-gritty-in-pink-new-york-2020.jpeg"><img loading="lazy" src="archive-gritty-in-pink-new-york-2020.jpeg" alt="Flyer for Gritty in Pink New York"></a>
+        <figcaption><span class="sl-date">Tue, Jul 7, 2020</span><span class="sl-title">Gritty in Pink New York</span><span class="sl-venue">Virtual tour &middot; Fundraiser for Sweet Relief</span></figcaption>
+      </figure>
+      <figure class="sleeve">
+        <a href="archive-ig-live-interview-2020.jpeg" data-full="archive-ig-live-interview-2020.jpeg"><img loading="lazy" src="archive-ig-live-interview-2020.jpeg" alt="Flyer for Exclusive Interview on IG Live"></a>
+        <figcaption><span class="sl-date">Thu, May 28, 2020</span><span class="sl-title">Exclusive Interview on IG Live</span><span class="sl-venue">3 PM NYC &middot; @ghetto_queen_official</span></figcaption>
+      </figure>
+      <figure class="sleeve">
+        <a href="archive-pepatian-film-screenings-2020.jpeg" data-full="archive-pepatian-film-screenings-2020.jpeg"><img loading="lazy" src="archive-pepatian-film-screenings-2020.jpeg" alt="Flyer for Pepatian's Hip-Hop Academy: Film Screenings"></a>
+        <figcaption><span class="sl-date">Thu, May 14, 2020</span><span class="sl-title">Pepatian's Hip-Hop Academy: Film Screenings</span><span class="sl-venue">Women in Hip-Hop Rep The Bronx Q&amp;A &middot; The Point</span></figcaption>
+      </figure>
+      <figure class="sleeve">
+        <a href="archive-pepatian-spoken-word-2020.jpeg" data-full="archive-pepatian-spoken-word-2020.jpeg"><img loading="lazy" src="archive-pepatian-spoken-word-2020.jpeg" alt="Flyer for Pepatian's Hip-Hop Academy: Spoken Word"></a>
+        <figcaption><span class="sl-date">Tuesdays, May 12 to Jun 2, 2020</span><span class="sl-title">Pepatian's Hip-Hop Academy: Spoken Word</span><span class="sl-venue">Hosted by Nejma Nefertiti &middot; Ages 12 to 19</span></figcaption>
+      </figure>
+      <figure class="sleeve">
+        <a href="archive-rebel-minded-music-2020.jpeg" data-full="archive-rebel-minded-music-2020.jpeg"><img loading="lazy" src="archive-rebel-minded-music-2020.jpeg" alt="Flyer for Rebel Minded Music"></a>
+        <figcaption><span class="sl-date">Sat, May 9, 2020</span><span class="sl-title">Rebel Minded Music</span><span class="sl-venue">Destruct Presents &middot; IG Live &middot; 9 PM PST</span></figcaption>
+      </figure>
+      <figure class="sleeve">
+        <a href="archive-just-bust-madison-2020.jpeg" data-full="archive-just-bust-madison-2020.jpeg"><img loading="lazy" src="archive-just-bust-madison-2020.jpeg" alt="Flyer for Just Bust!"></a>
+        <figcaption><span class="sl-date">Fri, Mar 6, 2020</span><span class="sl-title">Just Bust!</span><span class="sl-venue">August Shop, 414 State St, Madison, WI</span></figcaption>
+      </figure>
+      <figure class="sleeve">
+        <a href="archive-art-equals-politics-madison-2020.jpeg" data-full="archive-art-equals-politics-madison-2020.jpeg"><img loading="lazy" src="archive-art-equals-politics-madison-2020.jpeg" alt="Flyer for Art Equals Politics: From The Streets To Social Justice"></a>
+        <figcaption><span class="sl-date">Thu, Feb 27, 2020</span><span class="sl-title">Art Equals Politics: From The Streets To Social Justice</span><span class="sl-venue">Bayview Community Center, Madison, WI &middot; Free</span></figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="year" id="y2019" data-dated data-reveal>
+    <div class="year-label"><h2>2019</h2></div>
+    <div class="sleeves">
+      <figure class="sleeve">
+        <a href="archive-word-rock-and-sword-ix-2019.jpeg" data-full="archive-word-rock-and-sword-ix-2019.jpeg"><img loading="lazy" src="archive-word-rock-and-sword-ix-2019.jpeg" alt="Flyer for Word, Rock &amp; Sword IX"></a>
+        <figcaption><span class="sl-date">Sat, Sep 21, 2019</span><span class="sl-title">Word, Rock &amp; Sword IX</span><span class="sl-venue">Le Poisson Rouge, New York, NY &middot; $20 advance</span></figcaption>
+      </figure>
+      <figure class="sleeve">
+        <a href="archive-newark-fm-forsa-2019.jpeg" data-full="archive-newark-fm-forsa-2019.jpeg"><img loading="lazy" src="archive-newark-fm-forsa-2019.jpeg" alt="Flyer for Newark.fm FORSA with DJ MD"></a>
+        <figcaption><span class="sl-date">Tue, Sep 17, 2019</span><span class="sl-title">Newark.fm FORSA with DJ MD</span><span class="sl-venue">Newark, NJ &middot; 6 to 8 PM</span></figcaption>
+      </figure>
+      <figure class="sleeve">
+        <a href="archive-i-am-maroon-launch-2019.jpeg" data-full="archive-i-am-maroon-launch-2019.jpeg"><img loading="lazy" src="archive-i-am-maroon-launch-2019.jpeg" alt="Flyer for I Am Maroon: Book Launch Reading and Discussion"></a>
+        <figcaption><span class="sl-date">Fri, Sep 6, 2019</span><span class="sl-title">I Am Maroon: Book Launch Reading and Discussion</span><span class="sl-venue">The People's Forum, 320 W 37th St, New York, NY &middot; Free</span></figcaption>
+      </figure>
+      <figure class="sleeve">
+        <a href="archive-lincoln-park-music-festival-2019.jpeg" data-full="archive-lincoln-park-music-festival-2019.jpeg"><img loading="lazy" src="archive-lincoln-park-music-festival-2019.jpeg" alt="Flyer for Lincoln Park Music Festival: Hip Hop Culture Day"></a>
+        <figcaption><span class="sl-date">Sun, Jul 28, 2019</span><span class="sl-title">Lincoln Park Music Festival: Hip Hop Culture Day</span><span class="sl-venue">Newark, NJ &middot; FORSA presents</span></figcaption>
+      </figure>
+      <figure class="sleeve">
+        <a href="archive-uprising-blend-the-femme-2019.jpeg" data-full="archive-uprising-blend-the-femme-2019.jpeg"><img loading="lazy" src="archive-uprising-blend-the-femme-2019.jpeg" alt="Flyer for Blend The Femme Uprising"></a>
+        <figcaption><span class="sl-date">Wed, Jun 26, 2019</span><span class="sl-title">Blend The Femme Uprising</span><span class="sl-venue">Pianos, New York, NY &middot; $15</span></figcaption>
+      </figure>
+      <figure class="sleeve">
+        <a href="archive-women-in-hip-hop-bronx-showcase-2019.jpeg" data-full="archive-women-in-hip-hop-bronx-showcase-2019.jpeg"><img loading="lazy" src="archive-women-in-hip-hop-bronx-showcase-2019.jpeg" alt="Flyer for Women in Hip-Hop: Rep The Bronx Showcase"></a>
+        <figcaption><span class="sl-date">Sat, Mar 30, 2019</span><span class="sl-title">Women in Hip-Hop: Rep The Bronx Showcase</span><span class="sl-venue">Bronx Music Heritage Center &middot; $5</span></figcaption>
+      </figure>
+      <figure class="sleeve">
+        <a href="archive-spoken-word-workshops-the-point-2019.jpeg" data-full="archive-spoken-word-workshops-the-point-2019.jpeg"><img loading="lazy" src="archive-spoken-word-workshops-the-point-2019.jpeg" alt="Flyer for Pepati&aacute;n Hip-Hop Academy Spoken Word Workshops"></a>
+        <figcaption><span class="sl-date">Mar 19, 21, 26 and 28, 2019</span><span class="sl-title">Pepati&aacute;n Hip-Hop Academy Spoken Word Workshops</span><span class="sl-venue">The Point, The Bronx</span></figcaption>
+      </figure>
+      <figure class="sleeve">
+        <a href="archive-indigenous-resistance-umass-amherst-2019.jpeg" data-full="archive-indigenous-resistance-umass-amherst-2019.jpeg"><img loading="lazy" src="archive-indigenous-resistance-umass-amherst-2019.jpeg" alt="Flyer for Indigenous Resistance, Environmental Struggle and 21st Century Survival"></a>
+        <figcaption><span class="sl-date">Mon, Mar 18, 2019</span><span class="sl-title">Indigenous Resistance, Environmental Struggle and 21st Century Survival</span><span class="sl-venue">Goodell Hall, UMass Amherst &middot; Free</span></figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="year" id="y2018" data-dated data-reveal>
+    <div class="year-label"><h2>2018</h2></div>
+    <div class="sleeves">
+      <figure class="sleeve">
+        <a href="archive-mirror-butterfly-kennedy-center.jpeg" data-full="archive-mirror-butterfly-kennedy-center.jpeg"><img loading="lazy" src="archive-mirror-butterfly-kennedy-center.jpeg" alt="Flyer for Mirror Butterfly: The Migrant Liberation Movement Suite"></a>
+        <figcaption><span class="sl-date">Fri, Nov 23, 2018</span><span class="sl-title">Mirror Butterfly: The Migrant Liberation Movement Suite</span><span class="sl-venue">Kennedy Center Millennium Stage &middot; Free</span></figcaption>
+      </figure>
+      <figure class="sleeve">
+        <a href="archive-wilmington-hip-hop-culture-festival-2018.jpeg" data-full="archive-wilmington-hip-hop-culture-festival-2018.jpeg"><img loading="lazy" src="archive-wilmington-hip-hop-culture-festival-2018.jpeg" alt="Flyer for Wilmington Hip Hop Culture Festival"></a>
+        <figcaption><span class="sl-date">Sun, Aug 26, 2018</span><span class="sl-title">Wilmington Hip Hop Culture Festival</span><span class="sl-venue">Wilmington</span></figcaption>
+      </figure>
+      <figure class="sleeve">
+        <a href="archive-vibes-of-pride-2018.jpeg" data-full="archive-vibes-of-pride-2018.jpeg"><img loading="lazy" src="archive-vibes-of-pride-2018.jpeg" alt="Flyer for Vibes of Pride"></a>
+        <figcaption><span class="sl-date">Sun, Jun 24, 2018</span><span class="sl-title">Vibes of Pride</span><span class="sl-venue">Pianos, New York, NY &middot; $15</span></figcaption>
+      </figure>
+      <figure class="sleeve">
+        <a href="archive-reweaving-pangaea-nuyorican-2018.jpeg" data-full="archive-reweaving-pangaea-nuyorican-2018.jpeg"><img loading="lazy" src="archive-reweaving-pangaea-nuyorican-2018.jpeg" alt="Flyer for Reweaving Pangaea"></a>
+        <figcaption><span class="sl-date">Fri, Apr 6, 2018</span><span class="sl-title">Reweaving Pangaea</span><span class="sl-venue">Nuyorican Poets Cafe, New York, NY</span></figcaption>
+      </figure>
+      <figure class="sleeve">
+        <a href="archive-woman-warriors-red-rooster-2018.jpeg" data-full="archive-woman-warriors-red-rooster-2018.jpeg"><img loading="lazy" src="archive-woman-warriors-red-rooster-2018.jpeg" alt="Flyer for Woman Warriors"></a>
+        <figcaption><span class="sl-date">Sat, Mar 17, 2018</span><span class="sl-title">Woman Warriors</span><span class="sl-venue">Ginny's Supper Club at Red Rooster, Harlem &middot; $15</span></figcaption>
+      </figure>
+      <figure class="sleeve">
+        <a href="archive-paying-homage-to-our-ancestors-2018.jpeg" data-full="archive-paying-homage-to-our-ancestors-2018.jpeg"><img loading="lazy" src="archive-paying-homage-to-our-ancestors-2018.jpeg" alt="Flyer for Paying Homage To Our Ancestors"></a>
+        <figcaption><span class="sl-date">Sat, Jan 27, 2018</span><span class="sl-title">Paying Homage To Our Ancestors</span><span class="sl-venue">Nuyorican Poets Cafe, New York, NY &middot; Hosted by La Bruja</span></figcaption>
+      </figure>
+      <figure class="sleeve">
+        <a href="archive-uprising-town-stages-2018.jpeg" data-full="archive-uprising-town-stages-2018.jpeg"><img loading="lazy" src="archive-uprising-town-stages-2018.jpeg" alt="Flyer for Uprising at Town Stages"></a>
+        <figcaption><span class="sl-date">Sat, Jan 20, 2018</span><span class="sl-title">Uprising at Town Stages</span><span class="sl-venue">221 W Broadway, New York, NY</span></figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="year" id="y2017" data-dated data-reveal>
+    <div class="year-label"><h2>2017</h2></div>
+    <div class="sleeves">
+      <figure class="sleeve">
+        <a href="archive-lesbians-who-tech-montreal-2017.jpeg" data-full="archive-lesbians-who-tech-montreal-2017.jpeg"><img loading="lazy" src="archive-lesbians-who-tech-montreal-2017.jpeg" alt="Flyer for Lesbians Who Tech Montr&eacute;al: Tech + Social Change"></a>
+        <figcaption><span class="sl-date">Wed, Nov 15, 2017</span><span class="sl-title">Lesbians Who Tech Montr&eacute;al: Tech + Social Change</span><span class="sl-venue">Cagibi, Montr&eacute;al</span></figcaption>
+      </figure>
+      <figure class="sleeve">
+        <a href="archive-freedom-night-2017.jpeg" data-full="archive-freedom-night-2017.jpeg"><img loading="lazy" src="archive-freedom-night-2017.jpeg" alt="Flyer for Freedom Night"></a>
+        <figcaption><span class="sl-date">Fri, Aug 25, 2017</span><span class="sl-title">Freedom Night</span><span class="sl-venue">Gamba Forest, 231 Norman Ave, Brooklyn &middot; Free</span></figcaption>
+      </figure>
+      <figure class="sleeve">
+        <a href="archive-rhythm-lounge-reunion-2017.jpeg" data-full="archive-rhythm-lounge-reunion-2017.jpeg"><img loading="lazy" src="archive-rhythm-lounge-reunion-2017.jpeg" alt="Flyer for Rhythm Lounge Reunion"></a>
+        <figcaption><span class="sl-date">Sun, Jul 30, 2017</span><span class="sl-title">Rhythm Lounge Reunion</span><span class="sl-venue">The Federal Underground, Long Beach, CA</span></figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="year" id="y2016" data-dated data-reveal>
+    <div class="year-label"><h2>2016</h2></div>
+    <div class="sleeves">
+      <figure class="sleeve">
+        <a href="archive-respect-to-the-queenz-vol-4-2016.jpeg" data-full="archive-respect-to-the-queenz-vol-4-2016.jpeg"><img loading="lazy" src="archive-respect-to-the-queenz-vol-4-2016.jpeg" alt="Flyer for Respect To The Queenz Vol. 4"></a>
+        <figcaption><span class="sl-date">Sun, Nov 6, 2016</span><span class="sl-title">Respect To The Queenz Vol. 4</span><span class="sl-venue">Bronx Museum of the Arts, The Bronx &middot; Free</span></figcaption>
+      </figure>
+      <figure class="sleeve">
+        <a href="archive-the-layup-whiskey-burger-2016.jpeg" data-full="archive-the-layup-whiskey-burger-2016.jpeg"><img loading="lazy" src="archive-the-layup-whiskey-burger-2016.jpeg" alt="Flyer for The LayUp"></a>
+        <figcaption><span class="sl-date">Fri, Sep 23, 2016</span><span class="sl-title">The LayUp</span><span class="sl-venue">Whiskey Burger, Brooklyn, NY</span></figcaption>
+      </figure>
+      <figure class="sleeve">
+        <a href="archive-summer-street-jam-2016.jpeg" data-full="archive-summer-street-jam-2016.jpeg"><img loading="lazy" src="archive-summer-street-jam-2016.jpeg" alt="Flyer for Summer Street Jam"></a>
+        <figcaption><span class="sl-date">Sat, Aug 13, 2016</span><span class="sl-title">Summer Street Jam</span><span class="sl-venue">Fulton St &amp; Marcus Garvey Blvd, Bed-Stuy, Brooklyn &middot; Free</span></figcaption>
+      </figure>
+      <figure class="sleeve">
+        <a href="archive-badass-mic-von-2016.jpeg" data-full="archive-badass-mic-von-2016.jpeg"><img loading="lazy" src="archive-badass-mic-von-2016.jpeg" alt="Flyer for The Badass Mic"></a>
+        <figcaption><span class="sl-date">Tue, Jul 19, 2016</span><span class="sl-title">The Badass Mic</span><span class="sl-venue">Von, New York, NY</span></figcaption>
+      </figure>
+      <figure class="sleeve">
+        <a href="archive-for-the-love-of-music-2016.jpeg" data-full="archive-for-the-love-of-music-2016.jpeg"><img loading="lazy" src="archive-for-the-love-of-music-2016.jpeg" alt="Flyer for For The Love Of Music"></a>
+        <figcaption><span class="sl-date">Tue, Jun 28, 2016</span><span class="sl-title">For The Love Of Music</span><span class="sl-venue">Club Pyramid, New York, NY &middot; $20</span></figcaption>
+      </figure>
+      <figure class="sleeve">
+        <a href="archive-seed-newark-may-14.jpeg" data-full="archive-seed-newark-may-14.jpeg"><img loading="lazy" src="archive-seed-newark-may-14.jpeg" alt="Flyer for Live at SEED"></a>
+        <figcaption><span class="sl-date">Sat, May 14, 2016</span><span class="sl-title">Live at SEED</span><span class="sl-venue">210 Market St, Newark, NJ &middot; $10 advance, $12 door</span></figcaption>
+      </figure>
+      <figure class="sleeve">
+        <a href="archive-words-nuyorican-2016.jpeg" data-full="archive-words-nuyorican-2016.jpeg"><img loading="lazy" src="archive-words-nuyorican-2016.jpeg" alt="Flyer for Words: Hip Hop &amp; Poetry Showcase"></a>
+        <figcaption><span class="sl-date">Sat, Jan 16, 2016</span><span class="sl-title">Words: Hip Hop &amp; Poetry Showcase</span><span class="sl-venue">Nuyorican Poets Cafe, New York, NY</span></figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="year" id="on-air" data-reveal>
+    <div class="year-label"><h2>On air</h2></div>
+    <div class="sleeves">
+      <figure class="sleeve">
+        <a href="archive-super-heru-show-ep-41.jpeg" data-full="archive-super-heru-show-ep-41.jpeg"><img loading="lazy" src="archive-super-heru-show-ep-41.jpeg" alt="Flyer for The Xuper Heru Show, Ep. 41"></a>
+        <figcaption><span class="sl-date">Saturdays, 9 PM EST</span><span class="sl-title">The Xuper Heru Show, Ep. 41</span><span class="sl-venue">Instagram Live</span></figcaption>
+      </figure>
+      <figure class="sleeve">
+        <a href="archive-junkies-ep-74.jpeg" data-full="archive-junkies-ep-74.jpeg"><img loading="lazy" src="archive-junkies-ep-74.jpeg" alt="Flyer for That Junkies Hip Hop Show, Ep. 74"></a>
+        <figcaption><span class="sl-date">Podcast</span><span class="sl-title">That Junkies Hip Hop Show, Ep. 74</span><span class="sl-venue">Junkies ATL</span></figcaption>
+      </figure>
+      <figure class="sleeve">
+        <a href="archive-junkies-ep-51.jpeg" data-full="archive-junkies-ep-51.jpeg"><img loading="lazy" src="archive-junkies-ep-51.jpeg" alt="Flyer for That Junkies Hip Hop Show, Ep. 51"></a>
+        <figcaption><span class="sl-date">Podcast</span><span class="sl-title">That Junkies Hip Hop Show, Ep. 51</span><span class="sl-venue">Junkies ATL</span></figcaption>
+      </figure>
+      <figure class="sleeve">
+        <a href="archive-junkies-ep-22.jpeg" data-full="archive-junkies-ep-22.jpeg"><img loading="lazy" src="archive-junkies-ep-22.jpeg" alt="Flyer for That Junkies Hip Hop Show, Ep. 22"></a>
+        <figcaption><span class="sl-date">Podcast</span><span class="sl-title">That Junkies Hip Hop Show, Ep. 22</span><span class="sl-venue">Junkies ATL</span></figcaption>
+      </figure>
+      <figure class="sleeve">
+        <a href="archive-junkies-ep-21.jpeg" data-full="archive-junkies-ep-21.jpeg"><img loading="lazy" src="archive-junkies-ep-21.jpeg" alt="Flyer for That Junkies Hip Hop Show, Ep. 21"></a>
+        <figcaption><span class="sl-date">Podcast</span><span class="sl-title">That Junkies Hip Hop Show, Ep. 21</span><span class="sl-venue">Junkies ATL</span></figcaption>
+      </figure>
+      <figure class="sleeve">
+        <a href="archive-visual-caffeine-ep-101.jpeg" data-full="archive-visual-caffeine-ep-101.jpeg"><img loading="lazy" src="archive-visual-caffeine-ep-101.jpeg" alt="Flyer for Visual Caffeine, Episode 101"></a>
+        <figcaption><span class="sl-date">Interview</span><span class="sl-title">Visual Caffeine, Episode 101</span><span class="sl-venue">viscaff.com</span></figcaption>
+      </figure>
+      <figure class="sleeve">
+        <a href="archive-thermal-soundwaves-sun.jpeg" data-full="archive-thermal-soundwaves-sun.jpeg"><img loading="lazy" src="archive-thermal-soundwaves-sun.jpeg" alt="Flyer for Thermal Soundwaves Show"></a>
+        <figcaption><span class="sl-date">Guest, Sunday 5 to 8 PM EST</span><span class="sl-title">Thermal Soundwaves Show</span><span class="sl-venue">thermalsoundwaves.com</span></figcaption>
+      </figure>
+      <figure class="sleeve">
+        <a href="archive-thermal-soundwaves-wed.jpeg" data-full="archive-thermal-soundwaves-wed.jpeg"><img loading="lazy" src="archive-thermal-soundwaves-wed.jpeg" alt="Flyer for Thermal Soundwaves on Logik Radio"></a>
+        <figcaption><span class="sl-date">Guest, Wednesday 3 to 6 PM EST</span><span class="sl-title">Thermal Soundwaves on Logik Radio</span><span class="sl-venue">WLGK Radio</span></figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="year" id="more-nights" data-reveal>
+    <div class="year-label"><h2>More nights</h2></div>
+    <div class="sleeves">
+      <figure class="sleeve">
+        <a href="archive-brooklyn-to-tampa-series-7.jpeg" data-full="archive-brooklyn-to-tampa-series-7.jpeg"><img loading="lazy" src="archive-brooklyn-to-tampa-series-7.jpeg" alt="Flyer for Brooklyn To Tampa, Series 7"></a>
+        <figcaption><span class="sl-date">Sep 26</span><span class="sl-title">Brooklyn To Tampa, Series 7</span><span class="sl-venue">Crowbar, 1812 N 17th St, Tampa, FL &middot; $5</span></figcaption>
+      </figure>
+      <figure class="sleeve">
+        <a href="archive-diversity-resilience-baad-bronx.jpeg" data-full="archive-diversity-resilience-baad-bronx.jpeg"><img loading="lazy" src="archive-diversity-resilience-baad-bronx.jpeg" alt="Flyer for Celebrating Diversity &amp; Resilience"></a>
+        <figcaption><span class="sl-date">Apr 13</span><span class="sl-title">Celebrating Diversity &amp; Resilience</span><span class="sl-venue">BAAD!, 2474 Westchester Ave, The Bronx &middot; Free</span></figcaption>
+      </figure>
+      <figure class="sleeve">
+        <a href="archive-living-gallery-aug-28.jpeg" data-full="archive-living-gallery-aug-28.jpeg"><img loading="lazy" src="archive-living-gallery-aug-28.jpeg" alt="Flyer for Music Line Up at The Living Gallery"></a>
+        <figcaption><span class="sl-date">Aug 28</span><span class="sl-title">Music Line Up at The Living Gallery</span><span class="sl-venue">1094 Broadway, Brooklyn, NY</span></figcaption>
+      </figure>
+      <figure class="sleeve">
+        <a href="archive-morning-influence-party-1019.jpeg" data-full="archive-morning-influence-party-1019.jpeg"><img loading="lazy" src="archive-morning-influence-party-1019.jpeg" alt="Flyer for The Morning Influence with Kim Goodlook Seabrook"></a>
+        <figcaption><span class="sl-date">May 7</span><span class="sl-title">The Morning Influence with Kim Goodlook Seabrook</span><span class="sl-venue">Party 101.9 &middot; Damatrix Studios Network</span></figcaption>
+      </figure>
+      <figure class="sleeve">
+        <a href="archive-plaxall-gallery-long-island-city.jpeg" data-full="archive-plaxall-gallery-long-island-city.jpeg"><img loading="lazy" src="archive-plaxall-gallery-long-island-city.jpeg" alt="Flyer for The Plaxall Gallery"></a>
+        <figcaption><span class="sl-date">Evening, 6:30 to 10:30</span><span class="sl-title">The Plaxall Gallery</span><span class="sl-venue">Long Island City, NY</span></figcaption>
+      </figure>
+    </div>
+  </section>
+
+</main>
+
+<div class="divider">
+  <div class="rule"></div>
+  <svg class="mark" viewBox="0 0 24 24" fill="none" stroke="none"><path d="M12 3.5L21 20H3L12 3.5Z" fill="var(--gold)"/></svg>
+  <div class="rule"></div>
+</div>
+
+<footer>
+  <a class="btn" href="../">Back to nejmanefertiti.com</a>
+  <p class="copy">&copy; 2026 Nejma Nefertiti &middot; Star Temple Studios LLC. All rights reserved.</p>
+</footer>
+
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Flyer"><img alt=""><button type="button">Close</button></div>
+<button class="to-top" id="toTop" aria-label="Back to top"><svg viewBox="0 0 24 24"><path d="M12 3.5L21 20H3L12 3.5Z"/></svg></button>
+
+<script>
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, {threshold:.08});
+  document.querySelectorAll('[data-reveal]').forEach(el=>io.observe(el));
+
+
+  const lb = document.getElementById('lightbox');
+  const lbImg = lb.querySelector('img');
+  document.querySelectorAll('.sleeve a').forEach(a=>{
+    a.addEventListener('click', ev=>{
+      ev.preventDefault();
+      lbImg.src = a.dataset.full;
+      lbImg.alt = a.querySelector('img').alt;
+      lb.classList.add('open');
+    });
+  });
+  const closeLb = ()=>{ lb.classList.remove('open'); lbImg.removeAttribute('src'); };
+  lb.addEventListener('click', closeLb);
+  document.addEventListener('keydown', ev=>{ if(ev.key==='Escape') closeLb(); });
+
+  const toTop = document.getElementById('toTop');
+  const toggleTop = ()=>{ toTop.classList.toggle('show', window.scrollY > 700); };
+  window.addEventListener('scroll', toggleTop, {passive:true});
+  toggleTop();
+  toTop.addEventListener('click', ()=>window.scrollTo({top:0, behavior:'smooth'}));
+</script>
+
+</body>
+</html>
