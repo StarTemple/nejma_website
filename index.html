@@ -233,6 +233,16 @@
     .music-layout{flex-direction:column;}
     .music-art{width:100%;height:auto;aspect-ratio:1/1;}
   }
+  .latest-album{display:flex;gap:26px;align-items:center;max-width:600px;margin:0 auto 34px;padding:22px;border:1px solid var(--gold);}
+  .latest-album img{width:140px;height:140px;flex-shrink:0;display:block;}
+  .la-label{font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);}
+  .la-title{margin:6px 0 16px;font-size:clamp(1.5rem,3.4vw,2rem);line-height:1.05;}
+  .la-buttons{display:flex;flex-wrap:wrap;gap:10px;}
+  .la-buttons a{padding:10px 16px;border:1px solid var(--line);font-size:.82rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink);transition:border-color .2s,color .2s;}
+  .la-buttons a:hover{border-color:var(--gold);color:var(--gold-bright);}
+  .la-buttons a.la-buy{background:var(--gold);border-color:var(--gold);color:#0b0a08;}
+  .la-buttons a.la-buy:hover{background:var(--gold-bright);color:#0b0a08;}
+  @media(max-width:560px){.latest-album{flex-direction:column;text-align:center;padding:20px;}.la-buttons{justify-content:center;}}
   .platform-row{
     display:flex;flex-wrap:wrap;gap:0;margin-top:28px;
   }
@@ -575,7 +585,6 @@
     <a href="#events">Events</a>
     <a href="#gallery">Gallery</a>
     <a href="#press">Press</a>
-    <a href="https://app.amazecommerce.com/shop/maroon-couture" target="_blank" rel="noopener">Streetwear</a>
     <a href="https://www.aliveshoes.com/liberte--3" target="_blank" rel="noopener">Sneakers</a>
     <a href="perfume/">Perfume</a>
     <a href="#contact">Book Now</a>
@@ -601,16 +610,26 @@
   <div class="section-head">
     <h2>Music</h2>
   </div>
+  <div class="latest-album">
+    <img src="links/mtmm-cover.jpg" alt="Method To My Madness album cover" width="140" height="140" loading="lazy">
+    <div class="la-info">
+      <span class="la-label">Latest album</span>
+      <h3 class="la-title">Method To My Madness</h3>
+      <div class="la-buttons">
+        <a class="la-buy" href="https://nejmanefertiti.bandcamp.com/album/method-to-my-madness-m-t-m-m" target="_blank" rel="noopener">Buy on Bandcamp</a>
+        <a href="https://open.spotify.com/album/4r2XWEcryFMt9o6f2czswv" target="_blank" rel="noopener">Spotify</a>
+        <a href="https://music.apple.com/us/album/method-to-my-madness-m-t-m-m/1879454190" target="_blank" rel="noopener">Apple Music</a>
+      </div>
+    </div>
+  </div>
   <div class="music-embed" style="max-width:600px;margin:0 auto;">
-      <iframe style="border-radius:0" src="https://open.spotify.com/embed/artist/1xPqTnYL7I4ZrXMnW8cGSv?utm_source=generator&theme=0" width="100%" height="352" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+      <iframe style="border-radius:0" src="https://open.spotify.com/embed/artist/1xPqTnYL7I4ZrXMnW8cGSv?utm_source=generator&theme=0" width="100%" height="352" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="Nejma Nefertiti on Spotify"></iframe>
   </div>
   <div class="platform-row" style="justify-content:center;">
-    <a href="https://open.spotify.com/artist/1xPqTnYL7I4ZrXMnW8cGSv" target="_blank" rel="noopener">Spotify</a>
-    <a href="https://nejmanefertiti.bandcamp.com/" target="_blank" rel="noopener">Bandcamp</a>
     <a href="https://soundcloud.com/nejmanefertiti" target="_blank" rel="noopener">SoundCloud</a>
-    <a href="https://music.apple.com/us/artist/nejma-nefertiti/1353037061" target="_blank" rel="noopener">Apple Music</a>
     <a href="https://tidal.com/browse/artist/9589639" target="_blank" rel="noopener">Tidal</a>
-    <a href="https://www.youtube.com/c/NejmaNefertiti" target="_blank" rel="noopener">YouTube</a>
+    <a href="https://www.youtube.com/@NejmaNefertiti" target="_blank" rel="noopener">YouTube</a>
+    <a href="https://music.youtube.com/@nejmanefertiti" target="_blank" rel="noopener">YouTube Music</a>
   </div>
   <p class="vinyl-link"><a href="https://www.subwayhiphop.com" target="_blank" rel="noopener">subwayhiphop.com</a></p>
 </section>
