@@ -246,6 +246,8 @@
   .la-buttons svg{width:18px;height:18px;flex-shrink:0;fill:none;stroke:var(--gold);stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;}
   @media(max-width:380px){.la-buttons a{font-size:.7rem;letter-spacing:.04em;gap:6px;padding:12px 6px;white-space:nowrap;}.la-buttons svg{width:16px;height:16px;}.latest-album{padding:16px;}}
   @media(max-width:560px){.latest-album{flex-direction:column;text-align:center;padding:20px;}.la-info{width:100%;}}
+  .la-buttons a.la-pink{background:#ff4fa3;border-color:#ff4fa3;color:#fff;font-weight:600;padding:14px 16px;}
+  .la-buttons a.la-pink:hover{background:#ff6db3;border-color:#ff6db3;color:#fff;}
   .platform-row{
     display:flex;flex-wrap:wrap;gap:0;margin-top:28px;
   }
@@ -621,6 +623,17 @@
 <section id="music" data-reveal>
   <div class="section-head">
     <h2>Music</h2>
+  </div>
+  <!-- HERS SINGLE BLOCK. Dec 11: change the label to "Latest single", add Spotify / Apple Music / Bandcamp buttons here. -->
+  <div class="latest-album latest-single">
+    <img src="links/hers-cover-art.jpg" alt="HERS cover art by Nejma Nefertiti" width="140" height="140" loading="lazy">
+    <div class="la-info">
+      <span class="la-label">New single &middot; Dec 11</span>
+      <h3 class="la-title">HERS</h3>
+      <div class="la-buttons">
+        <a class="la-pink" href="https://youtu.be/lBrOFQybCNw" target="_blank" rel="noopener">Official Video Premiere, Dec 18</a>
+      </div>
+    </div>
   </div>
   <div class="latest-album">
     <img src="links/mtmm-cover.jpg" alt="Method To My Madness M.T.M.M. album cover" width="140" height="140" loading="lazy">
